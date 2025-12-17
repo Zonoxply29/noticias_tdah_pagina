@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de TDAH</title>
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <!-- Header con Bootstrap Grid -->
+    <div class="container-fluid">
+        <div class="row header-container">
+
+            <!-- Logo (columna izquierda) -->
+            <div class="col-lg-2 col-12 logo-section">
+                <div class="logo-mobile-wrapper">
+                    <div class="logo-row">
+                        <a href="#">
+                            <img src="img/logo_TDAH.PNG" alt="TDAH Adultos México" class="logo">
+                        </a>
+                        <!-- Toggle a la derecha del logo -->
+                        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mainNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <!-- Iconos Mobile debajo del logo -->
+                    <div class="navbar-icons-mobile d-lg-none">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-search"></i>
+                        <i class="bi bi-cart"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navbar Section (columna derecha) -->
+            <div class="col-lg-10 col-12 navbar-section">
+
+                <!-- Barra fecha -->
+                <div class="date-bar">
+                    <span>Viernes, 24 de Febrero, 2025</span>
+                </div>
+
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light main-navbar">
+                    <div class="container-fluid">
+
+                        <!-- Contenido -->
+                        <div class="collapse navbar-collapse" id="mainNavbar">
+
+                            <!-- Menú -->
+                            <ul class="navbar-nav me-auto gap-lg-3">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle region-link" href="#" data-bs-toggle="dropdown">
+                                        Noticias Por Región
+                                    </a>
+                                    <ul class="dropdown-menu region-dropdown">
+                                        <li><a class="dropdown-item" href="#">CDMX</a></li>
+                                        <li><a class="dropdown-item" href="#">Cuernavaca</a></li>
+                                        <li><a class="dropdown-item" href="#">Guadalajara</a></li>
+                                        <li><a class="dropdown-item" href="#">Monterrey</a></li>
+                                        <li><a class="dropdown-item" href="#">Cancún</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item"><a class="nav-link" href="#">Cultura</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Eventos</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Deportes</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Testimonios</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Medicina</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Sostenibilidad</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Otros</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Opinión</a></li>
+                                        <li><a class="dropdown-item" href="#">Investigación</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <!-- Iconos -->
+                            <div class="navbar-icons d-none d-lg-flex">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-search"></i>
+                                <i class="bi bi-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="container my-5">
+            <div class="row g-3">
+
+                <!-- Columna izquierda (noticia principal) -->
+                <div class="col-lg-6">
+                    <article class="news-card news-large">
+                        <span class="badge badge-region">Noticias por Región</span>
+
+                        <div class="news-overlay">
+                            <span class="news-meta badge-region">Craig Bator · 27 Dec 2020</span>
+                            <h2 class="news-title">
+                                After All Is Said And Done, More Is Done
+                            </h2>
+                        </div>
+
+                        <img src="img/noticia_principal.png" class="img-fluid" alt="">
+                    </article>
+                </div>
+
+                <!-- Columna derecha -->
+                <div class="col-lg-6">
+                    <div class="row g-3">
+
+                        <!-- Noticia superior -->
+                        <div class="col-12">
+                            <article class="news-card news-wide">
+                                <span class="badge badge-culture">Cultura</span>
+
+                                <div class="news-overlay">
+                                    <span class="news-meta badge-culture">Craig Bator · 27 Dec 2020</span>
+                                    <h3 class="news-title">
+                                        Tourism In Dubai Is Booming By International Tourist
+                                    </h3>
+                                </div>
+
+                                <img src="img/noticia_cultura.png" class="img-fluid" alt="">
+                            </article>
+                        </div>
+
+                        <!-- Inferior izquierda -->
+                        <div class="col-md-6">
+                            <article class="news-card news-small">
+                                <span class="badge badge-sustainability">Sostenibilidad</span>
+
+                                <div class="news-overlay">
+                                    <span class="news-meta badge-sustainability">Craig Bator · 27 Dec 2020</span>
+                                    <h4 class="news-title">
+                                        They’re Back! Kennedy Darling Named To Return To
+                                    </h4>
+                                </div>
+
+                                <img src="img/noticia_sostenibilidad.png" class="img-fluid" alt="">
+                            </article>
+                        </div>
+
+                        <!-- Inferior derecha -->
+                        <div class="col-md-6">
+                            <article class="news-card news-small">
+                                <span class="badge badge-medicine">Medicina</span>
+
+                                <div class="news-overlay">
+                                    <span class="news-meta badge-medicine">Craig Bator · 27 Dec 2020</span>
+                                    <h4 class="news-title">
+                                        Swiss Authorities Say Uber Drivers Should
+                                    </h4>
+                                </div>
+
+                                <img src="img/noticia_medicina.png" class="img-fluid" alt="">
+                            </article>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--SECCION NOTICIAS DE CULTURA Y ADS-->
+    <section>
+        <div class="container my-5">
+
+            <!-- Publicidad superior -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="ad ad-horizontal">
+                        Ad
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <!-- Contenido principal -->
+                <div class="col-lg-9">
+
+                    <!-- Título sección -->
+                    <div class="section-header text-center mb-4">
+                        <span class="section-line"></span>
+                        <h2 class="section-title">Cultura</h2>
+                        <span class="section-line"></span>
+                    </div>
+
+                    <!-- Grid noticias -->
+                    <div class="row g-4">
+
+                        <div class="col-md-4">
+                            <article class="news-item">
+                                <img src="img/noticia_cultura_2.png" class="img-fluid rounded" alt="">
+                                <a href="#" class="news-title-link">
+                                    <h5 class="news-title">
+                                        Marta Martín, especializada en neurodivergencia: "El TDAH no está ligado al
+                                        fracaso escolar"
+                                    </h5>
+                                </a>
+                                <span class="news-meta">Hace 4 dias · Cadena Ser</span>
+                            </article>
+                        </div>
+
+                        <div class="col-md-4">
+                            <article class="news-item">
+                                <img src="img/noticia_rap.png" class="img-fluid rounded" alt="">
+                                <a href="#" class="news-title-link">
+                                    <h5 class="news-title">
+                                        "No es un problema, es un superpoder": el rap con el que un joven granadino da
+                                        voz al Día Nacional del TDAH
+                                    </h5>
+                                </a>
+                                <span class="news-meta">Hace 2 horas · TDAH Noticias</span>
+                            </article>
+                        </div>
+
+                        <div class="col-md-4">
+                            <article class="news-item">
+                                <img src="img/redes_sociales_tdah.webp" class="img-fluid rounded" alt="">
+                                <a href="" class="news-title-link">
+                                    <h5 class="news-title">
+                                        Algoritmos que moldean la percepción del TDAH: redes sociales, salud mental y
+                                        cultura digital
+                                    </h5>
+                                </a>
+                                <span class="news-meta">Hace 2 semanas · Washington Post</span>
+                            </article>
+                        </div>
+
+                    </div>
+
+                    <!-- Botón -->
+                    <div class="text-center mt-4">
+                        <a href="#" class="btn btn-more">MAS NOTICIAS</a>
+                    </div>
+
+                </div>
+
+                <!-- Publicidad lateral -->
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="ad ad-vertical">
+                        Ad
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section>
+
+    </section>
+    
+    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
