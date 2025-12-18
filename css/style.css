@@ -29,6 +29,39 @@ body>.container-fluid:first-child {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* CLASE REUTILIZABLE PARA HOVER DE ICONOS */
+.icon-hover {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.icon-hover:hover {
+    transform: scale(1.2) translateY(-3px);
+    color: var(--secondary);
+}
+
+/* Variante más sutil */
+.icon-hover-subtle {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.icon-hover-subtle:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
+/* Variante solo scale (sin color) */
+.icon-hover-scale {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icon-hover-scale:hover {
+    transform: scale(1.2);
+}
+
+
 /* Header Container */
 .header-container {
     max-width: 1400px;
@@ -126,11 +159,6 @@ body>.container-fluid:first-child {
     color: var(--primary);
 }
 
-/* Iconos Mobile - Ocultos por defecto */
-.navbar-icons-mobile {
-    display: none;
-}
-
 /* Toggle hamburguesa */
 .navbar-toggler {
     padding: 0.25rem 0.75rem;
@@ -174,7 +202,7 @@ body>.container-fluid:first-child {
     .logo-mobile-wrapper {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 10px;
         width: 100%;
     }
@@ -209,19 +237,23 @@ body>.container-fluid:first-child {
 
     /* Mostrar iconos mobile debajo del logo */
     .navbar-icons-mobile {
-        display: flex !important;
+        display: flex;
+        justify-content: center;
         align-items: center;
         gap: 15px;
+        padding: 4px 0;
     }
 
     .navbar-icons-mobile i {
         font-size: 1.3rem;
         cursor: pointer;
         color: #000;
+        transition: all 0.3s ease;
     }
 
     .navbar-icons-mobile i:hover {
         color: var(--primary);
+        transform: scale(1.2) translateY(-3px);
     }
 
     /* El menú colapsado ocupa todo el ancho */
@@ -1709,7 +1741,7 @@ body>.container-fluid:first-child {
 }
 
 .footer-title {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 20px;
@@ -1744,10 +1776,13 @@ body>.container-fluid:first-child {
     font-size: 1.4rem;
     margin-left: 10px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .footer-social i:hover {
     color: #0a8ea0;
+    transform: scale(1.2) translateY(-3px);
 }
 
 .footer-copyright {
@@ -1757,6 +1792,7 @@ body>.container-fluid:first-child {
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 /* Responsive */
 @media (max-width: 991px) {
     .footer-menu {
