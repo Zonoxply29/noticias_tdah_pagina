@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: "Gotham_Black";
-    src: url('/fonts/Gotham\ Black.otf');
+    src: url('../fonts/Gotham Black.otf');
 }
 
 :root {
