@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de TDAH</title>
+    <title>Doctores | TDAH</title>
     <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -58,7 +60,7 @@
                             <!-- Menú -->
                             <ul class="navbar-nav me-auto gap-lg-3">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle region-link" href="#" data-bs-toggle="dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                                         Noticias Por Región
                                     </a>
                                     <ul class="dropdown-menu region-dropdown">
@@ -74,7 +76,7 @@
                                 <li class="nav-item"><a class="nav-link" href="#">Eventos</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">Deportes</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">Testimonios</a></li>
-                                <li class="nav-item"><a class="nav-link" href="doctores.html">Medicina</a></li>
+                                <li class="nav-item"><a class="nav-link region-link" href="doctores.html">Medicina</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">Negocios</a></li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Otros</a>
@@ -100,6 +102,63 @@
             </div>
         </div>
     </div>
+    <!-- Encabezado de la Seccion-->
+    <section class="section-category">
+        <div class="container">
+
+            <!-- Título de categoría -->
+            <div class="section-header text-center my-4">
+                <span class="section-line"></span>
+                <h2 class="section-title section-title-muted">Salud</h2>
+                <span class="section-line"></span>
+            </div>
+
+            <!-- Anuncio que solo se ve en mobile - Después del título -->
+            <div class="row d-lg-none mb-4">
+                <div class="col-12">
+                    <div class="ad ad-horizontal">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">320 x 100</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ads superiores - SOLO DESKTOP -->
+            <div class="row g-3 mb-4 d-none d-lg-flex">
+                <div class="col-lg-6">
+                    <div class="ad ad-horizontal">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">468 x 60</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ad ad-horizontal">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">468 x 60</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!--HEADLINE DE NOTICIAS-->
     <section>
         <div class="container my-3">
@@ -108,16 +167,17 @@
                 <!-- Columna izquierda (noticia principal) -->
                 <div class="col-lg-6">
                     <article class="news-card news-large">
-                        <span class="badge badge-region">Noticias por Región</span>
+                        <span class="badge badge-location">CDMX</span>
 
                         <div class="news-overlay">
-                            <span class="news-meta badge-region">Craig Bator · 27 Dec 2020</span>
+                            <span class="news-meta">Redacción TDAH · 24 Feb 2025</span>
                             <h2 class="news-title">
-                                After All Is Said And Done, More Is Done
+                                Nuevos avances médicos mejoran el abordaje del TDAH
                             </h2>
                         </div>
 
-                        <img src="img/noticia_principal.png" class="img-fluid" alt="">
+                        <img src="img/medicina/noticia_medicina_1.png" class="img-fluid"
+                            alt="Equipo médico durante procedimiento clínico">
                     </article>
                 </div>
 
@@ -128,48 +188,62 @@
                         <!-- Noticia superior -->
                         <div class="col-12">
                             <article class="news-card news-wide">
-                                <span class="badge badge-culture">Cultura</span>
+                                <span class="badge badge-location">MTY</span>
 
                                 <div class="news-overlay">
-                                    <span class="news-meta badge-culture">Craig Bator · 27 Dec 2020</span>
+                                    <span class="news-meta">Hace 2 horas · TDAH Noticias</span>
                                     <h3 class="news-title">
-                                        Tourism In Dubai Is Booming By International Tourist
+                                        El diagnóstico oportuno del TDAH cambia la vida adulta
                                     </h3>
                                 </div>
 
-                                <img src="img/noticia_cultura.png" class="img-fluid" alt="">
+                                <img src="img/medicina/noticia_medicina_2.png" class="img-fluid" alt="">
                             </article>
+                        </div>
+                        
+                        <!-- Anuncio que solo se ve en mobile - Después de la noticia superior -->
+                        <div class="col-12 d-lg-none">
+                            <div class="ad ad-horizontal">
+                                <div class="ad-content">
+                                    <i class="bi bi-megaphone"></i>
+                                    <div class="ad-text">
+                                        <h6>Espacio Publicitario</h6>
+                                        <p>Anuncia aquí tu negocio</p>
+                                    </div>
+                                    <span class="ad-size">320 x 100</span>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Inferior izquierda -->
                         <div class="col-6">
                             <article class="news-card news-small">
-                                <span class="badge badge-sustainability">Sostenibilidad</span>
+                                <span class="badge badge-location">Cuernavaca</span>
 
                                 <div class="news-overlay">
-                                    <span class="news-meta badge-sustainability">Craig Bator · 27 Dec 2020</span>
+                                    <span class="news-meta"> Hace 2 semanas · TDAH Noticias </span>
                                     <h4 class="news-title">
-                                        They’re Back! Kennedy Darling Named To Return To
+                                        Terapias integrales fortalecen el tratamiento del TDAH
                                     </h4>
                                 </div>
 
-                                <img src="img/noticia_sostenibilidad.png" class="img-fluid" alt="">
+                                <img src="img/medicina/noticia_medicina_3.png" class="img-fluid" alt="">
                             </article>
                         </div>
 
                         <!-- Inferior derecha -->
                         <div class="col-6">
                             <article class="news-card news-small">
-                                <span class="badge badge-medicine">Medicina</span>
+                                <span class="badge badge-location">Cancún</span>
 
                                 <div class="news-overlay">
-                                    <span class="news-meta badge-medicine">Craig Bator · 27 Dec 2020</span>
+                                    <span class="news-meta">Hace 1 Dia · TDAH Noticias</span>
                                     <h4 class="news-title">
-                                        Swiss Authorities Say Uber Drivers Should
+                                        Tecnología al servicio de personas con TDAH
                                     </h4>
                                 </div>
 
-                                <img src="img/noticia_medicina.png" class="img-fluid" alt="">
+                                <img src="img/medicina/noticia_medicina_4.png" class="img-fluid" alt="">
                             </article>
                         </div>
 
@@ -179,229 +253,126 @@
             </div>
         </div>
     </section>
-    <!--SECCION NOTICIAS DE CULTURA Y ADS-->
-    <section>
-        <div class="container my-5">
+    <!--SECCION ULTIMAS NOTICIAS Y ADS-->
+    <section class="my-5">
+        <div class="container">
 
-            <!-- Publicidad superior -->
-            <div class="row mb-4">
-                <div class="col-12">
-                    <div class="ad ad-horizontal">
+            <div class="row g-4 news-health-layout">
+
+                <!-- COLUMNA IZQUIERDA ADS -->
+                <div class="col-lg-2 d-flex flex-column gap-4">
+                    <div class="ad ad-vertical-large">
                         <div class="ad-content">
                             <i class="bi bi-megaphone"></i>
                             <div class="ad-text">
                                 <h6>Espacio Publicitario</h6>
                                 <p>Anuncia aquí tu negocio</p>
                             </div>
-                            <span class="ad-size">728 x 90</span>
+                            <span class="ad-size">160 x 600</span>
+                        </div>
+                    </div>
+                    <div class="ad ad-vertical-small">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">160 x 300</span>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="row">
+                <!-- COLUMNA CENTRAL NOTICIAS -->
+                <div class="col-lg-7">
 
-                <!-- Contenido principal -->
-                <div class="col-lg-9">
-
-                    <!-- Título sección -->
-                    <div class="section-header text-center mb-4">
-                        <span class="section-line"></span>
-                        <h2 class="section-title">Cultura</h2>
-                        <span class="section-line"></span>
+                    <!-- Header -->
+                    <div class="section-header-left mb-4">
+                        <span class="section-label section-label-primary">
+                            Últimas Noticias
+                        </span>
                     </div>
 
                     <!-- Grid noticias -->
                     <div class="row g-4">
 
-                        <div class="col-12 col-md-4">
-                            <article class="news-item news-item-responsive">
-                                <img src="img/noticia_cultura_2.png" class="img-fluid rounded" alt="">
-                                <div class="news-text">
-                                    <a href="#" class="news-title-link">
-                                        <h5 class="news-title">
-                                            Marta Martín, especializada en neurodivergencia: "El TDAH no está ligado al
-                                            fracaso escolar"
-                                        </h5>
-                                    </a>
-                                    <span class="news-meta news-meta-secondary">Hace 4 dias · Cadena Ser</span>
-                                </div>
+                        <div class="col-md-6">
+                            <article class="news-card-vertical">
+                                <a href="#" class="news-image-link">
+                                    <img src="img/medicina/ultimas_noticias_1.png" class="img-fluid rounded mb-2"
+                                        alt="Tratamiento TDAH">
+                                </a>
+                                <a href="#" class="news-title-link">
+                                    <h6 class="news-title-sm">
+                                        Nuevos enfoques terapéuticos revolucionan el tratamiento del TDAH en adultos
+                                    </h6>
+                                </a>
+                                <span class="news-meta">Hace 1 hora · Redacción Salud</span>
                             </article>
                         </div>
 
-                        <div class="col-12 col-md-4">
-                            <article class="news-item news-item-responsive">
-                                <img src="img/noticia_rap.png" class="img-fluid rounded" alt="">
-                                <div class="news-text">
-                                    <a href="#" class="news-title-link">
-                                        <h5 class="news-title">
-                                            "No es un problema, es un superpoder": el rap con el que un joven granadino
-                                            da
-                                            voz al Día Nacional del TDAH
-                                        </h5>
-                                    </a>
-                                    <span class="news-meta news-meta-secondary">Hace 2 horas · TDAH Noticias</span>
-                                </div>
+                        <div class="col-md-6">
+                            <article class="news-card-vertical">
+                                <a href="#" class="news-image-link">
+                                    <img src="img/medicina/ultimas_noticias_2.jpg" class="img-fluid rounded mb-2"
+                                        alt="Actividad física">
+                                </a>
+                                <a href="#" class="news-title-link">
+                                    <h6 class="news-title-sm">
+                                        Ejercicio físico: Un aliado clave en el manejo del TDAH según estudios recientes
+                                    </h6>
+                                </a>
+                                <span class="news-meta">Hace 2 horas · Especial Salud</span>
                             </article>
                         </div>
 
-                        <div class="col-12 col-md-4">
-                            <article class="news-item news-item-responsive">
-                                <img src="img/redes_sociales_tdah.webp" class="img-fluid rounded" alt="">
-                                <div class="news-text">
-                                    <a href="" class="news-title-link">
-                                        <h5 class="news-title">
-                                            Algoritmos que moldean la percepción del TDAH: redes sociales, salud mental
-                                            y
-                                            cultura digital
-                                        </h5>
-                                    </a>
-                                    <span class="news-meta news-meta-secondary">Hace 2 semanas · Washington Post</span>
-                                </div>
+                        <div class="col-md-6">
+                            <article class="news-card-vertical">
+                                <a href="#" class="news-image-link">
+                                    <img src="img/medicina/ultimas_noticias_3.jpg" class="img-fluid rounded mb-2"
+                                        alt="Terapia integral">
+                                </a>
+                                <a href="#" class="news-title-link">
+                                    <h6 class="news-title-sm">
+                                        Terapias integrales: Combinando medicina y mindfulness para mejorar calidad de
+                                        vida
+                                    </h6>
+                                </a>
+                                <span class="news-meta">Hace 3 horas · Redacción</span>
                             </article>
                         </div>
 
-                    </div>
-
-                    <!-- Botón -->
-                    <div class="text-center mt-4">
-                        <a href="#" class="btn btn-more">MAS NOTICIAS</a>
-                    </div>
-
-                </div>
-
-                <!-- Publicidad lateral -->
-                <div class="col-lg-3 col-12">
-                    <div class="ad ad-vertical ad-mobile-spacing">
-                        <div class="ad-content">
-                            <i class="bi bi-megaphone"></i>
-                            <div class="ad-text">
-                                <h6>Espacio Publicitario</h6>
-                                <p>Anuncia aquí tu negocio</p>
-                            </div>
-                            <span class="ad-size">300 x 600</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-    <!--SECCION EVENTOS-->
-    <section class="my-5">
-        <div class="container">
-
-            <div class="row">
-
-                <!-- CONTENIDO NOTICIAS -->
-                <div class="col-lg-9">
-
-                    <!-- Header reutilizable -->
-                    <div class="section-header-left mb-4">
-                        <span class="section-label">EVENTOS</span>
-                        <span class="section-line-full"></span>
-                    </div>
-
-                    <div class="row g-4">
-
-                        <!-- Noticia principal -->
-                        <div class="col-lg-6">
-                            <article class="news-feature">
-                                <img src="img/eventos/noticias_eventos_1.png" class="img-fluid rounded mb-3" alt="">
-                                <span class="news-meta news-meta-events">Comunidad TDAH · 10 de Diciembre, 2025</span>
-                                <h4 class="news-title">
-                                    Uniendo Voces: El Congreso de TDAH que está transformando vidas en México
-                                </h4>
-                                <p class="news-excerpt">
-                                    Cientos de familias, profesionales y personas con TDAH se dieron cita en un espacio
-                                    de encuentro, aprendizaje y empoderamiento. El evento destacó por sus talleres
-                                    prácticos, testimonios inspiradores y la creación de una red de apoyo nacional.
-                                </p>
+                        <div class="col-md-6">
+                            <article class="news-card-vertical">
+                                <a href="#" class="news-image-link">
+                                    <img src="img/medicina/ultimas_noticias_4.jpg" class="img-fluid rounded mb-2"
+                                        alt="Tecnología salud">
+                                </a>
+                                <a href="#" class="news-title-link">
+                                    <h6 class="news-title-sm">
+                                        Apps y herramientas digitales facilitan la organización diaria de personas con
+                                        TDAH
+                                    </h6>
+                                </a>
+                                <span class="news-meta">Hace 4 horas · Salud Digital</span>
                             </article>
-
-                            <div class="col-12 order-2 order-lg-3 d-lg-none">
-                                <div class="ad ad-medium mb-4">
-                                    <div class="ad-content">
-                                        <i class="bi bi-megaphone"></i>
-                                        <div class="ad-text">
-                                            <h6>Espacio Publicitario</h6>
-                                            <p>Anuncia aquí tu negocio</p>
-                                        </div>
-                                        <span class="ad-size">300 x 250</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- Listado -->
-                        <div class="col-lg-6">
-                            <div class="news-list-vertical">
-
-                                <article class="news-list-item">
-                                    <img src="img/eventos/noticia_small_evento.png" alt="">
-                                    <div>
-                                        <span class="news-meta news-meta-events">TDAH Guadalajara · 5 de Diciembre,
-                                            2025</span>
-                                        <h6 class="news-title-sm">
-                                            Taller de Estrategias para Padres: Cómo Apoyar a Niños con TDAH en Casa
-                                        </h6>
-                                    </div>
-                                </article>
-
-                                <article class="news-list-item">
-                                    <img src="img/eventos/noticia_small_evento_2.png" alt="">
-                                    <div>
-                                        <span class="news-meta news-meta-events">Red TDAH · 1 de Diciembre, 2025</span>
-                                        <h6 class="news-title-sm">
-                                            Webinar Gratuito: Mitos y Realidades del TDAH en la Edad Adulta
-                                        </h6>
-                                    </div>
-                                </article>
-
-                                <article class="news-list-item">
-                                    <img src="img/eventos/noticia_small_evento_3.png" alt="">
-                                    <div>
-                                        <span class="news-meta news-meta-events">TDAH Monterrey · 28 de Noviembre,
-                                            2025</span>
-                                        <h6 class="news-title-sm">
-                                            Conferencia Internacional: Nuevos Enfoques en el Tratamiento del TDAH
-                                        </h6>
-                                    </div>
-                                </article>
-
-                                <article class="news-list-item">
-                                    <img src="img/eventos/noticia_small_evento_4.png" alt="">
-                                    <div>
-                                        <span class="news-meta news-meta-events">Comunidad TDAH · 20 de Noviembre,
-                                            2025</span>
-                                        <h6 class="news-title-sm">
-                                            Grupo de Apoyo Virtual: Compartiendo Experiencias y Estrategias de Vida
-                                        </h6>
-                                    </div>
-                                </article>
-
-                                <article class="news-list-item">
-                                    <img src="img/eventos/noticia_small_evento_5.png" alt="">
-                                    <div>
-                                        <span class="news-meta news-meta-events">TDAH CDMX · 15 de Noviembre,
-                                            2025</span>
-                                        <h6 class="news-title-sm">
-                                            Capacitación para Docentes: Herramientas para el Aula Inclusiva
-                                        </h6>
-                                    </div>
-                                </article>
-
-                            </div>
                         </div>
 
                     </div>
                 </div>
 
-                <!-- SIDEBAR -->
-                <div class="col-lg-3 d-none d-lg-block">
-                    <div class="ad ad-medium mb-4">
+                <!-- COLUMNA DERECHA -->
+                <div class="col-lg-3 d-flex flex-column gap-4">
+
+                    <!-- Header comunidad -->
+                    <div class="section-header-left">
+                        <span class="section-label section-label-secondary">
+                            Nuestra Comunidad
+                        </span>
+                    </div>
+
+                    <!-- Ads -->
+                    <div class="ad ad-vertical-medium">
                         <div class="ad-content">
                             <i class="bi bi-megaphone"></i>
                             <div class="ad-text">
@@ -411,88 +382,180 @@
                             <span class="ad-size">300 x 250</span>
                         </div>
                     </div>
-                    <div class="newsletter-box">
-                        <h5 class="text-center">Recibe las Últimas Noticias</h5>
-                        <input type="email" class="form-control mb-3" placeholder="Tu correo electrónico">
-                        <button class="btn btn-subscribe w-100">Suscribirse</button>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- ADS INFERIORES (DESKTOP) -->
-            <div class="row mt-5 d-none d-lg-flex">
-                <div class="col-lg-6">
-                    <div class="ad ad-horizontal">
+                    <div class="ad ad-vertical-medium">
                         <div class="ad-content">
                             <i class="bi bi-megaphone"></i>
                             <div class="ad-text">
                                 <h6>Espacio Publicitario</h6>
                                 <p>Anuncia aquí tu negocio</p>
                             </div>
-                            <span class="ad-size">468 x 60</span>
+                            <span class="ad-size">300 x 250</span>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="ad ad-horizontal">
-                        <div class="ad-content">
-                            <i class="bi bi-megaphone"></i>
-                            <div class="ad-text">
-                                <h6>Espacio Publicitario</h6>
-                                <p>Anuncia aquí tu negocio</p>
-                            </div>
-                            <span class="ad-size">468 x 60</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- AD HORIZONTAL (mobile only) - Primer anuncio -->
-            <div class="row mt-4 d-lg-none">
-                <div class="col-12">
-                    <div class="ad ad-horizontal mb-4">
-                        <div class="ad-content">
-                            <i class="bi bi-megaphone"></i>
-                            <div class="ad-text">
-                                <h6>Espacio Publicitario</h6>
-                                <p>Anuncia aquí tu negocio</p>
-                            </div>
-                            <span class="ad-size">320 x 100</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    <!-- Botón tienda -->
+                    <a href="#" class="btn btn-store">
+                        <img src="img/logo_sale_tienda.png" alt="Tienda" class="btn-store-icon">
+                        CONOCE LA TIENDA
+                    </a>
 
-            <!-- NEWSLETTER (mobile only) - Después del anuncio -->
-            <div class="row d-lg-none">
-                <div class="col-12">
-                    <div class="newsletter-box">
-                        <h5 class="text-center">Recibe las Últimas Noticias</h5>
-                        <input type="email" class="form-control mb-3" placeholder="Tu correo electrónico">
-                        <button class="btn btn-subscribe w-100">Suscribirse</button>
-                    </div>
                 </div>
-            </div>
 
-            <!-- AD HORIZONTAL 2 (mobile only) - Segundo anuncio -->
-            <div class="row mt-4 d-lg-none">
-                <div class="col-12">
-                    <div class="ad ad-horizontal">
-                        <div class="ad-content">
-                            <i class="bi bi-megaphone"></i>
-                            <div class="ad-text">
-                                <h6>Espacio Publicitario</h6>
-                                <p>Anuncia aquí tu negocio</p>
-                            </div>
-                            <span class="ad-size">320 x 100</span>
-                        </div>
-                    </div>
-                </div>
             </div>
 
         </div>
     </section>
+
+    <!--SECCION EVENTOS-->
+    <section class="my-5">
+        <div class="container">
+
+            <!-- TÍTULO -->
+            <div class="section-header text-center mb-5">
+                <span class="section-line"></span>
+                <h2 class="section-title section-title-muted section-title-responsive">
+                    Red de Profesionales<br class="d-md-none"> Aliados
+                </h2>
+                <span class="section-line"></span>
+            </div>
+
+            <!-- SLIDER DOCTORES -->
+            <div class="swiper doctors-slider mb-5">
+                <div class="swiper-wrapper">
+
+                    <!-- Card doctor -->
+                    <div class="swiper-slide">
+                        <a href="#" class="doctor-card-link">
+                            <article class="doctor-card">
+                                <div class="doctor-photo">
+                                    <img src="img/doctores/doctor_2.png" alt="Doctor">
+                                </div>
+                                <div class="doctor-info">
+                                    <span class="doctor-status">
+                                        <span class="status-dot"></span> Disponible
+                                    </span>
+                                    <h6 class="doctor-name">Dr. Richard James</h6>
+                                    <span class="doctor-role">Médico General</span>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+
+                    <!-- Segundo Doctor -->
+                    <div class="swiper-slide">
+                        <a href="#" class="doctor-card-link">
+                            <article class="doctor-card">
+                                <div class="doctor-photo">
+                                    <img src="img/doctores/doctor_3.png" alt="Doctor">
+                                </div>
+                                <div class="doctor-info">
+                                    <span class="doctor-status">
+                                        <span class="status-dot"></span> Disponible
+                                    </span>
+                                    <h6 class="doctor-name">Dra. Laura Gómez</h6>
+                                    <span class="doctor-role">Psicóloga Clínica</span>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+
+                    <!-- Tercer Doctor -->
+                    <div class="swiper-slide">
+                        <a href="#" class="doctor-card-link">
+                            <article class="doctor-card">
+                                <div class="doctor-photo">
+                                    <img src="img/doctores/doctor_4.png" alt="Doctor">
+                                </div>
+                                <div class="doctor-info">
+                                    <span class="doctor-status">
+                                        <span class="status-dot"></span> Disponible
+                                    </span>
+                                    <h6 class="doctor-name">Dr. Carlos Mendoza</h6>
+                                    <span class="doctor-role">Neurólogo</span>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+
+                    <!-- Cuarto Doctor -->
+                    <div class="swiper-slide">
+                        <a href="#" class="doctor-card-link">
+                            <article class="doctor-card">
+                                <div class="doctor-photo">
+                                    <img src="img/doctores/doctor_5.png" alt="Doctor">
+                                </div>
+                                <div class="doctor-info">
+                                    <span class="doctor-status">
+                                        <span class="status-dot"></span> Disponible
+                                    </span>
+                                    <h6 class="doctor-name">Dra. Ana Rodríguez</h6>
+                                    <span class="doctor-role">Psiquiatra</span>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+
+                    <!-- Quinto Doctor -->
+                    <div class="swiper-slide">
+                        <a href="#" class="doctor-card-link">
+                            <article class="doctor-card">
+                                <div class="doctor-photo">
+                                    <img src="img/doctores/doctor_6.png" alt="Doctor">
+                                </div>
+                                <div class="doctor-info">
+                                    <span class="doctor-status">
+                                        <span class="status-dot"></span> Disponible
+                                    </span>
+                                    <h6 class="doctor-name">Dr. Miguel Sánchez</h6>
+                                    <span class="doctor-role">Terapeuta Ocupacional</span>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CARD DETALLE DOCTOR -->
+            <div class="row align-items-start doctor-detail-card">
+
+                <!-- Imagen -->
+                <div class="col-lg-4">
+                    <div class="doctor-detail-photo">
+                        <img src="img/doctores/doctor_2.png" alt="Doctor">
+                    </div>
+                </div>
+
+                <!-- Información -->
+                <div class="col-lg-8 py-3">
+                    <h3 class="doctor-detail-name">
+                        Dr. Richard James
+                        <i class="bi bi-patch-check-fill verified-icon"></i>
+                    </h3>
+
+                    <div class="doctor-detail-meta">
+                        MBBS · Médico General
+                        <span class="experience-badge">2 Años</span>
+                    </div>
+
+                    <h6 class="mt-4">Acerca de</h6>
+                    <p class="doctor-detail-about">
+                        Profesional comprometido con la atención integral, enfocado en
+                        prevención, diagnóstico temprano y estrategias de tratamiento
+                        efectivas para pacientes con necesidades diversas.
+                    </p>
+
+                    <p class="doctor-price">
+                        Precio por consulta: <strong>$100 MXN</strong>
+                        <i class="bi bi-whatsapp whatsapp-icon"></i>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
 
     <!--Seccion de Videos y Proximos Eventos-->
     <section class="my-5">
@@ -1148,6 +1211,21 @@
 
 
     <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+        const doctorSwiper = new Swiper('.doctors-slider', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            grabCursor: true,
+            breakpoints: {
+                768: {
+                    slidesPerView: 3
+                },
+                992: {
+                    slidesPerView: 5
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
