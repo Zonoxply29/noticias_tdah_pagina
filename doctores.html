@@ -22,7 +22,7 @@
             <div class="col-lg-2 col-12 logo-section">
                 <div class="logo-mobile-wrapper">
                     <div class="logo-row">
-                        <a href="index.html">
+                        <a href="#">
                             <img src="img/logo_TDAH.PNG" alt="TDAH Adultos México" class="logo">
                         </a>
                         <!-- Toggle a la derecha del logo -->
@@ -64,7 +64,7 @@
                                         Noticias Por Región
                                     </a>
                                     <ul class="dropdown-menu region-dropdown">
-                                        <li><a class="dropdown-item" href="#">CDMX</a></li>
+                                        <li><a class="dropdown-item" href="index.html">CDMX</a></li>
                                         <li><a class="dropdown-item" href="#">Cuernavaca</a></li>
                                         <li><a class="dropdown-item" href="#">Guadalajara</a></li>
                                         <li><a class="dropdown-item" href="#">Monterrey</a></li>
@@ -76,7 +76,7 @@
                                 <li class="nav-item"><a class="nav-link" href="#">Eventos</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">Deportes</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">Testimonios</a></li>
-                                <li class="nav-item"><a class="nav-link region-link" href="doctores.html">Medicina</a></li>
+                                <li class="nav-item"><a class="nav-link region-link" href="#">Medicina</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">Negocios</a></li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Otros</a>
@@ -200,7 +200,7 @@
                                 <img src="img/medicina/noticia_medicina_2.png" class="img-fluid" alt="">
                             </article>
                         </div>
-                        
+
                         <!-- Anuncio que solo se ve en mobile - Después de la noticia superior -->
                         <div class="col-12 d-lg-none">
                             <div class="ad ad-horizontal">
@@ -260,17 +260,19 @@
             <div class="row g-4 news-health-layout">
 
                 <!-- COLUMNA IZQUIERDA ADS -->
-                <div class="col-lg-2 d-flex flex-column gap-4">
+                <div class="col-lg-2 d-flex flex-column gap-4 d-none d-lg-flex">
+                    <!-- Anuncio vertical grande - SOLO DESKTOP -->
                     <div class="ad ad-vertical-large">
                         <div class="ad-content">
                             <i class="bi bi-megaphone"></i>
                             <div class="ad-text">
-                                <h6>Espacio Publicitario</h6>
+                                <h6>Espacio Publicitario de la izquierda</h6>
                                 <p>Anuncia aquí tu negocio</p>
                             </div>
                             <span class="ad-size">160 x 600</span>
                         </div>
                     </div>
+                    <!-- Anuncio vertical pequeño - SOLO DESKTOP -->
                     <div class="ad ad-vertical-small">
                         <div class="ad-content">
                             <i class="bi bi-megaphone"></i>
@@ -281,6 +283,7 @@
                             <span class="ad-size">160 x 300</span>
                         </div>
                     </div>
+
                 </div>
 
                 <!-- COLUMNA CENTRAL NOTICIAS -->
@@ -309,6 +312,20 @@
                                 </a>
                                 <span class="news-meta">Hace 1 hora · Redacción Salud</span>
                             </article>
+                        </div>
+
+                        <!-- Anuncio que solo se ve en mobile -->
+                        <div class="col-12 d-lg-none">
+                            <div class="ad ad-horizontal">
+                                <div class="ad-content">
+                                    <i class="bi bi-megaphone"></i>
+                                    <div class="ad-text">
+                                        <h6>Espacio Publicitario</h6>
+                                        <p>Anuncia aquí tu negocio</p>
+                                    </div>
+                                    <span class="ad-size">320 x 100</span>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="col-md-6">
@@ -341,7 +358,19 @@
                                 <span class="news-meta">Hace 3 horas · Redacción</span>
                             </article>
                         </div>
-
+                        <!-- Anuncio que solo se ve en mobile -->
+                        <div class="col-12 d-lg-none">
+                            <div class="ad ad-horizontal">
+                                <div class="ad-content">
+                                    <i class="bi bi-megaphone"></i>
+                                    <div class="ad-text">
+                                        <h6>Espacio Publicitario</h6>
+                                        <p>Anuncia aquí tu negocio</p>
+                                    </div>
+                                    <span class="ad-size">320 x 100</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-md-6">
                             <article class="news-card-vertical">
                                 <a href="#" class="news-image-link">
@@ -362,7 +391,7 @@
                 </div>
 
                 <!-- COLUMNA DERECHA -->
-                <div class="col-lg-3 d-flex flex-column gap-4">
+                <div class="col-lg-3 d-flex flex-column gap-4 d-none d-lg-flex">
 
                     <!-- Header comunidad -->
                     <div class="section-header-left">
@@ -371,12 +400,12 @@
                         </span>
                     </div>
 
-                    <!-- Ads -->
+                    <!-- Ads solo desktop -->
                     <div class="ad ad-vertical-medium">
                         <div class="ad-content">
                             <i class="bi bi-megaphone"></i>
                             <div class="ad-text">
-                                <h6>Espacio Publicitario</h6>
+                                <h6> Espacio Publicitario</h6>
                                 <p>Anuncia aquí tu negocio</p>
                             </div>
                             <span class="ad-size">300 x 250</span>
@@ -402,11 +431,25 @@
                 </div>
 
             </div>
-
+            <!-- Anuncio SOLO MOBILE - Después de toda la sección de noticias -->
+            <div class="row d-lg-none mt-4">
+                <div class="col-12">
+                    <div class="ad ad-horizontal">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">320 x 100</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!--SECCION EVENTOS-->
+    <!--SECCION DOCTORES-->
     <section class="my-5">
         <div class="container">
 
@@ -418,6 +461,7 @@
                 </h2>
                 <span class="section-line"></span>
             </div>
+
 
             <!-- SLIDER DOCTORES -->
             <div class="swiper doctors-slider mb-5">
@@ -515,7 +559,21 @@
 
                 </div>
             </div>
-
+            <!-- Anuncio SOLO MOBILE - Debajo del título -->
+            <div class="row d-lg-none mb-4">
+                <div class="col-12">
+                    <div class="ad ad-horizontal">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">320 x 100</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- CARD DETALLE DOCTOR -->
             <div class="row align-items-start doctor-detail-card">
 
@@ -557,527 +615,355 @@
     </section>
 
 
-    <!--Seccion de Videos y Proximos Eventos-->
+    <!--Seccion Directorio de Doctores y anuncios a los costados-->
     <section class="my-5">
         <div class="container">
+
+            <div class="row g-4 mb-4">
+                <!-- Ad superior - Solo abarca hasta columna central -->
+                <div class="col-lg-9">
+                    <div class="ad ad-horizontal ad-large-height">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">728 x 150</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA - A la altura del anuncio -->
+                <div class="col-lg-3">
+                    <!-- Última Hora -->
+                    <div class="sidebar-box mb-4">
+                        <h6 class="sidebar-title">Última Hora !</h6>
+
+                        <article class="news-card news-small">
+                            <span class="badge badge-location">CDMX</span>
+
+                            <div class="news-overlay">
+                                <span class="news-meta">Redacción TDAH · 24 Feb 2025</span>
+                                <h2 class="news-title">
+                                    Nuevos avances médicos mejoran el abordaje del TDAH
+                                </h2>
+                            </div>
+
+                            <img src="img/medicina/noticia_medicina_1.png" class="img-fluid"
+                                alt="Equipo médico durante procedimiento clínico">
+                        </article>
+                    </div>
+                </div>
+            </div>
 
             <div class="row g-4">
-
-                <!-- ÚLTIMOS VIDEOS -->
-                <div class="col-lg-4">
-                    <div class="block-header mb-3">
-                        <span class="block-title video-title">ÚLTIMOS VIDEOS</span>
-                    </div>
-
-                    <div class="video-list">
-
-                        <article class="video-item">
-                            <div class="video-thumb">
-                                <img src="img/miniaturas_videos/1_miniatura_video.png" alt="Miniatura video">
-                                <i class="bi bi-play-fill"></i>
-                            </div>
-                            <div class="video-info">
-                                <h6 class="video-text">
-                                    5 Estrategias Efectivas para Mejorar la Concentración en Adultos con TDAH
-                                </h6>
-                                <span class="video-meta">TDAH México · Hace 2 días</span>
-                            </div>
-                        </article>
-
-                        <article class="video-item">
-                            <div class="video-thumb">
-                                <img src="img/miniaturas_videos/2_miniautura_video.png" alt="Miniatura video">
-                                <i class="bi bi-play-fill"></i>
-                            </div>
-                            <div class="video-info">
-                                <h6 class="video-text">
-                                    Testimonios Reales: Vivir con TDAH y Triunfar en la Vida Profesional
-                                </h6>
-                                <span class="video-meta">Comunidad TDAH · Hace 5 días</span>
-                            </div>
-                        </article>
-
-                        <article class="video-item">
-                            <div class="video-thumb">
-                                <img src="img/miniaturas_videos/3_miniatura_video.png" alt="Miniatura video">
-                                <i class="bi bi-play-fill"></i>
-                            </div>
-                            <div class="video-info">
-                                <h6 class="video-text">
-                                    Neurocientíficos Explican: ¿Qué Pasa en el Cerebro con TDAH?
-                                </h6>
-                                <span class="video-meta">Dr. Ramírez · Hace 1 semana</span>
-                            </div>
-                        </article>
-
-                        <article class="video-item">
-                            <div class="video-thumb">
-                                <img src="img/miniaturas_videos/4_miniatura_video.png" alt="Miniatura video">
-                                <i class="bi bi-play-fill"></i>
-                            </div>
-                            <div class="video-info">
-                                <h6 class="video-text">
-                                    Técnicas de Organización y Gestión del Tiempo para Personas con TDAH
-                                </h6>
-                                <span class="video-meta">TDAH Tips · Hace 3 días</span>
-                            </div>
-                        </article>
-
-                    </div>
-                </div>
-
-                <!-- PRÓXIMOS EVENTOS -->
-                <div class="col-lg-5">
-                    <div class="events-box">
-
-                        <h3 class="events-title">Próximos Eventos</h3>
-
-                        <div class="events-scroll">
-
-                            <article class="event-item">
-                                <div class="event-thumb">
-                                    <i class="bi bi-lightbulb"></i>
-                                </div>
-                                <div class="event-info">
-                                    <h6>Taller de Mindfulness para TDAH</h6>
-                                    <span><i class="bi bi-calendar"></i> Miércoles, 4 de Diciembre</span>
-                                    <span><i class="bi bi-clock"></i> 13:00 hrs</span>
-                                    <span><i class="bi bi-geo-alt"></i> La Roma, CDMX</span>
-                                </div>
-                            </article>
-
-                            <article class="event-item">
-                                <div class="event-thumb">
-                                    <i class="bi bi-person-video3"></i>
-                                </div>
-                                <div class="event-info">
-                                    <h6>Conferencia: Estrategias de Estudio</h6>
-                                    <span><i class="bi bi-calendar"></i> Jueves, 5 de Diciembre</span>
-                                    <span><i class="bi bi-clock"></i> 15:30 hrs</span>
-                                    <span><i class="bi bi-geo-alt"></i> Puebla, Puebla</span>
-                                </div>
-                            </article>
-
-                            <article class="event-item">
-                                <div class="event-thumb">
-                                    <i class="bi bi-people"></i>
-                                </div>
-                                <div class="event-info">
-                                    <h6>Grupo de Apoyo para Padres</h6>
-                                    <span><i class="bi bi-calendar"></i> Viernes, 6 de Diciembre</span>
-                                    <span><i class="bi bi-clock"></i> 10:45 hrs</span>
-                                    <span><i class="bi bi-geo-alt"></i> Monterrey, Nuevo León</span>
-                                </div>
-                            </article>
-
-                            <article class="event-item">
-                                <div class="event-thumb">
-                                    <i class="bi bi-laptop"></i>
-                                </div>
-                                <div class="event-info">
-                                    <h6>Webinar: TDAH en el Trabajo</h6>
-                                    <span><i class="bi bi-calendar"></i> Sábado, 7 de Diciembre</span>
-                                    <span><i class="bi bi-clock"></i> 11:00 hrs</span>
-                                    <span><i class="bi bi-geo-alt"></i> Online</span>
-                                </div>
-                            </article>
-
-                            <article class="event-item">
-                                <div class="event-thumb">
-                                    <i class="bi bi-journal-text"></i>
-                                </div>
-                                <div class="event-info">
-                                    <h6>Taller de Organización Personal</h6>
-                                    <span><i class="bi bi-calendar"></i> Domingo, 8 de Diciembre</span>
-                                    <span><i class="bi bi-clock"></i> 16:00 hrs</span>
-                                    <span><i class="bi bi-geo-alt"></i> Guadalajara, Jalisco</span>
-                                </div>
-                            </article>
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- CATEGORÍAS + RECOMENDACIONES -->
-                <div class="col-lg-3">
-                    <!-- 1 ANUNCIO DE ABAJO PERO EN MOBILE -->
-                    <div class="ad ad-medium mb-4 d-lg-none">
-                        <div class="ad-content">
-                            <i class="bi bi-megaphone"></i>
-                            <div class="ad-text">
-                                <h6>Espacio Publicitario</h6>
-                                <p>Anuncia aquí tu negocio</p>
-                            </div>
-                            <span class="ad-size">300 x 250</span>
-                        </div>
-                    </div>
-
-                    <!-- Categorías -->
-                    <div class="categories-box mb-4">
-                        <h6 class="sidebar-title">Categorías</h6>
-
-                        <ul class="category-list">
-                            <li>Medicina <span class="category-medicina">50</span></li>
-                            <li>Cultura <span class="category-cultura">55</span></li>
-                            <li>Deportes <span class="category-deportes">40</span></li>
-                            <li>Testimonios <span class="category-testimonios">10</span></li>
-                            <li>Sostenibilidad <span class="category-sostenibilidad">42</span></li>
-                            <li>Otros <span class="category-otros">5</span></li>
-                            <li>Noticias por Región <span class="category-region">67</span></li>
-                        </ul>
-                    </div>
-
-                    <!-- Recomendaciones -->
-                    <div class="recommend-box">
-                        <h6 class="sidebar-title">Recomendaciones</h6>
-                        <div class="recommend-content">
-                            <img src="img/imagen_recomendaciones.png" alt="">
-                            <p>
-                                Millones dependen de beneficios de emergencia por pandemia para renta,
-                                alimentos y medicina. Esa línea de vida podría desaparecer.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- 2 ANUNCIO DE ABAJO PERO EN MOBILE -->
-                    <div class="ad ad-medium mt-4 d-lg-none">
-                        <div class="ad-content">
-                            <i class="bi bi-megaphone"></i>
-                            <div class="ad-text">
-                                <h6>Espacio Publicitario</h6>
-                                <p>Anuncia aquí tu negocio</p>
-                            </div>
-                            <span class="ad-size">300 x 250</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- ADS INFERIORES -->
-            <div class="row mt-5 d-none d-lg-flex">
-                <div class="col-lg-6">
-                    <div class="ad ad-horizontal">
-                        <div class="ad-content">
-                            <i class="bi bi-megaphone"></i>
-                            <div class="ad-text">
-                                <h6>Espacio Publicitario</h6>
-                                <p>Anuncia aquí tu negocio</p>
-                            </div>
-                            <span class="ad-size">468 x 60</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="ad ad-horizontal">
-                        <div class="ad-content">
-                            <i class="bi bi-megaphone"></i>
-                            <div class="ad-text">
-                                <h6>Espacio Publicitario</h6>
-                                <p>Anuncia aquí tu negocio</p>
-                            </div>
-                            <span class="ad-size">468 x 60</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!--Seccion de Deportes -->
-    <section>
-        <div class="container my-5">
-
-            <div class="row">
-
-                <!-- Contenido principal -->
-                <div class="col-lg-9">
-
-                    <!-- Título sección -->
-                    <div class="section-header text-center mb-4">
-                        <span class="section-line"></span>
-                        <h2 class="section-title section-title-deportes">Deportes</h2>
-                        <span class="section-line"></span>
-                    </div>
-
-                    <!-- Grid noticias -->
-                    <div class="row g-4">
-
-                        <div class="col-12 col-md-4">
-                            <article class="news-item news-item-responsive">
-                                <img src="img/esgrima.png" class="img-fluid rounded" alt="">
-                                <div class="news-text">
-                                    <a href="#" class="news-title-link">
-                                        <h5 class="news-title">
-                                            Marta Martín, especializada en neurodivergencia: "El TDAH no está ligado al
-                                            fracaso escolar"
-                                        </h5>
-                                    </a>
-                                    <span class="news-meta news-meta-deportes">Hace 4 dias · Cadena Ser</span>
-                                </div>
-                            </article>
-                        </div>
-
-                        <div class="col-12 col-md-4">
-                            <article class="news-item news-item-responsive">
-                                <img src="img/corredora.png" class="img-fluid rounded" alt="">
-                                <div class="news-text">
-                                    <a href="#" class="news-title-link">
-                                        <h5 class="news-title">
-                                            "No es un problema, es un superpoder": el rap con el que un joven granadino
-                                            da
-                                            voz al Día Nacional del TDAH
-                                        </h5>
-                                    </a>
-                                    <span class="news-meta news-meta-deportes">Hace 2 horas · TDAH Noticias</span>
-                                </div>
-                            </article>
-                        </div>
-
-                        <div class="col-12 col-md-4">
-                            <article class="news-item news-item-responsive">
-                                <img src="img/nadador.png" class="img-fluid rounded" alt="">
-                                <div class="news-text">
-                                    <a href="" class="news-title-link">
-                                        <h5 class="news-title">
-                                            Algoritmos que moldean la percepción del TDAH: redes sociales, salud mental
-                                            y
-                                            cultura digital
-                                        </h5>
-                                    </a>
-                                    <span class="news-meta news-meta-deportes">Hace 2 semanas · Washington Post</span>
-                                </div>
-                            </article>
-                        </div>
-
-                    </div>
-
-                    <!-- Botón -->
-                    <div class="text-center mt-4">
-                        <a href="#" class="btn btn-more section-title-deportes">MAS NOTICIAS</a>
-                    </div>
-
-                    <!-- NUEVO ANUNCIO WIDE TALL - Solo ocupa el ancho de col-lg-9 -->
-                    <div class="row mt-4">
-                        <div class="col-12">
-                            <div class="ad ad-wide-tall">
-                                <div class="ad-content">
-                                    <i class="bi bi-megaphone"></i>
-                                    <div class="ad-text">
-                                        <h6>Espacio Publicitario</h6>
-                                        <p>Anuncia aquí tu negocio</p>
-                                    </div>
-                                    <span class="ad-size">970 x 200</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Sidebar - SOLO DESKTOP -->
-                <div class="col-lg-3 col-12 d-none d-lg-block">
-
-                    <!-- Anuncio reducido -->
-                    <div class="ad ad-medium mb-4">
-                        <div class="ad-content">
-                            <i class="bi bi-megaphone"></i>
-                            <div class="ad-text">
-                                <h6>Espacio Publicitario</h6>
-                                <p>Anuncia aquí tu negocio</p>
-                            </div>
-                            <span class="ad-size">300 x 250</span>
-                        </div>
-                    </div>
-
-                    <!-- Card basado en lo que te gusta -->
-                    <div class="recommend-box">
-                        <h6 class="sidebar-title">Basado en lo que te gusta</h6>
-                        <div class="recommend-content">
-                            <img src="img/natacion.png" alt="Destacado Deportes">
-                            <p>
-                                El deporte como terapia complementaria: descubre cómo el ejercicio regular puede ayudar
-                                a mejorar la concentración y reducir síntomas del TDAH.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Card basado en lo que te gusta - SOLO MOBILE (fuera del row principal) -->
-            <div class="row mt-4 d-lg-none justify-content-center">
-                <div class="col-12 col-md-8">
-                    <div class="recommend-box">
-                        <h6 class="sidebar-title">Basado en lo que te gusta</h6>
-                        <div class="recommend-content">
-                            <img src="img/natacion.png" alt="Destacado Deportes">
-                            <p>
-                                El deporte como terapia complementaria: descubre cómo el ejercicio regular puede
-                                ayudar
-                                a mejorar la concentración y reducir síntomas del TDAH.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Anuncio reducido - SOLO MOBILE (fuera del row principal) -->
-            <div class="row mt-4 d-lg-none justify-content-center">
-                <div class="col-12 col-md-8">
-                    <div class="ad ad-medium">
-                        <div class="ad-content">
-                            <i class="bi bi-megaphone"></i>
-                            <div class="ad-text">
-                                <h6>Espacio Publicitario</h6>
-                                <p>Anuncia aquí tu negocio</p>
-                            </div>
-                            <span class="ad-size">300 x 250</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-    <!--Seccion Medicina-->
-    <section class="my-5">
-        <div class="container">
-
-            <div class="row">
-
-                <!-- CONTENIDO NOTICIAS -->
-                <div class="col-lg-9">
-
-                    <!-- Header reutilizable -->
-                    <div class="section-header-left mb-4">
-                        <span class="section-label section-label-medicina">Medicina</span>
-                        <span class="section-line-full section-line-full-medicina"></span>
-                    </div>
-
-                    <div class="row g-4">
-
-                        <!-- Noticia principal -->
-                        <div class="col-lg-6">
-                            <article class="news-feature">
-                                <img src="img/medicina/noticia_medicina_1.png" class="img-fluid rounded mb-3" alt="">
-                                <span class="news-meta news-meta-events">Comunidad TDAH · 10 de Diciembre, 2025</span>
-                                <h4 class="news-title">
-                                    Detrás del Quirófano: Especialistas Comprometidos con la Salud Mental y Neurológica
-                                    en México
-                                </h4>
-                                <p class="news-excerpt">
-                                    Un equipo multidisciplinario de cirujanos y neurólogos trabaja en la vanguardia de
-                                    tratamientos innovadores para trastornos del neurodesarrollo.
-                                </p>
-                            </article>
-
-                            <div class="col-12 order-2 order-lg-3 d-lg-none">
-                                <div class="ad ad-medium mb-4">
-                                    <div class="ad-content">
-                                        <i class="bi bi-megaphone"></i>
-                                        <div class="ad-text">
-                                            <h6>Espacio Publicitario</h6>
-                                            <p>Anuncia aquí tu negocio</p>
-                                        </div>
-                                        <span class="ad-size">300 x 250</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- Listado -->
-                        <div class="col-lg-6">
-                            <div class="news-list-vertical">
-
-                                <article class="news-list-item">
-                                    <img src="img/eventos/noticia_small_evento.png" alt="">
-                                    <div>
-                                        <span class="news-meta news-meta-events">TDAH Guadalajara · 5 de Diciembre,
-                                            2025</span>
-                                        <h6 class="news-title-sm">
-                                            Taller de Estrategias para Padres: Cómo Apoyar a Niños con TDAH en Casa
-                                        </h6>
-                                    </div>
-                                </article>
-
-                                <article class="news-list-item">
-                                    <img src="img/eventos/noticia_small_evento_2.png" alt="">
-                                    <div>
-                                        <span class="news-meta news-meta-events">Red TDAH · 1 de Diciembre, 2025</span>
-                                        <h6 class="news-title-sm">
-                                            Webinar Gratuito: Mitos y Realidades del TDAH en la Edad Adulta
-                                        </h6>
-                                    </div>
-                                </article>
-
-                                <article class="news-list-item">
-                                    <img src="img/eventos/noticia_small_evento_3.png" alt="">
-                                    <div>
-                                        <span class="news-meta news-meta-events">TDAH Monterrey · 28 de Noviembre,
-                                            2025</span>
-                                        <h6 class="news-title-sm">
-                                            Conferencia Internacional: Nuevos Enfoques en el Tratamiento del TDAH
-                                        </h6>
-                                    </div>
-                                </article>
-
-                                <article class="news-list-item">
-                                    <img src="img/eventos/noticia_small_evento_4.png" alt="">
-                                    <div>
-                                        <span class="news-meta news-meta-events">Comunidad TDAH · 20 de Noviembre,
-                                            2025</span>
-                                        <h6 class="news-title-sm">
-                                            Grupo de Apoyo Virtual: Compartiendo Experiencias y Estrategias de Vida
-                                        </h6>
-                                    </div>
-                                </article>
-
-                                <article class="news-list-item">
-                                    <img src="img/eventos/noticia_small_evento_5.png" alt="">
-                                    <div>
-                                        <span class="news-meta news-meta-events">TDAH CDMX · 15 de Noviembre,
-                                            2025</span>
-                                        <h6 class="news-title-sm">
-                                            Capacitación para Docentes: Herramientas para el Aula Inclusiva
-                                        </h6>
-                                    </div>
-                                </article>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- SIDEBAR -->
+                <!-- COLUMNA IZQUIERDA -->
                 <div class="col-lg-3 d-none d-lg-block">
-                    <div class="ad ad-medium mb-4">
+
+                    <!-- FILTROS -->
+                    <div class="filter-box">
+                        <h6 class="filter-title">Filtrar por Especialidad</h6>
+
+                        <div class="filter-group">
+                            <label><input type="checkbox"> Psicólogo</label>
+                            <label><input type="checkbox"> Psiquiatra</label>
+                            <label><input type="checkbox"> Nutriólogo</label>
+                        </div>
+
+                        <h6 class="filter-title mt-4">Rango de Precios</h6>
+                        <div class="filter-group">
+                            <label><input type="radio" name="price"> $0 - $50</label>
+                            <label><input type="radio" name="price"> $51 - $100</label>
+                            <label><input type="radio" name="price"> $101 - $150</label>
+                            <label><input type="radio" name="price"> $151 - $200</label>
+                            <label><input type="radio" name="price"> $201+</label>
+                        </div>
+
+                        <div class="price-range mt-2">
+                            <input type="number" placeholder="mínimo">
+                            <input type="number" placeholder="máximo">
+                        </div>
+
+                        <h6 class="filter-title mt-4">Ubicación</h6>
+                        <div class="filter-group">
+                            <label><input type="checkbox"> CDMX</label>
+                            <label><input type="checkbox"> Monterrey</label>
+                            <label><input type="checkbox"> Guadalajara</label>
+                            <label><input type="checkbox"> Baja California</label>
+                            <label><input type="checkbox"> Cuernavaca</label>
+                            <label><input type="checkbox"> Cancún</label>
+                        </div>
+                    </div>
+
+                    <!-- Ad vertical large debajo de filtros -->
+                    <div class="ad ad-vertical-large mt-4">
                         <div class="ad-content">
                             <i class="bi bi-megaphone"></i>
                             <div class="ad-text">
                                 <h6>Espacio Publicitario</h6>
                                 <p>Anuncia aquí tu negocio</p>
                             </div>
-                            <span class="ad-size">300 x 250</span>
+                            <span class="ad-size">160 x 600</span>
                         </div>
                     </div>
-                    <a href="#" class="btn-shop w-100">
-                        CONECTA CON DOCTORES
-                        <img src="img/medicina/icon_medico.png" alt="Medico">
+
+                    <!-- Card de testimonios -->
+                    <div class="testimonial-box mt-2">
+                        <h6 class="sidebar-title-external">Testimonios</h6>
+                        <img src="img/imagen_recomendaciones.png" alt="Testimonio" class="testimonial-img">
+                        <p class="testimonial-text">
+                            "Millones dependen de beneficios de emergencia por pandemia para renta,
+                            alimentos y medicina. Esa línea de vida podría desaparecer."
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- COLUMNA CENTRAL -->
+                <div class="col-lg-6 col-12">
+
+                    <!-- Header -->
+                    <h5 class="section-title-simple mb-3">Ubica tu Doctor</h5>
+
+                    <!-- Selectores -->
+                    <div class="d-flex gap-2 mb-4">
+                        <select class="form-select">
+                            <option selected disabled>Especialidad</option>
+                            <option value="psicologo">Psicólogo</option>
+                            <option value="psiquiatra">Psiquiatra</option>
+                            <option value="neurologo">Neurólogo</option>
+                            <option value="nutriologo">Nutriólogo</option>
+                            <option value="terapeuta">Terapeuta Ocupacional</option>
+                        </select>
+
+                        <select class="form-select">
+                            <option selected disabled>Ubicación</option>
+                            <option value="cdmx">CDMX</option>
+                            <option value="monterrey">Monterrey</option>
+                            <option value="guadalajara">Guadalajara</option>
+                            <option value="bajacalifornia">Baja California</option>
+                            <option value="cuernavaca">Cuernavaca</option>
+                            <option value="cancun">Cancún</option>
+                        </select>
+
+                        <select class="form-select">
+                            <option selected disabled>Valoración</option>
+                            <option value="5">⭐⭐⭐⭐⭐</option>
+                            <option value="4">⭐⭐⭐⭐</option>
+                            <option value="3">⭐⭐⭐</option>
+                            <option value="2">⭐⭐</option>
+                            <option value="1">⭐</option>
+                        </select>
+
+                        <button class="btn btn-search">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+
+                    <!-- Primera Card de Directorio Doctores -->
+                    <article class="doctor-list-card">
+                        <img src="img/doctores/directorio_doctor_1.png" class="doctor-img" alt="">
+                        <div class="doctor-list-info">
+                            <div class="doctor-info-header">
+                                <h6>Dr. Beatrix Lin</h6>
+                                <span class="doctor-price">$180 / consulta</span>
+                            </div>
+
+                            <!-- Nueva sección de detalles -->
+                            <div class="doctor-details">
+                                <span class="doctor-detail-item">
+                                    <i class="bi bi-geo-alt-fill"></i> CDMX
+                                </span>
+                                <span class="doctor-detail-item">
+                                    <i class="bi bi-person-hearts"></i> Psicologo
+                                </span>
+                            </div>
+
+                            <p>Especializada en cuidado de la piel, tratamientos anti-edad y procedimientos
+                                dermatológicos avanzados.</p>
+
+                            <div class="doctor-info-footer">
+                                <div class="doctor-actions">
+                                    <button class="btn btn-agendar">Agendar Ahora</button>
+                                    <button class="btn btn-outline-secondary">Ver Perfil</button>
+                                </div>
+                                <span class="doctor-rating">⭐ 4.7</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Segunda Card de Directorio Doctores -->
+                    <article class="doctor-list-card">
+                        <img src="img/doctores/directorio_doctor_2.png" class="doctor-img" alt="">
+                        <div class="doctor-list-info">
+                            <div class="doctor-info-header">
+                                <h6>Dr. Beatrix Lin</h6>
+                                <span class="doctor-price">$180 / consulta</span>
+                            </div>
+
+                            <!-- Nueva sección de detalles -->
+                            <div class="doctor-details">
+                                <span class="doctor-detail-item">
+                                    <i class="bi bi-geo-alt-fill"></i> MTY
+                                </span>
+                                <span class="doctor-detail-item">
+                                    <i class="bi bi-person-hearts"></i> Nutriólogo
+                                </span>
+                            </div>
+
+                            <p>Especializada en cuidado de la piel, tratamientos anti-edad y procedimientos
+                                dermatológicos avanzados.</p>
+
+                            <div class="doctor-info-footer">
+                                <div class="doctor-actions">
+                                    <button class="btn btn-agendar">Agendar Ahora</button>
+                                    <button class="btn btn-outline-secondary">Ver Perfil</button>
+                                </div>
+                                <span class="doctor-rating">⭐ 4.7</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tercera Card de Directorio Doctores -->
+                    <article class="doctor-list-card">
+                        <img src="img/doctores/directorio_doctor_3.png" class="doctor-img" alt="">
+                        <div class="doctor-list-info">
+                            <div class="doctor-info-header">
+                                <h6>Dr. Beatrix Lin</h6>
+                                <span class="doctor-price">$180 / consulta</span>
+                            </div>
+
+                            <!-- Nueva sección de detalles -->
+                            <div class="doctor-details">
+                                <span class="doctor-detail-item">
+                                    <i class="bi bi-geo-alt-fill"></i> Guadalajara
+                                </span>
+                                <span class="doctor-detail-item">
+                                    <i class="bi bi-person-hearts"></i> Psiquiatra
+                                </span>
+                            </div>
+
+                            <p>Especializada en cuidado de la piel, tratamientos anti-edad y procedimientos
+                                dermatológicos avanzados.</p>
+
+                            <div class="doctor-info-footer">
+                                <div class="doctor-actions">
+                                    <button class="btn btn-agendar">Agendar Ahora</button>
+                                    <button class="btn btn-outline-secondary">Ver Perfil</button>
+                                </div>
+                                <span class="doctor-rating">⭐ 4.7</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Cuarta Card de Directorio Doctores -->
+                    <article class="doctor-list-card">
+                        <img src="img/doctores/directorio_doctor_2.png" class="doctor-img" alt="">
+                        <div class="doctor-list-info">
+                            <div class="doctor-info-header">
+                                <h6>Dr. Beatrix Lin</h6>
+                                <span class="doctor-price">$180 / consulta</span>
+                            </div>
+
+                            <!-- Nueva sección de detalles -->
+                            <div class="doctor-details">
+                                <span class="doctor-detail-item">
+                                    <i class="bi bi-geo-alt-fill"></i> Baja California
+                                </span>
+                                <span class="doctor-detail-item">
+                                    <i class="bi bi-person-hearts"></i> Nutriologo
+                                </span>
+                            </div>
+
+                            <p>Especializada en cuidado de la piel, tratamientos anti-edad y procedimientos
+                                dermatológicos avanzados.</p>
+
+                            <div class="doctor-info-footer">
+                                <div class="doctor-actions">
+                                    <button class="btn btn-agendar">Agendar Ahora</button>
+                                    <button class="btn btn-outline-secondary">Ver Perfil</button>
+                                </div>
+                                <span class="doctor-rating">⭐ 4.7</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Repetir cards  si se necesitan mas doctores-->
+
+                    <!-- Paginación -->
+                    <nav aria-label="Paginación de doctores" class="mt-4">
+                        <ul class="pagination-custom">
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-link pagination-prev" aria-label="Anterior">
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-link active">1</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-link">2</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-link">3</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-link">4</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-link">5</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-link pagination-next" aria-label="Siguiente">
+                                    <i class="bi bi-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- COLUMNA DERECHA CONTINUACIÓN -->
+                <div class="col-lg-3">
+
+                    <!-- Ad vertical large -->
+                    <div class="ad ad-vertical-large mb-4">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">160 x 600</span>
+                        </div>
+                    </div>
+
+                    <!-- Botón tienda - Versión vertical alargada -->
+                    <a href="#" class="btn-store btn-store-vertical-tall">
+                        <img src="img/logo_sale_tienda.png" alt="Tienda" class="btn-store-icon">
+                        <span>CONOCE LA TIENDA</span>
                     </a>
+
+                    <!-- Título fuera de la card -->
+                    <h6 class="sidebar-title-external">Testimonios</h6>
+
+                    <!-- Card de testimonios -->
+                    <div class="testimonial-box">
+                        <img src="img/imagen_recomendaciones.png" alt="Testimonio" class="testimonial-img">
+                        <p class="testimonial-text">
+                            "Millones dependen de beneficios de emergencia por pandemia para renta,
+                            alimentos y medicina. Esa línea de vida podría desaparecer."
+                        </p>
+                    </div>
+
                 </div>
 
             </div>
 
-            <!-- AD HORIZONTAL (mobile only) - Primer anuncio -->
-            <div class="row mt-4 d-lg-none">
+            <!-- Anuncio SOLO MOBILE - Fuera del grid, después de toda la sección -->
+            <div class="row d-lg-none mt-4">
                 <div class="col-12">
-                    <div class="ad ad-horizontal mb-4">
+                    <div class="ad ad-horizontal">
                         <div class="ad-content">
                             <i class="bi bi-megaphone"></i>
                             <div class="ad-text">
@@ -1090,18 +976,9 @@
                 </div>
             </div>
 
-            <!-- Boton de Conoce la tienda - Después del anuncio -->
-            <div class="row d-lg-none">
-                <div class="col-12">
-                    <a href="#" class="btn-shop w-100">
-                        CONECTA CON DOCTORES
-                        <img src="img/medicina/icon_medico.png" alt="Medico">
-                    </a>
-                </div>
-            </div>
-
         </div>
     </section>
+
     <!--Seccion de Newsletter final y anuncios-->
     <section class="subscribe-section">
         <div class="container">
@@ -1136,10 +1013,11 @@
 
         </div>
     </section>
+    <!-- Publicidad inferior - Anuncio único de ancho completo -->
     <section class="my-5">
         <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-6">
+            <div class="row">
+                <div class="col-12">
                     <div class="ad ad-horizontal">
                         <div class="ad-content">
                             <i class="bi bi-megaphone"></i>
@@ -1147,19 +1025,7 @@
                                 <h6>Espacio Publicitario</h6>
                                 <p>Anuncia aquí tu negocio</p>
                             </div>
-                            <span class="ad-size">468 x 60</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="ad ad-horizontal">
-                        <div class="ad-content">
-                            <i class="bi bi-megaphone"></i>
-                            <div class="ad-text">
-                                <h6>Espacio Publicitario</h6>
-                                <p>Anuncia aquí tu negocio</p>
-                            </div>
-                            <span class="ad-size">468 x 60</span>
+                            <span class="ad-size">728 x 90</span>
                         </div>
                     </div>
                 </div>
