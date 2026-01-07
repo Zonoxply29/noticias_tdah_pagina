@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap');
 
 @font-face {
     font-family: "Gotham_Black";
@@ -2004,6 +2006,12 @@ body>.container-fluid:first-child {
     font-weight: 400;
 }
 
+/* Variante de color alternativo - Solo cambia el color de fondo */
+.section-title-events {
+    background-color: #F0E6AE;
+    color: #000;
+}
+
 .section-line {
     flex: 1;
     height: 3px;
@@ -2798,5 +2806,462 @@ body>.container-fluid:first-child {
 @media (max-width: 991px) {
     .doctor-list-card {
         flex-direction: column;
+    }
+}
+
+/*************** SECCION EVENTOS **************/
+/* ===== Event Cards ===== */
+.event-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+}
+
+/* ===== CONTENEDOR DE IMAGEN ===== */
+.section-title-franklin {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 800;
+}
+
+.event-image {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-bottom: 7px;
+    border-bottom: 3px solid #000;
+}
+
+.event-card-large .event-image img {
+    height: 16rem;
+    object-fit: cover;
+}
+
+.event-image img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+/* ===== BADGE DENTRO DE LA IMAGEN ===== */
+.event-badge {
+    font-family: 'Libre Franklin', sans-serif;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #00acc1;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== TEXTO ===== */
+.event-title {
+    font-family: 'Domine', serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.event-meta {
+    font-family: 'Domine', serif;
+    font-size: 0.75rem;
+    color: #555;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.event-meta {
+    font-family: 'Domine', serif;
+    font-size: 1rem;
+    color: #555;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.event-meta span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.event-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+/* ===== BOTONES ===== */
+.btn-event {
+    width: 100%;
+    padding: 10px;
+    background-color: #FE9518;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Gotham', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn-event:hover {
+    background-color: #0097a7;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 172, 193, 0.3);
+}
+
+.event-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+}
+
+/* ===== CONTENEDOR DE IMAGEN ===== */
+.event-image {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    border-bottom: 4px solid #e0e0e0;
+}
+
+.event-card-large .event-image img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.event-image img {
+    width: 100%;
+    height: 17rem;
+    border-radius: 8px;
+    display: block;
+    object-fit: cover;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar-title {
+    font-family: 'Gotham', sans-serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .event-card-large img {
+        height: auto;
+    }
+}
+
+/************* SECCION FERIAS Y MAS **********/
+
+/* Título principal */
+.ferias-title {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Tabs de días */
+.day-tabs {
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.day-tab {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.day-tab.active {
+    color: #00acc1;
+}
+
+.day-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #00acc1;
+}
+
+.day-tab:hover {
+    color: #00acc1;
+}
+
+/* Cards de actividades */
+.activity-item {
+    transition: background-color 0.3s ease;
+    border-bottom: 3px solid #e0e0e0 !important;
+}
+
+.activity-item:hover {
+    background-color: #f8f9fa;
+}
+
+.activity-item:last-child {
+    border-bottom: none !important;
+}
+.activity-img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Título de actividad */
+.activity-title {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* Metadata de actividad */
+.activity-meta {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 400;
+    font-size: 0.98rem;
+    color: #666;
+}
+
+.activity-meta span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Botón de reserva */
+.btn-activity {
+    background-color: #FE9518;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-family: 'Gotham', sans-serif;
+    font-weight: 700;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-activity:hover {
+    background-color: #0097a7;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 172, 193, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .activity-title {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .activity-meta {
+        font-size: 0.75rem;
+    }
+    
+    .day-tab {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+    
+    /* Imagen más grande en mobile */
+    .activity-item .col-3 {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+    
+    .activity-item .col-9 {
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+    
+    .activity-img {
+        height: 120px;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 768px) {
+    .activity-title {
+        padding-right: 15px;
+    }
+    
+    .activity-meta {
+        align-items: center;
+        height: 100%;
+    }
+
+}
+/**** SECCION EVENTOS PASADOS ****/
+/* Título de la sección */
+.past-events-title {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* Carousel de eventos pasados */
+.past-events-carousel {
+    position: relative;
+}
+
+.past-events-carousel .carousel-inner {
+    padding: 20px 0;
+}
+
+/* Cards de eventos pasados */
+.past-event-card {
+    padding: 15px;
+    position: relative;
+    border-right: 3px solid #0397B1;
+    transition: transform 0.3s ease;
+}
+
+.past-event-card:last-child {
+    border-right: none;
+}
+
+.past-event-card:hover {
+    transform: translateY(-5px);
+}
+
+.past-event-card img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.past-event-card h6 {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+
+.past-event-card p {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* Controles del carousel con Swiper */
+.past-events-carousel .carousel-control-prev,
+.past-events-carousel .carousel-control-next {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #0397B1;
+    border-radius: 50%;
+    opacity: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.past-events-carousel .carousel-control-prev {
+    left: -40px;
+}
+
+.past-events-carousel .carousel-control-next {
+    right: -40px;
+}
+
+.past-events-carousel .carousel-control-prev:hover,
+.past-events-carousel .carousel-control-next:hover {
+    background-color: #027a94;
+}
+
+.past-events-carousel .carousel-control-prev::after,
+.past-events-carousel .carousel-control-next::after {
+    font-size: 20px;
+    color: white;
+}
+
+/* Ocultar botones cuando están deshabilitados */
+.past-events-carousel .swiper-button-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .past-event-card {
+        border-right: none;
+        border-bottom: 3px solid #0397B1;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+    
+    .past-event-card:last-child {
+        border-bottom: none;
+    }
+    
+    .past-event-card img {
+        height: 250px;
+    }
+    
+    .past-events-carousel .carousel-control-prev,
+    .past-events-carousel .carousel-control-next {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .past-events-carousel .carousel-control-prev {
+        left: 10px;
+    }
+    
+    .past-events-carousel .carousel-control-next {
+        right: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .past-event-card img {
+        height: 280px;
     }
 }
