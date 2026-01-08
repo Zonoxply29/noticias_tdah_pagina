@@ -82,7 +82,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item"><a class="nav-link" href="#">Deportes</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Testimonios</a></li>
+                                <li class="nav-item"><a class="nav-link" href="testimonios.html">Testimonios</a></li>
                                 <li class="nav-item"><a class="nav-link" href="doctores.html">Medicina</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">Negocios</a></li>
                                 <li class="nav-item dropdown">
@@ -1008,7 +1008,7 @@
                         <li><a href="#">Cultura</a></li>
                         <li><a href="#">Eventos</a></li>
                         <p class="footer-copyright">
-                            © 2025 TDAH Adultos México. Todos los derechos reservados.
+                            © <span id="currentYear"></span> TDAH Adultos México. Todos los derechos reservados.
                         </p>
                     </ul>
 
@@ -1032,20 +1032,9 @@
 
     <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
     <script>
-        const doctorSwiper = new Swiper('.doctors-slider', {
-            slidesPerView: 'auto',
-            spaceBetween: 20,
-            grabCursor: true,
-            breakpoints: {
-                768: {
-                    slidesPerView: 3
-                },
-                992: {
-                    slidesPerView: 5
-                }
-            }
-        });
-
+        // Actualizar año automáticamente en el footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
         // Swiper para eventos pasados
         const pastEventsSwiper = new Swiper('.pastEventsSwiper', {
             slidesPerView: 1,

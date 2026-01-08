@@ -73,7 +73,7 @@
                                 <li class="nav-item"><a class="nav-link" href="#">Cultura</a></li>
                                 <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">Deportes</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Testimonios</a></li>
+                                <li class="nav-item"><a class="nav-link" href="testimonios.html">Testimonios</a></li>
                                 <li class="nav-item"><a class="nav-link" href="doctores.html">Medicina</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">Negocios</a></li>
                                 <li class="nav-item dropdown">
@@ -1125,7 +1125,7 @@
                         <li><a href="#">Cultura</a></li>
                         <li><a href="#">Eventos</a></li>
                         <p class="footer-copyright">
-                            © 2025 TDAH Adultos México. Todos los derechos reservados.
+                            © <span id="currentYear"></span> TDAH Adultos México. Todos los derechos reservados.
                         </p>
                     </ul>
 
@@ -1145,9 +1145,11 @@
 
         </div>
     </footer>
-
-
     <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+        // Actualizar año automáticamente en el footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
