@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Richard James | Medico General</title>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Header con Bootstrap Grid -->
+    <div class="container-fluid">
+        <div class="row header-container">
+
+            <!-- Logo (columna izquierda) -->
+            <div class="col-lg-2 col-12 logo-section">
+                <div class="logo-mobile-wrapper">
+                    <div class="logo-row">
+                        <a href="../index.html">
+                            <img src="../img/logo_TDAH.PNG" alt="TDAH Adultos México" class="logo">
+                        </a>
+                        <!-- Toggle a la derecha del logo -->
+                        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mainNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <!-- Iconos Mobile debajo del logo -->
+                    <div class="navbar-icons-mobile d-lg-none text-center">
+                        <i class="bi bi-facebook icon-hover"></i>
+                        <i class="bi bi-instagram icon-hover"></i>
+                        <i class="bi bi-youtube icon-hover"></i>
+                        <i class="bi bi-search icon-hover"></i>
+                        <i class="bi bi-cart icon-hover"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navbar Section (columna derecha) -->
+            <div class="col-lg-10 col-12 navbar-section">
+
+                <!-- Barra fecha -->
+                <div class="date-bar">
+                    <span>Viernes, 24 de Febrero, 2025</span>
+                </div>
+
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light main-navbar">
+                    <div class="container-fluid">
+
+                        <!-- Contenido -->
+                        <div class="collapse navbar-collapse" id="mainNavbar">
+
+                            <!-- Menú -->
+                            <ul class="navbar-nav me-auto gap-lg-3">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                        Noticias Por Región
+                                    </a>
+                                    <ul class="dropdown-menu region-dropdown">
+                                        <li><a class="dropdown-item" href="index.html">CDMX</a></li>
+                                        <li><a class="dropdown-item" href="#">Cuernavaca</a></li>
+                                        <li><a class="dropdown-item" href="#">Guadalajara</a></li>
+                                        <li><a class="dropdown-item" href="#">Monterrey</a></li>
+                                        <li><a class="dropdown-item" href="#">Cancún</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item"><a class="nav-link" href="#">Cultura</a></li>
+                                <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Deportes</a></li>
+                                <li class="nav-item"><a class="nav-link" href="testimonios.html">Testimonios</a></li>
+                                <li class="nav-item"><a class="nav-link region-link" href="#">Medicina</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Negocios</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Otros</a>
+                                    <ul class="dropdown-menu region-dropdown">
+                                        <li><a class="dropdown-item" href="#">Tienda</a></li>
+                                        <li><a class="dropdown-item" href="#">Opinion</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <!-- Iconos -->
+                            <div class="navbar-icons d-none d-lg-flex">
+                                <i class="bi bi-facebook icon-hover"></i>
+                                <i class="bi bi-instagram icon-hover"></i>
+                                <i class="bi bi-youtube icon-hover"></i>
+                                <i class="bi bi-search icon-hover"></i>
+                                <i class="bi bi-cart icon-hover"></i>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Perfil de Doctor--->
+    <section class="doctor-profile-section py-5">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- COLUMNA IZQUIERDA -->
+                <div class="col-12 col-lg-4">
+
+                    <!-- VIDEO PRINCIPAL -->
+                    <div class="main-video-card mb-4">
+                        <img src="../img/doctores/video_testimonios_doctor.png" alt="Video principal">
+                        <div class="video-overlay">
+                            <i class="bi bi-youtube"></i>
+                        </div>
+                    </div>
+
+                    <!-- ÚLTIMOS VIDEOS (RECICLADO) -->
+                    <div class="block-header mb-3">
+                        <span class="block-title video-title">ÚLTIMOS VIDEOS</span>
+                    </div>
+
+                    <div class="video-list">
+
+                        <article class="video-item">
+                            <div class="video-thumb">
+                                <img src="img/miniaturas_videos/1_miniatura_video.png" alt="">
+                                <i class="bi bi-play-fill"></i>
+                            </div>
+                            <div class="video-info">
+                                <h6 class="video-text">
+                                    5 Estrategias Efectivas para Mejorar la Concentración en Adultos con TDAH
+                                </h6>
+                                <span class="video-meta">TDAH México · Hace 2 días</span>
+                            </div>
+                        </article>
+
+                        <article class="video-item">
+                            <div class="video-thumb">
+                                <img src="img/miniaturas_videos/2_miniautura_video.png" alt="">
+                                <i class="bi bi-play-fill"></i>
+                            </div>
+                            <div class="video-info">
+                                <h6 class="video-text">
+                                    Testimonios Reales: Vivir con TDAH y Triunfar en la Vida Profesional
+                                </h6>
+                                <span class="video-meta">Comunidad TDAH · Hace 5 días</span>
+                            </div>
+                        </article>
+
+                        <article class="video-item">
+                            <div class="video-thumb">
+                                <img src="img/miniaturas_videos/3_miniatura_video.png" alt="">
+                                <i class="bi bi-play-fill"></i>
+                            </div>
+                            <div class="video-info">
+                                <h6 class="video-text">
+                                    Neurocientíficos Explican: ¿Qué Pasa en el Cerebro con TDAH?
+                                </h6>
+                                <span class="video-meta">Dr. Ramírez · Hace 1 semana</span>
+                            </div>
+                        </article>
+
+                        <article class="video-item">
+                            <div class="video-thumb">
+                                <img src="img/miniaturas_videos/4_miniatura_video.png" alt="">
+                                <i class="bi bi-play-fill"></i>
+                            </div>
+                            <div class="video-info">
+                                <h6 class="video-text">
+                                    Técnicas de Organización y Gestión del Tiempo para Personas con TDAH
+                                </h6>
+                                <span class="video-meta">TDAH Tips · Hace 3 días</span>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA -->
+                <div class="col-12 col-lg-8">
+
+                    <div class="doctor-card">
+
+                        <!-- FONDO -->
+                        <div class="doctor-cover">
+                            <img src="../img/doctores/img_fondo_perfil.png" alt="">
+                        </div>
+
+                        <!-- PERFIL -->
+                        <div class="doctor-info text-center">
+                            <img class="doctor-avatar doctor-avatar-img-offset" src="../img/doctores/img_doctor_perfil.png" alt="">
+
+                            <h3 class="doctor-name">
+                                Dr. Julio Cruz
+                                <i class="bi bi-patch-check-fill"></i>
+                            </h3>
+
+                            <h4 class="doctor-section-title">Sobre el Doctor</h4>
+
+                            <p class="doctor-description">
+                                Lorem ipsum dolor sit amet consectetur. Eget vulputate sociis sit urna sit aliquet.
+                                Vivamus facilisis diam libero dolor volutpat diam eu. Quis a id posuere etiam at
+                                enim vivamus. Urna nisi malesuada libero enim ornare in viverra. Nibh commodo quis
+                                tellus aliquet nibh tristique lobortis id.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--SECCION ULTIMAS NOTICIAS Y ADS-->
+    <section class="my-5">
+        <div class="container">
+
+            <div class="row g-4 news-health-layout">
+
+                <!-- COLUMNA IZQUIERDA ADS -->
+                <div class="col-lg-2 d-flex flex-column gap-4 d-none d-lg-flex">
+                    <!-- Anuncio vertical grande - SOLO DESKTOP -->
+                    <div class="ad ad-vertical-large">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario de la izquierda</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">160 x 600</span>
+                        </div>
+                    </div>
+                    <!-- Anuncio vertical pequeño - SOLO DESKTOP -->
+                    <div class="ad ad-vertical-small">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">160 x 300</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- COLUMNA CENTRAL NOTICIAS -->
+                <div class="col-lg-7">
+
+                    <!-- Header -->
+                    <div class="section-header-left mb-4">
+                        <span class="section-label section-label-primary">
+                            Últimas Noticias
+                        </span>
+                    </div>
+
+                    <!-- Grid noticias -->
+                    <div class="row g-4">
+
+                        <div class="col-md-6">
+                            <article class="news-card-vertical">
+                                <a href="#" class="news-image-link">
+                                    <img src="../img/medicina/ultimas_noticias_1.png" class="img-fluid rounded mb-2"
+                                        alt="Tratamiento TDAH">
+                                </a>
+                                <a href="#" class="news-title-link">
+                                    <h6 class="news-title-sm">
+                                        Nuevos enfoques terapéuticos revolucionan el tratamiento del TDAH en adultos
+                                    </h6>
+                                </a>
+                                <span class="news-meta">Hace 1 hora · Redacción Salud</span>
+                            </article>
+                        </div>
+
+                        <!-- Anuncio que solo se ve en mobile -->
+                        <div class="col-12 d-lg-none">
+                            <div class="ad ad-horizontal">
+                                <div class="ad-content">
+                                    <i class="bi bi-megaphone"></i>
+                                    <div class="ad-text">
+                                        <h6>Espacio Publicitario</h6>
+                                        <p>Anuncia aquí tu negocio</p>
+                                    </div>
+                                    <span class="ad-size">320 x 100</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <article class="news-card-vertical">
+                                <a href="#" class="news-image-link">
+                                    <img src="../img/medicina/ultimas_noticias_2.jpg" class="img-fluid rounded mb-2"
+                                        alt="Actividad física">
+                                </a>
+                                <a href="#" class="news-title-link">
+                                    <h6 class="news-title-sm">
+                                        Ejercicio físico: Un aliado clave en el manejo del TDAH según estudios recientes
+                                    </h6>
+                                </a>
+                                <span class="news-meta">Hace 2 horas · Especial Salud</span>
+                            </article>
+                        </div>
+
+                        <div class="col-md-6">
+                            <article class="news-card-vertical">
+                                <a href="#" class="news-image-link">
+                                    <img src="../img/medicina/ultimas_noticias_3.jpg" class="img-fluid rounded mb-2"
+                                        alt="Terapia integral">
+                                </a>
+                                <a href="#" class="news-title-link">
+                                    <h6 class="news-title-sm">
+                                        Terapias integrales: Combinando medicina y mindfulness para mejorar calidad de
+                                        vida
+                                    </h6>
+                                </a>
+                                <span class="news-meta">Hace 3 horas · Redacción</span>
+                            </article>
+                        </div>
+                        <!-- Anuncio que solo se ve en mobile -->
+                        <div class="col-12 d-lg-none">
+                            <div class="ad ad-horizontal">
+                                <div class="ad-content">
+                                    <i class="bi bi-megaphone"></i>
+                                    <div class="ad-text">
+                                        <h6>Espacio Publicitario</h6>
+                                        <p>Anuncia aquí tu negocio</p>
+                                    </div>
+                                    <span class="ad-size">320 x 100</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <article class="news-card-vertical">
+                                <a href="#" class="news-image-link">
+                                    <img src="../img/medicina/ultimas_noticias_4.jpg" class="img-fluid rounded mb-2"
+                                        alt="Tecnología salud">
+                                </a>
+                                <a href="#" class="news-title-link">
+                                    <h6 class="news-title-sm">
+                                        Apps y herramientas digitales facilitan la organización diaria de personas con
+                                        TDAH
+                                    </h6>
+                                </a>
+                                <span class="news-meta">Hace 4 horas · Salud Digital</span>
+                            </article>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA -->
+                <div class="col-lg-3 d-flex flex-column gap-4 d-none d-lg-flex">
+
+                    <!-- Header comunidad -->
+                    <div class="section-header-left">
+                        <span class="section-label section-label-secondary">
+                            Nuestra Comunidad
+                        </span>
+                    </div>
+
+                    <!-- Ads solo desktop -->
+                    <div class="ad ad-vertical-medium">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6> Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">300 x 250</span>
+                        </div>
+                    </div>
+                    <div class="ad ad-vertical-medium">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">300 x 250</span>
+                        </div>
+                    </div>
+
+                    <!-- Botón tienda -->
+                    <a href="#" class="btn btn-store">
+                        <img src="../img/logo_sale_tienda.png" alt="Tienda" class="btn-store-icon">
+                        CONOCE LA TIENDA
+                    </a>
+
+                </div>
+
+            </div>
+            <!-- Anuncio SOLO MOBILE - Después de toda la sección de noticias -->
+            <div class="row d-lg-none mt-4">
+                <div class="col-12">
+                    <div class="ad ad-horizontal">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">320 x 100</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Seccion de Newsletter final y anuncios-->
+    <section class="subscribe-section">
+        <div class="container">
+
+            <div class="row align-items-center g-4">
+
+                <!-- Texto -->
+                <div class="col-lg-6">
+                    <h2 class="subscribe-title">
+                        Recibe las Últimas<br>
+                        Noticias y Eventos
+                    </h2>
+                </div>
+
+                <!-- Descripción + formulario -->
+                <div class="col-lg-6">
+                    <p class="subscribe-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                    </p>
+
+                    <form class="subscribe-form">
+                        <input type="text" class="form-control" placeholder="Tu nombre">
+                        <input type="email" class="form-control" placeholder="Ingresa tu correo electrónico">
+                        <button type="submit" class="btn btn-subscribe-main">
+                            Suscríbete
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- Publicidad inferior - Anuncio único de ancho completo -->
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="ad ad-horizontal">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">728 x 90</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <!-- Logo -->
+                <div class="col-lg-3 text-center text-lg-start mb-3 mb-lg-0">
+                    <img src="../img/logo_TDAH.PNG" alt="TDAH Adultos México" class="footer-logo">
+                </div>
+
+                <!-- Navegación -->
+                <div class="col-lg-6 text-center">
+                    <h5 class="footer-title">¿Quiénes Somos?</h5>
+                    <ul class="footer-menu">
+                        <li><a href="#">Tienda</a></li>
+                        <li><a href="#">Testimonios</a></li>
+                        <li><a href="#">Deportes</a></li>
+                        <li><a href="#">Negocios</a></li>
+                        <li><a href="#">Medicina</a></li>
+                        <li><a href="#">Cultura</a></li>
+                        <li><a href="#">Eventos</a></li>
+                        <p class="footer-copyright">
+                            © <span id="currentYear"></span> TDAH Adultos México. Todos los derechos reservados.
+                        </p>
+                    </ul>
+
+                </div>
+
+                <!-- Redes -->
+                <div class="col-lg-3 text-center text-lg-end">
+                    <p class="footer-social-title">Síguenos en nuestras<br>redes sociales</p>
+                    <div class="footer-social">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-youtube"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+        // Actualizar año automáticamente en el footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const doctorSwiper = new Swiper('.doctors-slider', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            grabCursor: true,
+            breakpoints: {
+                768: {
+                    slidesPerView: 3
+                },
+                992: {
+                    slidesPerView: 5
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>
