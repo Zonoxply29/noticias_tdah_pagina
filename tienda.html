@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda | TDAH</title>
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Header con Bootstrap Grid -->
+    <div class="container-fluid">
+        <div class="row header-container">
+
+            <!-- Logo (columna izquierda) -->
+            <div class="col-lg-2 col-12 logo-section">
+                <div class="logo-mobile-wrapper">
+                    <div class="logo-row">
+                        <a href="index.html">
+                            <img src="img/logo_TDAH.PNG" alt="TDAH Adultos México" class="logo">
+                        </a>
+                        <!-- Toggle a la derecha del logo -->
+                        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mainNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <!-- Iconos Mobile debajo del logo -->
+                    <div class="navbar-icons-mobile d-lg-none text-center">
+                        <i class="bi bi-facebook icon-hover"></i>
+                        <i class="bi bi-instagram icon-hover"></i>
+                        <i class="bi bi-youtube icon-hover"></i>
+                        <i class="bi bi-search icon-hover"></i>
+                        <i class="bi bi-cart icon-hover"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navbar Section (columna derecha) -->
+            <div class="col-lg-10 col-12 navbar-section">
+
+                <!-- Barra fecha -->
+                <div class="date-bar">
+                    <span>Viernes, 24 de Febrero, 2025</span>
+                </div>
+
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light main-navbar">
+                    <div class="container-fluid">
+
+                        <!-- Contenido -->
+                        <div class="collapse navbar-collapse" id="mainNavbar">
+
+                            <!-- Menú -->
+                            <ul class="navbar-nav me-auto gap-lg-3">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                        Noticias Por Región
+                                    </a>
+                                    <ul class="dropdown-menu region-dropdown">
+                                        <li><a class="dropdown-item" href="index.html">CDMX</a></li>
+                                        <li><a class="dropdown-item" href="#">Cuernavaca</a></li>
+                                        <li><a class="dropdown-item" href="#">Guadalajara</a></li>
+                                        <li><a class="dropdown-item" href="#">Monterrey</a></li>
+                                        <li><a class="dropdown-item" href="#">Cancún</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item"><a class="nav-link" href="#">Cultura</a></li>
+                                <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Deportes</a></li>
+                                <li class="nav-item"><a class="nav-link" href="testimonios.html">Testimonios</a></li>
+                                <li class="nav-item"><a class="nav-link" href="doctores.html">Medicina</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Negocios</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle region-link" href="#"
+                                        data-bs-toggle="dropdown">Otros</a>
+                                    <ul class="dropdown-menu region-dropdown">
+                                        <li><a class="dropdown-item" href="tienda.html">Tienda</a></li>
+                                        <li><a class="dropdown-item" href="#">Negocios / Finanzas</a></li>
+                                        <li><a class="dropdown-item" href="#">Tecnologias</a></li>
+                                        <li><a class="dropdown-item" href="#">Consejos TDAH</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <!-- Iconos -->
+                            <div class="navbar-icons d-none d-lg-flex">
+                                <i class="bi bi-facebook icon-hover"></i>
+                                <i class="bi bi-instagram icon-hover"></i>
+                                <i class="bi bi-youtube icon-hover"></i>
+                                <i class="bi bi-search icon-hover"></i>
+                                <i class="bi bi-cart icon-hover"></i>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+    <!-- Encabezado de la Seccion-->
+    <section class="section-category">
+        <div class="container">
+
+            <!-- Título de categoría -->
+            <div class="section-header text-center my-4">
+                <span class="section-line"></span>
+                <h2 class="section-title section-title-tienda">Tienda</h2>
+                <span class="section-line"></span>
+            </div>
+
+            <!-- Anuncio que solo se ve en mobile - Después del título -->
+            <div class="row d-lg-none mb-4">
+                <div class="col-12">
+                    <div class="ad ad-horizontal">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">320 x 100</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ads superiores - SOLO DESKTOP -->
+            <div class="row g-3 mb-4 d-none d-lg-flex">
+                <div class="col-lg-6">
+                    <div class="ad ad-horizontal">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">468 x 60</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ad ad-horizontal">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">468 x 60</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="shop-section container-fluid">
+        <div class="row">
+
+            <!-- FILTROS -->
+            <aside class="col-lg-3 col-xl-2 d-none d-lg-block filters-sidebar">
+                <div class="filters-wrapper">
+                    <h6 class="filters-title">
+                        <i class="bi bi-list"></i> Filtros
+                    </h6>
+
+                    <!-- Tipo de Artículo -->
+                    <div class="filter-group">
+                        <h6 class="filter-heading">Tipo de Artículo</h6>
+                        <ul class="filter-list">
+                            <li><input type="checkbox"> Playeras</li>
+                            <li><input type="checkbox"> Sudaderas</li>
+                            <li><input type="checkbox"> Gorras</li>
+                            <li><input type="checkbox"> Bolsas</li>
+                            <li><input type="checkbox"> Accesorios</li>
+                        </ul>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="filter-group">
+                        <h6 class="filter-heading">Precio</h6>
+                        <ul class="filter-list">
+                            <li><input type="checkbox"> $50 - $99</li>
+                            <li><input type="checkbox"> $100 - $199</li>
+                            <li><input type="checkbox"> $200 - $299</li>
+                            <li><input type="checkbox"> $300 - $400</li>
+                        </ul>
+                    </div>
+
+                    <!-- Size -->
+                    <div class="filter-group">
+                        <h6 class="filter-heading">Talla</h6>
+                        <ul class="filter-list">
+                            <li><input type="checkbox"> XS</li>
+                            <li><input type="checkbox"> SM</li>
+                            <li><input type="checkbox"> MD</li>
+                            <li><input type="checkbox"> LG</li>
+                            <li><input type="checkbox"> XL</li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- PRODUCTOS -->
+            <main class="col-lg-9 col-xl-10 products-section">
+
+                <!-- Botón de filtros para mobile -->
+                <button class="btn btn-filters d-lg-none mb-3" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#filtersOffcanvas">
+                    <i class="bi bi-funnel"></i> Filtros
+                </button>
+
+                <div class="products-header d-flex justify-content-between align-items-center">
+                    <p class="products-count">7 Productos Encontrados</p>
+                    <div class="sort-wrapper">
+                        <span class="sort-label">Ordenar por:</span>
+                        <select class="sort-select" id="sortSelect">
+                            <option value="relevance">Relevancia</option>
+                            <option value="a-z">De la A a la Z</option>
+                            <option value="price-low">Precio bajo a alto</option>
+                            <option value="price-high">Precio alto a bajo</option>
+                            <option value="best-seller">Lo más vendido</option>
+                            <option value="newest">Nuevo</option>
+                        </select>
+                        <i class="bi bi-chevron-down sort-icon"></i>
+                    </div>
+                </div>
+
+                <div class="row g-3 products-grid">
+
+                    <!-- TOTEBAG CARD PRODUCTO -->
+                    <div class="col-6 col-md-4 col-xl-3">
+                        <div class="product-card">
+                            <div class="product-image-wrapper">
+                                <img src="img/tienda/bolsa_tdah_merch.png" alt="Product">
+                                <div class="product-hover-actions">
+                                    <button class="icon-btn"><i class="bi bi-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h6 class="product-title">TOTEBAG TDAH </h6>
+                                <p class="product-price">$300 MXN</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PLAYERA TDAH CARD PRODUCTO -->
+                    <div class="col-6 col-md-4 col-xl-3">
+                        <div class="product-card">
+                            <div class="product-image-wrapper">
+                                <img src="img/tienda/playera_tdah_merch.PNG" alt="Product">
+                                <div class="product-hover-actions">
+                                    <button class="icon-btn"><i class="bi bi-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h6 class="product-title">Playera TDAH </h6>
+                                <p class="product-price">$400 MXN</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Almohada TDAH CARD PRODUCTO -->
+                    <div class="col-6 col-md-4 col-xl-3">
+                        <div class="product-card">
+                            <div class="product-image-wrapper">
+                                <img src="img/tienda/almohada_tdha_merch.png" alt="Product">
+                                <div class="product-hover-actions">
+                                    <button class="icon-btn"><i class="bi bi-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h6 class="product-title">Almohada TDAH </h6>
+                                <p class="product-price">$100 MXN</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Taza tdah CARD PRODUCTO -->
+                    <div class="col-6 col-md-4 col-xl-3">
+                        <div class="product-card">
+                            <div class="product-image-wrapper">
+                                <img src="img/tienda/taza_tdah_merch.png" alt="Product">
+                                <div class="product-hover-actions">
+                                    <button class="icon-btn"><i class="bi bi-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h6 class="product-title">Taza TDAH </h6>
+                                <p class="product-price">$70 MXN</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Termo CARD PRODUCTO -->
+                    <div class="col-6 col-md-4 col-xl-3">
+                        <div class="product-card">
+                            <div class="product-image-wrapper">
+                                <img src="img/tienda/termo_pro_tdah_merch.png" alt="Product">
+                                <div class="product-hover-actions">
+                                    <button class="icon-btn"><i class="bi bi-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h6 class="product-title">Termo Pro TDAH </h6>
+                                <p class="product-price">$300 MXN</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Vasa para Cafe  CARD PRODUCTO -->
+                    <div class="col-6 col-md-4 col-xl-3">
+                        <div class="product-card">
+                            <div class="product-image-wrapper">
+                                <img src="img/tienda/vaso_tdah_merch.png" alt="Product">
+                                <div class="product-hover-actions">
+                                    <button class="icon-btn"><i class="bi bi-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h6 class="product-title">Vaso para Cafe TDAH </h6>
+                                <p class="product-price">$150 MXN</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vasa para Cafe  CARD PRODUCTO -->
+                    <div class="col-6 col-md-4 col-xl-3">
+                        <div class="product-card">
+                            <div class="product-image-wrapper">
+                                <img src="img/tienda/gorra_tdah_souvenir.png" alt="Product">
+                                <div class="product-hover-actions">
+                                    <button class="icon-btn"><i class="bi bi-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h6 class="product-title">Gorra Souvenir </h6>
+                                <p class="product-price">$200 MXN</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+            <!-- Offcanvas de filtros para mobile -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="filtersOffcanvas"
+                aria-labelledby="filtersOffcanvasLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="filtersOffcanvasLabel">
+                        <i class="bi bi-funnel"></i> Filtros
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <!-- Tipo de Artículo -->
+                    <div class="filter-group">
+                        <h6 class="filter-heading">Tipo de Artículo</h6>
+                        <ul class="filter-list">
+                            <li><input type="checkbox"> Playeras</li>
+                            <li><input type="checkbox"> Sudaderas</li>
+                            <li><input type="checkbox"> Gorras</li>
+                            <li><input type="checkbox"> Bolsas</li>
+                            <li><input type="checkbox"> Accesorios</li>
+                        </ul>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="filter-group">
+                        <h6 class="filter-heading">Precio</h6>
+                        <ul class="filter-list">
+                            <li><input type="checkbox"> $50 - $99</li>
+                            <li><input type="checkbox"> $100 - $199</li>
+                            <li><input type="checkbox"> $200 - $299</li>
+                            <li><input type="checkbox"> $300 - $400</li>
+                        </ul>
+                    </div>
+
+                    <!-- Size -->
+                    <div class="filter-group">
+                        <h6 class="filter-heading">Talla</h6>
+                        <ul class="filter-list">
+                            <li><input type="checkbox"> XS</li>
+                            <li><input type="checkbox"> S</li>
+                            <li><input type="checkbox"> M</li>
+                            <li><input type="checkbox"> L</li>
+                            <li><input type="checkbox"> XL</li>
+                            <li><input type="checkbox"> XXL</li>
+                        </ul>
+                    </div>
+
+                    <!-- Botones de acción -->
+                    <div class="filter-actions mt-4">
+                        <button class="btn btn-clear-filters">Limpiar filtros</button>
+                        <button class="btn btn-apply-filters" data-bs-dismiss="offcanvas">Aplicar filtros</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Seccion de Newsletter final y anuncios-->
+    <section class="subscribe-section">
+        <div class="container">
+
+            <div class="row align-items-center g-4">
+
+                <!-- Texto -->
+                <div class="col-lg-6">
+                    <h2 class="subscribe-title">
+                        Recibe las Últimas<br>
+                        Noticias y Eventos
+                    </h2>
+                </div>
+
+                <!-- Descripción + formulario -->
+                <div class="col-lg-6">
+                    <p class="subscribe-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                    </p>
+
+                    <form class="subscribe-form">
+                        <input type="text" class="form-control" placeholder="Tu nombre">
+                        <input type="email" class="form-control" placeholder="Ingresa tu correo electrónico">
+                        <button type="submit" class="btn btn-subscribe-main">
+                            Suscríbete
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- Publicidad inferior - Anuncio único de ancho completo -->
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="ad ad-horizontal">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">728 x 90</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <!-- Logo -->
+                <div class="col-lg-3 text-center text-lg-start mb-3 mb-lg-0">
+                    <img src="./img/logo_TDAH.PNG" alt="TDAH Adultos México" class="footer-logo">
+                </div>
+
+                <!-- Navegación -->
+                <div class="col-lg-6 text-center">
+                    <h5 class="footer-title">¿Quiénes Somos?</h5>
+                    <ul class="footer-menu">
+                        <li><a href="#">Tienda</a></li>
+                        <li><a href="#">Testimonios</a></li>
+                        <li><a href="#">Deportes</a></li>
+                        <li><a href="#">Negocios</a></li>
+                        <li><a href="#">Medicina</a></li>
+                        <li><a href="#">Cultura</a></li>
+                        <li><a href="#">Eventos</a></li>
+                        <p class="footer-copyright">
+                            © <span id="currentYear"></span> TDAH Adultos México. Todos los derechos reservados.
+                        </p>
+                    </ul>
+
+                </div>
+
+                <!-- Redes -->
+                <div class="col-lg-3 text-center text-lg-end">
+                    <p class="footer-social-title">Síguenos en nuestras<br>redes sociales</p>
+                    <div class="footer-social">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-youtube"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+        // Actualizar año automáticamente en el footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const doctorSwiper = new Swiper('.doctors-slider', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            grabCursor: true,
+            breakpoints: {
+                768: {
+                    slidesPerView: 3
+                },
+                992: {
+                    slidesPerView: 5
+                }
+            }
+        });
+
+        // Funcionalidad de ordenamiento
+        document.getElementById('sortSelect').addEventListener('change', function () {
+            const sortValue = this.value;
+            const productsGrid = document.querySelector('.products-grid');
+            const products = Array.from(productsGrid.querySelectorAll('.col-6, .col-md-4, .col-xl-3'));
+
+            products.sort((a, b) => {
+                const titleA = a.querySelector('.product-title').textContent;
+                const titleB = b.querySelector('.product-title').textContent;
+                const priceA = parseFloat(a.querySelector('.product-price').textContent.replace(/[^0-9.]/g, ''));
+                const priceB = parseFloat(b.querySelector('.product-price').textContent.replace(/[^0-9.]/g, ''));
+
+                switch (sortValue) {
+                    case 'a-z':
+                        return titleA.localeCompare(titleB);
+                    case 'price-low':
+                        return priceA - priceB;
+                    case 'price-high':
+                        return priceB - priceA;
+                    case 'best-seller':
+                    case 'newest':
+                    case 'relevance':
+                    default:
+                        return 0;
+                }
+            });
+
+            products.forEach(product => productsGrid.appendChild(product));
+        });
+
+    </script>
+</body>
+
+</html>
