@@ -176,11 +176,31 @@
                     <div class="filter-group">
                         <h6 class="filter-heading">Tipo de Artículo</h6>
                         <ul class="filter-list">
-                            <li><input type="checkbox"> Playeras</li>
-                            <li><input type="checkbox"> Sudaderas</li>
-                            <li><input type="checkbox"> Gorras</li>
-                            <li><input type="checkbox"> Bolsas</li>
-                            <li><input type="checkbox"> Accesorios</li>
+                            <li>
+                                <input type="checkbox" data-filter="type" data-value="playeras">
+                                <span>Playeras</span>
+                                <span class="filter-count" data-count-type="playeras">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="type" data-value="sudaderas">
+                                <span>Sudaderas</span>
+                                <span class="filter-count" data-count-type="sudaderas">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="type" data-value="gorras">
+                                <span>Gorras</span>
+                                <span class="filter-count" data-count-type="gorras">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="type" data-value="bolsas">
+                                <span>Bolsas</span>
+                                <span class="filter-count" data-count-type="bolsas">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="type" data-value="accesorios">
+                                <span>Accesorios</span>
+                                <span class="filter-count" data-count-type="accesorios">0</span>
+                            </li>
                         </ul>
                     </div>
 
@@ -188,10 +208,26 @@
                     <div class="filter-group">
                         <h6 class="filter-heading">Precio</h6>
                         <ul class="filter-list">
-                            <li><input type="checkbox"> $50 - $99</li>
-                            <li><input type="checkbox"> $100 - $199</li>
-                            <li><input type="checkbox"> $200 - $299</li>
-                            <li><input type="checkbox"> $300 - $400</li>
+                            <li>
+                                <input type="checkbox" data-filter="price" data-value="50-99">
+                                <span>$50 - $99</span>
+                                <span class="filter-count" data-count-price="50-99">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="price" data-value="100-199">
+                                <span>$100 - $199</span>
+                                <span class="filter-count" data-count-price="100-199">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="price" data-value="200-299">
+                                <span>$200 - $299</span>
+                                <span class="filter-count" data-count-price="200-299">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="price" data-value="300-400">
+                                <span>$300 - $400</span>
+                                <span class="filter-count" data-count-price="300-400">0</span>
+                            </li>
                         </ul>
                     </div>
 
@@ -199,11 +235,36 @@
                     <div class="filter-group">
                         <h6 class="filter-heading">Talla</h6>
                         <ul class="filter-list">
-                            <li><input type="checkbox"> XS</li>
-                            <li><input type="checkbox"> SM</li>
-                            <li><input type="checkbox"> MD</li>
-                            <li><input type="checkbox"> LG</li>
-                            <li><input type="checkbox"> XL</li>
+                            <li>
+                                <input type="checkbox" data-filter="size" data-value="xs">
+                                <span>XS</span>
+                                <span class="filter-count" data-count-size="xs">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="size" data-value="s">
+                                <span>S</span>
+                                <span class="filter-count" data-count-size="s">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="size" data-value="m">
+                                <span>M</span>
+                                <span class="filter-count" data-count-size="m">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="size" data-value="l">
+                                <span>L</span>
+                                <span class="filter-count" data-count-size="l">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="size" data-value="xl">
+                                <span>XL</span>
+                                <span class="filter-count" data-count-size="xl">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="size" data-value="xxl">
+                                <span>XXL</span>
+                                <span class="filter-count" data-count-size="xxl">0</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -238,11 +299,14 @@
 
                     <!-- TOTEBAG CARD PRODUCTO -->
                     <div class="col-6 col-md-4 col-xl-3">
-                        <div class="product-card">
+                        <div class="product-card" data-has-size="false" data-type="bolsas" data-price="300"
+                            data-stock="15">
                             <div class="product-image-wrapper">
                                 <img src="img/tienda/bolsa_tdah_merch.png" alt="Product">
                                 <div class="product-hover-actions">
-                                    <button class="icon-btn"><i class="bi bi-eye"></i></button>
+                                    <button class="icon-btn" data-bs-toggle="modal" data-bs-target="#productQuickView">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="product-info">
@@ -253,11 +317,15 @@
                     </div>
                     <!-- PLAYERA TDAH CARD PRODUCTO -->
                     <div class="col-6 col-md-4 col-xl-3">
-                        <div class="product-card">
+                        <!---ESTE CODIGO SIMULA UN INVENTARIO CONECTADO A UN API O BASE DE DATOS DONDE SE TENGA EL CONTEO DE EL INVENTARIO-->
+                        <div class="product-card" data-has-size="true" data-type="playeras" data-price="400"
+                            data-sizes='["s","m","l","xl"]' data-stock='{"s":5,"m":10,"l":8,"xl":3}'>
                             <div class="product-image-wrapper">
                                 <img src="img/tienda/playera_tdah_merch.PNG" alt="Product">
                                 <div class="product-hover-actions">
-                                    <button class="icon-btn"><i class="bi bi-eye"></i></button>
+                                    <button class="icon-btn" data-bs-toggle="modal" data-bs-target="#productQuickView">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="product-info">
@@ -268,11 +336,14 @@
                     </div>
                     <!-- Almohada TDAH CARD PRODUCTO -->
                     <div class="col-6 col-md-4 col-xl-3">
-                        <div class="product-card">
+                        <div class="product-card" data-has-size="false" data-type="accesorios" data-price="100"
+                            data-stock="20">
                             <div class="product-image-wrapper">
                                 <img src="img/tienda/almohada_tdha_merch.png" alt="Product">
                                 <div class="product-hover-actions">
-                                    <button class="icon-btn"><i class="bi bi-eye"></i></button>
+                                    <button class="icon-btn" data-bs-toggle="modal" data-bs-target="#productQuickView">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="product-info">
@@ -283,11 +354,14 @@
                     </div>
                     <!--Taza tdah CARD PRODUCTO -->
                     <div class="col-6 col-md-4 col-xl-3">
-                        <div class="product-card">
+                        <div class="product-card" data-has-size="false" data-type="accesorios" data-price="70"
+                            data-stock="30">
                             <div class="product-image-wrapper">
                                 <img src="img/tienda/taza_tdah_merch.png" alt="Product">
                                 <div class="product-hover-actions">
-                                    <button class="icon-btn"><i class="bi bi-eye"></i></button>
+                                    <button class="icon-btn" data-bs-toggle="modal" data-bs-target="#productQuickView">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="product-info">
@@ -298,11 +372,14 @@
                     </div>
                     <!-- Termo CARD PRODUCTO -->
                     <div class="col-6 col-md-4 col-xl-3">
-                        <div class="product-card">
+                        <div class="product-card" data-has-size="false" data-type="accesorios" data-price="300"
+                            data-stock="12">
                             <div class="product-image-wrapper">
                                 <img src="img/tienda/termo_pro_tdah_merch.png" alt="Product">
                                 <div class="product-hover-actions">
-                                    <button class="icon-btn"><i class="bi bi-eye"></i></button>
+                                    <button class="icon-btn" data-bs-toggle="modal" data-bs-target="#productQuickView">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="product-info">
@@ -313,11 +390,14 @@
                     </div>
                     <!-- Vasa para Cafe  CARD PRODUCTO -->
                     <div class="col-6 col-md-4 col-xl-3">
-                        <div class="product-card">
+                        <div class="product-card" data-has-size="false" data-type="accesorios" data-price="150"
+                            data-stock="25">
                             <div class="product-image-wrapper">
                                 <img src="img/tienda/vaso_tdah_merch.png" alt="Product">
                                 <div class="product-hover-actions">
-                                    <button class="icon-btn"><i class="bi bi-eye"></i></button>
+                                    <button class="icon-btn" data-bs-toggle="modal" data-bs-target="#productQuickView">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="product-info">
@@ -327,13 +407,16 @@
                         </div>
                     </div>
 
-                    <!-- Vasa para Cafe  CARD PRODUCTO -->
+                    <!-- Gorra TDAH  CARD PRODUCTO -->
                     <div class="col-6 col-md-4 col-xl-3">
-                        <div class="product-card">
+                        <div class="product-card" data-has-size="false" data-type="gorras" data-price="200"
+                            data-stock="18">
                             <div class="product-image-wrapper">
                                 <img src="img/tienda/gorra_tdah_souvenir.png" alt="Product">
                                 <div class="product-hover-actions">
-                                    <button class="icon-btn"><i class="bi bi-eye"></i></button>
+                                    <button class="icon-btn" data-bs-toggle="modal" data-bs-target="#productQuickView">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="product-info">
@@ -345,6 +428,7 @@
 
                 </div>
             </main>
+
             <!-- Offcanvas de filtros para mobile -->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="filtersOffcanvas"
                 aria-labelledby="filtersOffcanvasLabel">
@@ -359,11 +443,31 @@
                     <div class="filter-group">
                         <h6 class="filter-heading">Tipo de Artículo</h6>
                         <ul class="filter-list">
-                            <li><input type="checkbox"> Playeras</li>
-                            <li><input type="checkbox"> Sudaderas</li>
-                            <li><input type="checkbox"> Gorras</li>
-                            <li><input type="checkbox"> Bolsas</li>
-                            <li><input type="checkbox"> Accesorios</li>
+                            <li>
+                                <input type="checkbox" data-filter="type" data-value="playeras">
+                                <span>Playeras</span>
+                                <span class="filter-count" data-count-type="playeras">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="type" data-value="sudaderas">
+                                <span>Sudaderas</span>
+                                <span class="filter-count" data-count-type="sudaderas">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="type" data-value="gorras">
+                                <span>Gorras</span>
+                                <span class="filter-count" data-count-type="gorras">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="type" data-value="bolsas">
+                                <span>Bolsas</span>
+                                <span class="filter-count" data-count-type="bolsas">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="type" data-value="accesorios">
+                                <span>Accesorios</span>
+                                <span class="filter-count" data-count-type="accesorios">0</span>
+                            </li>
                         </ul>
                     </div>
 
@@ -371,10 +475,26 @@
                     <div class="filter-group">
                         <h6 class="filter-heading">Precio</h6>
                         <ul class="filter-list">
-                            <li><input type="checkbox"> $50 - $99</li>
-                            <li><input type="checkbox"> $100 - $199</li>
-                            <li><input type="checkbox"> $200 - $299</li>
-                            <li><input type="checkbox"> $300 - $400</li>
+                            <li>
+                                <input type="checkbox" data-filter="price" data-value="50-99">
+                                <span>$50 - $99</span>
+                                <span class="filter-count" data-count-price="50-99">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="price" data-value="100-199">
+                                <span>$100 - $199</span>
+                                <span class="filter-count" data-count-price="100-199">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="price" data-value="200-299">
+                                <span>$200 - $299</span>
+                                <span class="filter-count" data-count-price="200-299">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="price" data-value="300-400">
+                                <span>$300 - $400</span>
+                                <span class="filter-count" data-count-price="300-400">0</span>
+                            </li>
                         </ul>
                     </div>
 
@@ -382,12 +502,36 @@
                     <div class="filter-group">
                         <h6 class="filter-heading">Talla</h6>
                         <ul class="filter-list">
-                            <li><input type="checkbox"> XS</li>
-                            <li><input type="checkbox"> S</li>
-                            <li><input type="checkbox"> M</li>
-                            <li><input type="checkbox"> L</li>
-                            <li><input type="checkbox"> XL</li>
-                            <li><input type="checkbox"> XXL</li>
+                            <li>
+                                <input type="checkbox" data-filter="size" data-value="xs">
+                                <span>XS</span>
+                                <span class="filter-count" data-count-size="xs">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="size" data-value="s">
+                                <span>S</span>
+                                <span class="filter-count" data-count-size="s">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="size" data-value="m">
+                                <span>M</span>
+                                <span class="filter-count" data-count-size="m">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="size" data-value="l">
+                                <span>L</span>
+                                <span class="filter-count" data-count-size="l">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="size" data-value="xl">
+                                <span>XL</span>
+                                <span class="filter-count" data-count-size="xl">0</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" data-filter="size" data-value="xxl">
+                                <span>XXL</span>
+                                <span class="filter-count" data-count-size="xxl">0</span>
+                            </li>
                         </ul>
                     </div>
 
@@ -496,6 +640,71 @@
         </div>
     </footer>
 
+    <!-- MODAL QUICK VIEW -->
+    <div class="modal fade product-modal" id="productQuickView" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- BOTÓN CERRAR -->
+                <button type="button" class="modal-close" data-bs-dismiss="modal">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+
+                <div class="modal-body">
+                    <div class="row g-0">
+
+                        <!-- IMAGEN -->
+                        <div class="col-lg-6 product-modal-image">
+                            <img id="modalProductImage" src="img/tienda/bolsa_tdah_merch.png" alt="Producto">
+                        </div>
+
+                        <!-- INFO -->
+                        <div class="col-lg-6 product-modal-info">
+                            <h3 class="modal-product-title" id="modalProductTitle">TOTEBAG TDAH</h3>
+
+                            <p class="modal-product-description">
+                                Descripción de ejemplo del producto. Texto ilustrativo que representa
+                                beneficios, estilo y uso del artículo dentro de la tienda.
+                            </p>
+
+                            <!-- SELECT -->
+                            <div class="modal-select-group">
+                                <label class="form-label">Talla:</label>
+                                <select class="form-select">
+                                    <option value="" disabled selected>Elige una talla</option>
+                                    <option value="xs">XS</option>
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                                    <option value="xxl">XXL</option>
+                                </select>
+                            </div>
+
+                            <p class="modal-product-price" id="modalProductPrice">$300 MXN</p>
+
+                            <!-- CANTIDAD -->
+                            <div class="quantity-wrapper">
+                                <label class="form-label">Cantidad</label>
+                                <div class="quantity-controls">
+                                    <button class="qty-btn" onclick="decreaseQty()">−</button>
+                                    <input type="text" id="qtyInput" value="1" readonly>
+                                    <button class="qty-btn" onclick="increaseQty()">+</button>
+                                </div>
+                            </div>
+
+                            <!-- CTA -->
+                            <button class="btn btn-primary modal-add-cart">
+                                <i class="bi bi-cart-plus"></i> Agregar al Carrito
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
     <script>
@@ -545,6 +754,341 @@
 
             products.forEach(product => productsGrid.appendChild(product));
         });
+
+        // Funcionalidad de cantidad
+        function increaseQty() {
+            const input = document.getElementById('qtyInput');
+            input.value = parseInt(input.value) + 1;
+        }
+
+        function decreaseQty() {
+            const input = document.getElementById('qtyInput');
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
+        }
+
+        // Cargar datos del producto en el modal
+        document.querySelectorAll('[data-bs-toggle="modal"]').forEach(button => {
+            button.addEventListener('click', function () {
+                const card = this.closest('.product-card');
+                const title = card.querySelector('.product-title').textContent;
+                const price = card.querySelector('.product-price').textContent;
+                const image = card.querySelector('.product-image-wrapper img').src;
+                const hasSize = card.getAttribute('data-has-size') === 'true';
+
+                // Actualizar información del producto
+                document.getElementById('modalProductTitle').textContent = title;
+                document.getElementById('modalProductPrice').textContent = price;
+                document.getElementById('modalProductImage').src = image;
+                document.getElementById('qtyInput').value = 1;
+
+                // Mostrar u ocultar el selector de talla
+                const sizeGroup = document.querySelector('.modal-select-group');
+                const sizeSelect = sizeGroup.querySelector('.form-select');
+
+                if (hasSize) {
+                    sizeGroup.style.display = 'block';
+                    sizeSelect.selectedIndex = 0; // Reset al "Elige una talla"
+                    sizeSelect.disabled = false;
+                } else {
+                    sizeGroup.style.display = 'none';
+                }
+            });
+        });
+
+        // Validar que se seleccione una talla antes de agregar al carrito
+        document.querySelector('.modal-add-cart').addEventListener('click', function (e) {
+            const sizeGroup = document.querySelector('.modal-select-group');
+            const sizeSelect = sizeGroup.querySelector('.form-select');
+
+            // Solo validar si el selector está visible
+            if (sizeGroup.style.display !== 'none') {
+                if (sizeSelect.selectedIndex === 0) {
+                    e.preventDefault();
+                    alert('Por favor, selecciona una talla antes de agregar al carrito.');
+                    sizeSelect.focus();
+                    return;
+                }
+            }
+
+            // Aquí iría tu lógica de agregar al carrito
+            alert('Producto agregado al carrito');
+        });
+
+        // SISTEMA DE INVENTARIO Y FILTROS MEJORADO
+        class InventoryManager {
+            constructor() {
+                this.products = [];
+                this.filterState = {
+                    type: new Set(),
+                    price: new Set(),
+                    size: new Set()
+                };
+                this.init();
+            }
+
+            init() {
+                // Recopilar todos los productos
+                document.querySelectorAll('.product-card').forEach(card => {
+                    const product = {
+                        element: card,
+                        type: card.dataset.type,
+                        price: parseFloat(card.dataset.price),
+                        hasSize: card.dataset.hasSize === 'true',
+                        stock: card.dataset.stock ? parseInt(card.dataset.stock) : 0,
+                        sizes: card.dataset.hasSize === 'true' && card.dataset.sizes
+                            ? JSON.parse(card.dataset.sizes)
+                            : [],
+                        sizeStock: card.dataset.stock && card.dataset.hasSize === 'true'
+                            ? JSON.parse(card.dataset.stock)
+                            : {}
+                    };
+                    this.products.push(product);
+                });
+
+                this.updateFilterCounts();
+                this.setupFilterListeners();
+            }
+
+            updateFilterCounts() {
+                // Obtener productos visibles actualmente
+                const visibleProducts = this.products.filter(product => {
+                    const parentCol = product.element.closest('.col-6, .col-md-4, .col-xl-3');
+                    return parentCol.style.display !== 'none';
+                });
+
+                // Contar por tipo
+                const typeCounts = {};
+                visibleProducts.forEach(product => {
+                    if (!typeCounts[product.type]) {
+                        typeCounts[product.type] = 0;
+                    }
+                    typeCounts[product.type]++;
+                });
+
+                // Actualizar contadores de tipo
+                ['playeras', 'sudaderas', 'gorras', 'bolsas', 'accesorios'].forEach(type => {
+                    document.querySelectorAll(`[data-count-type="${type}"]`).forEach(countElement => {
+                        const count = typeCounts[type] || 0;
+                        countElement.textContent = count;
+
+                        const listItem = countElement.closest('li');
+                        const checkbox = listItem?.querySelector('input[type="checkbox"]');
+
+                        if (!checkbox) return;
+
+                        if (count === 0 && !this.filterState.type.has(type)) {
+                            countElement.classList.add('zero');
+                            listItem.style.opacity = '0.5';
+                            checkbox.disabled = true;
+                        } else {
+                            countElement.classList.remove('zero');
+                            listItem.style.opacity = '1';
+                            checkbox.disabled = false;
+                        }
+                    });
+                });
+
+                // Contar por rango de precio
+                const priceRanges = {
+                    '50-99': 0,
+                    '100-199': 0,
+                    '200-299': 0,
+                    '300-400': 0
+                };
+
+                visibleProducts.forEach(product => {
+                    if (product.price >= 50 && product.price <= 99) priceRanges['50-99']++;
+                    else if (product.price >= 100 && product.price <= 199) priceRanges['100-199']++;
+                    else if (product.price >= 200 && product.price <= 299) priceRanges['200-299']++;
+                    else if (product.price >= 300 && product.price <= 400) priceRanges['300-400']++;
+                });
+
+                // Actualizar contadores de precio
+                Object.keys(priceRanges).forEach(range => {
+                    document.querySelectorAll(`[data-count-price="${range}"]`).forEach(countElement => {
+                        const count = priceRanges[range];
+                        countElement.textContent = count;
+
+                        const listItem = countElement.closest('li');
+                        const checkbox = listItem?.querySelector('input[type="checkbox"]');
+
+                        if (!checkbox) return;
+
+                        if (count === 0 && !this.filterState.price.has(range)) {
+                            countElement.classList.add('zero');
+                            listItem.style.opacity = '0.5';
+                            checkbox.disabled = true;
+                        } else {
+                            countElement.classList.remove('zero');
+                            listItem.style.opacity = '1';
+                            checkbox.disabled = false;
+                        }
+                    });
+                });
+
+                // Contar por talla
+                const sizeCounts = {
+                    xs: 0, s: 0, m: 0, l: 0, xl: 0, xxl: 0
+                };
+
+                visibleProducts.forEach(product => {
+                    if (!product.hasSize) return;
+
+                    product.sizes.forEach(size => {
+                        const key = size.toLowerCase();
+                        if (sizeCounts[key] !== undefined) {
+                            sizeCounts[key]++;
+                        }
+                    });
+                });
+
+                // Actualizar contadores de talla
+                Object.keys(sizeCounts).forEach(size => {
+                    document.querySelectorAll(`[data-count-size="${size}"]`).forEach(countElement => {
+                        const count = sizeCounts[size];
+                        countElement.textContent = count;
+
+                        const listItem = countElement.closest('li');
+                        const checkbox = listItem?.querySelector('input[type="checkbox"]');
+
+                        if (!checkbox) return;
+
+                        if (count === 0 && !this.filterState.size.has(size)) {
+                            countElement.classList.add('zero');
+                            listItem.style.opacity = '0.5';
+                            checkbox.disabled = true;
+                        } else {
+                            countElement.classList.remove('zero');
+                            listItem.style.opacity = '1';
+                            checkbox.disabled = false;
+                        }
+                    });
+                });
+            }
+
+            setupFilterListeners() {
+                const checkboxes = document.querySelectorAll('input[type="checkbox"][data-filter]');
+
+                checkboxes.forEach(checkbox => {
+                    checkbox.addEventListener('change', (e) => {
+                        const { filter, value } = checkbox.dataset;
+                        const isChecked = checkbox.checked;
+
+                        // Actualizar estado
+                        if (isChecked) {
+                            this.filterState[filter].add(value);
+                        } else {
+                            this.filterState[filter].delete(value);
+                        }
+
+                        // Sincronizar todos los checkboxes iguales
+                        this.syncCheckboxes(filter, value, isChecked);
+
+                        this.applyFilters();
+                    });
+                });
+            }
+
+            syncCheckboxes(filter, value, checked) {
+                document
+                    .querySelectorAll(
+                        `input[data-filter="${filter}"][data-value="${value}"]`
+                    )
+                    .forEach(cb => {
+                        cb.checked = checked;
+                    });
+            }
+
+            applyFilters() {
+                const activeFilters = {
+                    type: [...this.filterState.type],
+                    price: [...this.filterState.price],
+                    size: [...this.filterState.size]
+                };
+
+                let visibleCount = 0;
+
+                this.products.forEach(product => {
+                    let visible = true;
+
+                    // Filtro de tipo
+                    if (activeFilters.type.length > 0) {
+                        visible = activeFilters.type.includes(product.type);
+                    }
+
+                    // Filtro de precio
+                    if (activeFilters.price.length > 0 && visible) {
+                        visible = activeFilters.price.some(range => {
+                            const [min, max] = range.split('-').map(Number);
+                            return product.price >= min && product.price <= max;
+                        });
+                    }
+
+                    // Filtro de talla
+                    if (activeFilters.size.length > 0 && visible) {
+                        if (product.hasSize) {
+                            visible = activeFilters.size.some(size =>
+                                product.sizes.map(s => s.toLowerCase()).includes(size)
+                            );
+                        } else {
+                            visible = false;
+                        }
+                    }
+
+                    const parentCol = product.element.closest('.col-6, .col-md-4, .col-xl-3');
+                    parentCol.style.display = visible ? '' : 'none';
+
+                    if (visible) visibleCount++;
+                });
+
+                document.querySelector('.products-count').textContent =
+                    `${visibleCount} Productos Encontrados`;
+
+                this.updateFilterCounts();
+            }
+
+            clearAllFilters() {
+                this.filterState = {
+                    type: new Set(),
+                    price: new Set(),
+                    size: new Set()
+                };
+
+                document
+                    .querySelectorAll('input[type="checkbox"][data-filter]')
+                    .forEach(cb => {
+                        cb.checked = false;
+                    });
+
+                this.applyFilters();
+            }
+
+            async updateFromBackend() {
+                try {
+                    // const response = await fetch('/api/products/inventory');
+                    // const data = await response.json();
+                    // this.products = data.products;
+                    // this.updateFilterCounts();
+
+                    console.log('Backend integration ready');
+                } catch (error) {
+                    console.error('Error updating inventory:', error);
+                }
+            }
+        }
+
+        // Inicializar el sistema de inventario
+        const inventoryManager = new InventoryManager();
+
+        // Botón limpiar filtros
+        document.querySelectorAll('.btn-clear-filters').forEach(btn => {
+            btn.addEventListener('click', () => {
+                inventoryManager.clearAllFilters();
+            });
+        });
+
 
     </script>
 </body>
