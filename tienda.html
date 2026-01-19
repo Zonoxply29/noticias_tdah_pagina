@@ -37,7 +37,10 @@
                         <i class="bi bi-instagram icon-hover"></i>
                         <i class="bi bi-youtube icon-hover"></i>
                         <i class="bi bi-search icon-hover"></i>
-                        <i class="bi bi-cart icon-hover"></i>
+                        <div class="cart-icon-wrapper">
+                            <i class="bi bi-cart icon-hover" id="cartIconMobile"></i>
+                            <span class="cart-badge" id="cartBadgeMobile">0</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -96,7 +99,10 @@
                                 <i class="bi bi-instagram icon-hover"></i>
                                 <i class="bi bi-youtube icon-hover"></i>
                                 <i class="bi bi-search icon-hover"></i>
-                                <i class="bi bi-cart icon-hover"></i>
+                                <div class="cart-icon-wrapper">
+                                    <i class="bi bi-cart" id="cartIcon"></i>
+                                    <span class="cart-badge" id="cartBadge">0</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -705,6 +711,78 @@
             </div>
         </div>
     </div>
+    <!-- OFFCANVAS CARRITO -->
+    <div class="offcanvas offcanvas-end cart-offcanvas" tabindex="-1" id="cartOffcanvas"
+        aria-labelledby="cartOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="cartOffcanvasLabel">
+                <i class="bi bi-cart3"></i> Tu Carrito
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <!-- Carrito vacío -->
+            <div id="emptyCart" class="empty-cart">
+                <i class="bi bi-cart-x"></i>
+                <p>Tu carrito está vacío</p>
+                <button class="btn btn-primary" data-bs-dismiss="offcanvas">Ir a comprar</button>
+            </div>
+
+            <!-- Lista de productos -->
+            <div id="cartItems" class="cart-items" style="display: none;">
+                <!-- Los productos se insertarán aquí dinámicamente -->
+            </div>
+
+            <!-- Resumen del carrito -->
+            <div id="cartSummary" class="cart-summary" style="display: none;">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="cartSubtotal">$0 MXN</span>
+                </div>
+                <div class="summary-row">
+                    <span>Envío:</span>
+                    <span id="cartShipping">Gratis</span>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">$0 MXN</span>
+                </div>
+
+                <button class="btn btn-primary btn-checkout">
+                    Continuar al Pago
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+
+                <button class="btn btn-outline-secondary btn-continue-shopping" data-bs-dismiss="offcanvas">
+                    Seguir Comprando
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmación de eliminación -->
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="bi bi-exclamation-triangle text-warning"></i>
+                        Confirmar eliminación
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Estás seguro de que deseas eliminar <strong id="productToDelete"></strong> de tu carrito?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
     <script>
@@ -795,25 +873,6 @@
                     sizeGroup.style.display = 'none';
                 }
             });
-        });
-
-        // Validar que se seleccione una talla antes de agregar al carrito
-        document.querySelector('.modal-add-cart').addEventListener('click', function (e) {
-            const sizeGroup = document.querySelector('.modal-select-group');
-            const sizeSelect = sizeGroup.querySelector('.form-select');
-
-            // Solo validar si el selector está visible
-            if (sizeGroup.style.display !== 'none') {
-                if (sizeSelect.selectedIndex === 0) {
-                    e.preventDefault();
-                    alert('Por favor, selecciona una talla antes de agregar al carrito.');
-                    sizeSelect.focus();
-                    return;
-                }
-            }
-
-            // Aquí iría tu lógica de agregar al carrito
-            alert('Producto agregado al carrito');
         });
 
         // SISTEMA DE INVENTARIO Y FILTROS MEJORADO
@@ -1065,6 +1124,7 @@
                 this.applyFilters();
             }
 
+            // ESTE EJEMPLO ES PARA CONECTARLO CON LA BASE DE DATOS O UNA API
             async updateFromBackend() {
                 try {
                     // const response = await fetch('/api/products/inventory');
@@ -1088,6 +1148,263 @@
                 inventoryManager.clearAllFilters();
             });
         });
+
+        // SISTEMA DE CARRITO DE COMPRAS
+        class ShoppingCart {
+            constructor() {
+                this.items = [];
+                this.itemToDelete = null;
+                this.init();
+            }
+
+            init() {
+                // Cargar carrito desde localStorage
+                const savedCart = localStorage.getItem('tdah_cart');
+                if (savedCart) {
+                    this.items = JSON.parse(savedCart);
+                    this.updateBadge();
+                }
+
+                // Setup event listeners
+                this.setupEventListeners();
+            }
+
+            setupEventListeners() {
+                // Botón checkout
+                document.querySelector('.btn-checkout')?.addEventListener('click', () => {
+                    this.checkout();
+                });
+
+                // Botón confirmar eliminación
+                document.getElementById('confirmDeleteBtn')?.addEventListener('click', () => {
+                    if (this.itemToDelete !== null) {
+                        this.removeItem(this.itemToDelete);
+                        this.itemToDelete = null;
+                        bootstrap.Modal.getInstance(document.getElementById('confirmDeleteModal')).hide();
+                    }
+                });
+            }
+
+            addItem(product) {
+                const existingItem = this.items.find(item =>
+                    item.title === product.title && item.size === product.size
+                );
+
+                if (existingItem) {
+                    existingItem.quantity += product.quantity;
+                } else {
+                    this.items.push({
+                        id: Date.now(),
+                        title: product.title,
+                        price: product.price,
+                        priceNumber: parseFloat(product.price.replace(/[^0-9.]/g, '')),
+                        size: product.size || null,
+                        quantity: product.quantity,
+                        image: product.image
+                    });
+                }
+
+                this.saveCart();
+                this.updateBadge();
+                this.showToast(product);
+                this.animateCartIcon();
+                this.renderCart();
+            }
+
+            confirmRemoveItem(id) {
+                const item = this.items.find(i => i.id === id);
+                if (item) {
+                    this.itemToDelete = id;
+                    document.getElementById('productToDelete').textContent = item.title;
+                    const modal = new bootstrap.Modal(document.getElementById('confirmDeleteModal'));
+                    modal.show();
+                }
+            }
+
+            removeItem(id) {
+                this.items = this.items.filter(item => item.id !== id);
+                this.saveCart();
+                this.updateBadge();
+                this.renderCart();
+
+                // Mostrar toast de eliminación
+                this.showToast({ title: 'Producto eliminado' }, true);
+            }
+
+            saveCart() {
+                localStorage.setItem('tdah_cart', JSON.stringify(this.items));
+            }
+
+            getTotalItems() {
+                return this.items.reduce((total, item) => total + item.quantity, 0);
+            }
+
+            getSubtotal() {
+                return this.items.reduce((total, item) => total + (item.priceNumber * item.quantity), 0);
+            }
+
+            updateBadge() {
+                const total = this.getTotalItems();
+                const badges = document.querySelectorAll('.cart-badge');
+
+                badges.forEach(badge => {
+                    badge.textContent = total;
+                    if (total > 0) {
+                        badge.classList.add('show');
+                    } else {
+                        badge.classList.remove('show');
+                    }
+                });
+            }
+
+            renderCart() {
+                const emptyCart = document.getElementById('emptyCart');
+                const cartItems = document.getElementById('cartItems');
+                const cartSummary = document.getElementById('cartSummary');
+
+                if (this.items.length === 0) {
+                    emptyCart.style.display = 'flex';
+                    cartItems.style.display = 'none';
+                    cartSummary.style.display = 'none';
+                } else {
+                    emptyCart.style.display = 'none';
+                    cartItems.style.display = 'block';
+                    cartSummary.style.display = 'block';
+
+                    // Renderizar items
+                    cartItems.innerHTML = this.items.map(item => `
+                <div class="cart-item">
+                    <img src="${item.image}" alt="${item.title}" class="cart-item-image">
+                    <div class="cart-item-info">
+                        <h6 class="cart-item-title">${item.title}</h6>
+                        ${item.size ? `<p class="cart-item-size">Talla: ${item.size.toUpperCase()}</p>` : ''}
+                        <p class="cart-item-price">${item.price}</p>
+                        <p class="cart-item-quantity">Cantidad: ${item.quantity}</p>
+                    </div>
+                    <button class="cart-item-remove" onclick="cart.confirmRemoveItem(${item.id})">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </div>
+            `).join('');
+
+                    // Actualizar resumen
+                    const subtotal = this.getSubtotal();
+                    const shipping = subtotal >= 500 ? 0 : 50;
+                    const total = subtotal + shipping;
+
+                    document.getElementById('cartSubtotal').textContent = `$${subtotal.toFixed(2)} MXN`;
+                    document.getElementById('cartShipping').textContent = shipping === 0 ? 'Gratis' : `$${shipping} MXN`;
+                    document.getElementById('cartTotal').textContent = `$${total.toFixed(2)} MXN`;
+                }
+            }
+
+            animateCartIcon() {
+                const wrappers = document.querySelectorAll('.cart-icon-wrapper');
+                wrappers.forEach(wrapper => {
+                    wrapper.classList.add('pulse');
+                    setTimeout(() => wrapper.classList.remove('pulse'), 500);
+                });
+            }
+
+            showToast(product, isDelete = false) {
+                let toast = document.getElementById('cartToast');
+                if (!toast) {
+                    toast = document.createElement('div');
+                    toast.id = 'cartToast';
+                    toast.className = 'cart-toast';
+                    toast.innerHTML = `
+                <div class="cart-toast-icon">
+                    <i class="bi bi-check"></i>
+                </div>
+                <div class="cart-toast-content">
+                    <h6 id="toastTitle">Producto agregado</h6>
+                    <p id="toastProductName"></p>
+                </div>
+            `;
+                    document.body.appendChild(toast);
+                }
+
+                const icon = toast.querySelector('.cart-toast-icon i');
+                const title = document.getElementById('toastTitle');
+                const productName = document.getElementById('toastProductName');
+
+                if (isDelete) {
+                    icon.className = 'bi bi-trash';
+                    toast.querySelector('.cart-toast-icon').style.background = '#dc3545';
+                    title.textContent = 'Producto eliminado';
+                    productName.textContent = product.title;
+                } else {
+                    icon.className = 'bi bi-check';
+                    toast.querySelector('.cart-toast-icon').style.background = '#28a745';
+                    title.textContent = 'Producto agregado';
+                    productName.textContent = `${product.title}${product.size ? ' - Talla ' + product.size.toUpperCase() : ''}`;
+                }
+
+                setTimeout(() => toast.classList.add('show'), 100);
+
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3000);
+            }
+
+            checkout() {
+                if (this.items.length === 0) {
+                    alert('Tu carrito está vacío');
+                    return;
+                }
+
+                // Aquí puedes redirigir a una página de checkout
+                alert('Redirigiendo al checkout...\n\nTotal: $' + (this.getSubtotal() + (this.getSubtotal() >= 500 ? 0 : 50)).toFixed(2) + ' MXN');
+
+                // window.location.href = 'checkout.html';
+            }
+        }
+
+        // Inicializar carrito
+        const cart = new ShoppingCart();
+
+        // Modificar el evento del botón "Agregar al Carrito"
+        document.querySelector('.modal-add-cart').addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const sizeGroup = document.querySelector('.modal-select-group');
+            const sizeSelect = sizeGroup.querySelector('.form-select');
+
+            // Solo validar si el selector está visible
+            if (sizeGroup.style.display !== 'none') {
+                if (sizeSelect.selectedIndex === 0) {
+                    alert('Por favor, selecciona una talla antes de agregar al carrito.');
+                    sizeSelect.focus();
+                    return;
+                }
+            }
+
+            // Obtener datos del producto
+            const product = {
+                title: document.getElementById('modalProductTitle').textContent,
+                price: document.getElementById('modalProductPrice').textContent,
+                size: sizeGroup.style.display !== 'none' ? sizeSelect.value : null,
+                quantity: parseInt(document.getElementById('qtyInput').value),
+                image: document.getElementById('modalProductImage').src
+            };
+
+            // Agregar al carrito
+            cart.addItem(product);
+
+            // Cerrar modal
+            const modal = bootstrap.Modal.getInstance(document.getElementById('productQuickView'));
+            modal.hide();
+        });
+
+        // Evento de clic en el icono del carrito - ACTUALIZAR
+        document.querySelectorAll('.cart-icon-wrapper').forEach(wrapper => {
+            wrapper.addEventListener('click', () => {
+                cart.renderCart();
+                const cartOffcanvas = new bootstrap.Offcanvas(document.getElementById('cartOffcanvas'));
+                cartOffcanvas.show();
+            });
+        });
+
 
 
     </script>
