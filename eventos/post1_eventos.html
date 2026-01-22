@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de Pintura: Expresión sin Juicios</title>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Header con Bootstrap Grid -->
+    <div class="container-fluid">
+        <div class="row header-container">
+
+            <!-- Logo (columna izquierda) -->
+            <div class="col-lg-2 col-12 logo-section">
+                <div class="logo-mobile-wrapper">
+                    <div class="logo-row">
+                        <a href="../index.html">
+                            <img src="../img/logo_TDAH.PNG" alt="TDAH Adultos México" class="logo">
+                        </a>
+                        <!-- Toggle a la derecha del logo -->
+                        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mainNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <!-- Iconos Mobile debajo del logo -->
+                    <div class="navbar-icons-mobile d-lg-none text-center">
+                        <i class="bi bi-facebook icon-hover"></i>
+                        <i class="bi bi-instagram icon-hover"></i>
+                        <i class="bi bi-youtube icon-hover"></i>
+                        <i class="bi bi-search icon-hover"></i>
+                        <i class="bi bi-cart icon-hover"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navbar Section (columna derecha) -->
+            <div class="col-lg-10 col-12 navbar-section">
+
+                <!-- Barra fecha -->
+                <div class="date-bar">
+                    <span>Viernes, 24 de Febrero, 2025</span>
+                </div>
+
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light main-navbar">
+                    <div class="container-fluid">
+
+                        <!-- Contenido -->
+                        <div class="collapse navbar-collapse" id="mainNavbar">
+
+                            <!-- Menú -->
+                            <ul class="navbar-nav me-auto gap-lg-3">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                        Noticias Por Región
+                                    </a>
+                                    <ul class="dropdown-menu region-dropdown">
+                                        <li><a class="dropdown-item" href="index.html">CDMX</a></li>
+                                        <li><a class="dropdown-item" href="#">Cuernavaca</a></li>
+                                        <li><a class="dropdown-item" href="#">Guadalajara</a></li>
+                                        <li><a class="dropdown-item" href="#">Monterrey</a></li>
+                                        <li><a class="dropdown-item" href="#">Cancún</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item"><a class="nav-link" href="#">Cultura</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Eventos</a>
+                                    <ul class="dropdown-menu region-dropdown">
+                                        <li><a class="dropdown-item" href="#proximos-eventos">Comunidad TDAH</a></li>
+                                        <li><a class="dropdown-item" href="#ferias-mas">Ferias TDAH</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="#">Deportes</a></li>
+                                <li class="nav-item"><a class="nav-link region-link"
+                                        href="testimonios.html">Testimonios</a></li>
+                                <li class="nav-item"><a class="nav-link" href="doctores.html">Medicina</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Negocios</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Otros</a>
+                                    <ul class="dropdown-menu region-dropdown">
+                                        <li><a class="dropdown-item" href="#">Tienda</a></li>
+                                        <li><a class="dropdown-item" href="#">Opinion</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <!-- Iconos -->
+                            <div class="navbar-icons d-none d-lg-flex">
+                                <i class="bi bi-facebook icon-hover"></i>
+                                <i class="bi bi-instagram icon-hover"></i>
+                                <i class="bi bi-youtube icon-hover"></i>
+                                <i class="bi bi-search icon-hover"></i>
+                                <i class="bi bi-cart icon-hover"></i>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+    <!-- Encabezado de la Seccion-->
+    <section class="section-category">
+        <div class="container mt-3">
+            <!-- Anuncio que solo se ve en mobile - Después del título -->
+            <div class="row d-lg-none mb-4">
+                <div class="col-12">
+                    <div class="ad ad-horizontal">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">320 x 100</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ads superiores - SOLO DESKTOP -->
+            <div class="row g-3 mb-4 d-none d-lg-flex">
+                <div class="col-lg-6">
+                    <div class="ad ad-horizontal">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">468 x 60</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ad ad-horizontal">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">468 x 60</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="event-detail-section">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- COLUMNA IZQUIERDA - Información del evento -->
+                <div class="col-lg-5 order-2 order-lg-1">
+                    <div class="event-detail-content">
+
+                        <!-- Título -->
+                        <h1 class="event-detail-title">
+                            Taller de Pintura:
+                            Expresión sin
+                            Juicios
+                        </h1>
+
+                        <!-- Tags -->
+                        <div class="event-tags">
+                            <span class="event-tag event-tag-orange">
+                                <i class="bi bi-circle-fill"></i> TDAH
+                            </span>
+                            <span class="event-tag event-tag-blue">Creatividad</span>
+                        </div>
+
+                        <!-- Fecha y hora -->
+                        <div class="event-meta">
+                            <div class="event-meta-item">
+                                <i class="bi bi-calendar3"></i>
+                                <span>Sáb 18 Nov</span>
+                            </div>
+                            <div class="event-meta-item">
+                                <i class="bi bi-clock"></i>
+                                <span>10:00 AM</span>
+                            </div>
+                        </div>
+
+                        <!-- Botón de reserva (MOBILE) - Se muestra solo en mobile después de fecha/hora -->
+                        <button class="btn-reserve d-lg-none mb-3">
+                            GRATIS - RESERVAR
+                        </button>
+
+                        <!-- Botón agregar al calendario (MOBILE) -->
+                        <a href="#" class="btn-add-calendar d-lg-none mb-4">
+                            <img src="https://ssl.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_31_2x.png"
+                                alt="Google Calendar" width="24" height="24">
+                            <span>+ Agregar al calendario</span>
+                        </a>
+
+                        <!-- Ubicación -->
+                        <h3 class="event-section-title">Ubicación del evento</h3>
+
+                        <div class="event-map-wrapper">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.8842922943564!2d-99.16562368509308!3d19.42847998688176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5bd1563%3A0x6c366f0e2de02ff7!2sCDMX!5e0!3m2!1ses!2smx!4v1234567890123!5m2!1ses!2smx"
+                                width="100%" height="250" style="border:0; border-radius: 12px;" allowfullscreen=""
+                                loading="lazy">
+                            </iframe>
+                            <a href="#" class="event-map-link">
+                                <i class="bi bi-arrow-up-right"></i> Ver mapa más grande
+                            </a>
+                        </div>
+
+                        <!-- Botón agregar al calendario (DESKTOP) - Solo visible en desktop -->
+                        <a href="#" class="btn-add-calendar d-none d-lg-inline-flex">
+                            <img src="https://ssl.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_31_2x.png"
+                                alt="Google Calendar" width="24" height="24">
+                            <span>+ Agregar al calendario</span>
+                        </a>
+
+                        <!-- Organizado por -->
+                        <div class="event-organizer">
+                            <h3 class="event-section-title">Organizado por</h3>
+                            <div class="organizer-card">
+                                <img src="../img/logo_TDAH.PNG" alt="TDAH Logo" class="organizer-logo">
+                                <div class="organizer-info">
+                                    <h4>TDAH Adultos México</h4>
+                                    <p>Comunidad de apoyo</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA - Imagen y reserva -->
+                <div class="col-lg-7 order-1 order-lg-2">
+                    <div class="event-detail-visual">
+
+                        <!-- Imagen principal -->
+                        <div class="event-main-image">
+                            <img src="../eventos/artistas.svg" alt="Taller de Pintura" class="img-fluid">
+                        </div>
+
+                        <!-- Botón de reserva (DESKTOP) - Solo visible en desktop -->
+                        <button class="btn-reserve d-none d-lg-block">
+                            GRATIS - RESERVAR
+                        </button>
+
+                        <!-- Anuncio lateral (DESKTOP ONLY) -->
+                        <div class="event-sidebar-ad d-none d-lg-block">
+                            <div class="ad ad-horizontal-tall">
+                                <div class="ad-content">
+                                    <i class="bi bi-megaphone"></i>
+                                    <div class="ad-text">
+                                        <h6>Espacio Publicitario</h6>
+                                        <p>Anuncia aquí tu negocio</p>
+                                    </div>
+                                    <span class="ad-size">450 x 250</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- ANUNCIO MOBILE - Aparece al final después de todo -->
+            <div class="row mt-4 d-lg-none">
+                <div class="col-12">
+                    <div class="ad ad-horizontal-tall">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">320 x 200</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--SECCION PROXIMOS EVENTOS DE LA COMUNIDAD -->
+    <section class="my-5">
+        <div class="container">
+
+            <!-- Título sección -->
+            <h2 class="mb-4 section-title-franklin">
+                Conecta con los testimonios
+            </h2>
+
+            <div class="row g-4">
+
+                <!-- COLUMNA IZQUIERDA (Testimonios) -->
+                <div class="col-lg-9">
+
+                    <!-- VIDEOS SUPERIORES (2 columnas) -->
+                    <div class="row g-4 mb-4">
+                        <!--Primera Video CARD--->
+                        <div class="col-md-6">
+                            <article class="testimonial-video-card">
+
+                                <div class="testimonial-video-wrapper">
+                                    <img src="img/testimonios/primer_video.png" alt="Testimonio video">
+                                    <button class="play-video-btn">
+                                        <i class="bi bi-play-circle-fill"></i>
+                                    </button>
+                                </div>
+
+                                <div class="testimonial-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+
+                                <p class="testimonial-review-text">
+                                    "Excelente experiencia, el apoyo de la comunidad ha sido fundamental en mi proceso
+                                    de aceptación y manejo del TDAH."
+                                </p>
+
+                            </article>
+                        </div>
+                        <!--Segunda Video Card-->
+                        <div class="col-md-6">
+                            <article class="testimonial-video-card">
+
+                                <div class="testimonial-video-wrapper">
+                                    <img src="img/testimonios/segundo_video.png" alt="Testimonio video">
+                                    <button class="play-video-btn">
+                                        <i class="bi bi-play-circle-fill"></i>
+                                    </button>
+                                </div>
+
+                                <div class="testimonial-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+
+                                <p class="testimonial-review-text">
+                                    "Excelente experiencia, el apoyo de la comunidad ha sido fundamental en mi proceso
+                                    de aceptación y manejo del TDAH."
+                                </p>
+
+                            </article>
+                        </div>
+                        <!-- Anuncio móvil - Solo visible en mobile -->
+                        <div class="d-lg-none my-4">
+                            <div class="ad ad-horizontal">
+                                <div class="ad-content">
+                                    <i class="bi bi-megaphone"></i>
+                                    <div class="ad-text">
+                                        <h6>Espacio Publicitario</h6>
+                                        <p>Anuncia aquí tu negocio</p>
+                                    </div>
+                                    <span class="ad-size">320 x 100</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Tercer Video Card-->
+                        <div class="col-md-6">
+                            <article class="testimonial-video-card">
+
+                                <div class="testimonial-video-wrapper">
+                                    <img src="img/testimonios/tercer_video.png" alt="Testimonio video">
+                                    <button class="play-video-btn">
+                                        <i class="bi bi-play-circle-fill"></i>
+                                    </button>
+                                </div>
+
+                                <div class="testimonial-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+
+                                <p class="testimonial-review-text">
+                                    "Excelente experiencia, el apoyo de la comunidad ha sido fundamental en mi proceso
+                                    de aceptación y manejo del TDAH."
+                                </p>
+
+                            </article>
+                        </div>
+                        <!---Cuarto Video Card-->
+                        <div class="col-md-6">
+                            <article class="testimonial-video-card">
+
+                                <div class="testimonial-video-wrapper">
+                                    <img src="img/testimonios/cuarto_video.png" alt="Testimonio video">
+                                    <button class="play-video-btn">
+                                        <i class="bi bi-play-circle-fill"></i>
+                                    </button>
+                                </div>
+
+                                <div class="testimonial-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+
+                                <p class="testimonial-review-text">
+                                    "Excelente experiencia, el apoyo de la comunidad ha sido fundamental en mi proceso
+                                    de aceptación y manejo del TDAH."
+                                </p>
+
+                            </article>
+                        </div>
+
+                    </div>
+
+                    <!-- EVENTOS INFERIORES (3 columnas) -->
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <!-- Anuncio móvil - Solo visible en mobile -->
+                            <div class="d-lg-none mb-4">
+                                <div class="ad ad-horizontal">
+                                    <div class="ad-content">
+                                        <i class="bi bi-megaphone"></i>
+                                        <div class="ad-text">
+                                            <h6>Espacio Publicitario</h6>
+                                            <p>Anuncia aquí tu negocio</p>
+                                        </div>
+                                        <span class="ad-size">320 x 100</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- TÍTULO -->
+                            <h3 class="past-events-title mb-4">Eventos Proximos</h3>
+
+                            <!-- SWIPER CAROUSEL -->
+                            <div class="past-events-carousel testimonios-destacados-carousel">
+                                <div class="swiper testimoniosDestacadosSwiper">
+                                    <div class="swiper-wrapper">
+
+                                        <!-- SLIDE 1 -->
+                                        <div class="swiper-slide">
+                                            <div class="past-event-card">
+                                                <img src="img/eventos/expo_tdah_evento_pasados.png" class="img-fluid"
+                                                    alt="EXPO TDHA 2020">
+                                                <h6>EXPO TDHA 2020</h6>
+                                                <p>20 / MARZO / 2020</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- SLIDE 2 -->
+                                        <div class="swiper-slide">
+                                            <div class="past-event-card">
+                                                <img src="img/eventos/expo_tdahart_evento_pasado.png" class="img-fluid"
+                                                    alt="EXPO TDARTH">
+                                                <h6>EXPO TDARTH</h6>
+                                                <p>25 / MAYO / 2021</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- SLIDE 3 -->
+                                        <div class="swiper-slide">
+                                            <div class="past-event-card">
+                                                <img src="img/eventos/expo_fotos_eventos_pasados.png" class="img-fluid"
+                                                    alt="EXPO FOTOS 2022">
+                                                <h6>EXPO FOTOS 2022</h6>
+                                                <p>10 / DICIEMBRE / 2022</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- SLIDE 4 -->
+                                        <div class="swiper-slide">
+                                            <div class="past-event-card">
+                                                <img src="img/eventos/tianguis_navideno_evento_pasado.png"
+                                                    class="img-fluid" alt="Tianguis Navideño">
+                                                <h6>Tianguis Navideño</h6>
+                                                <p>DICIEMBRE / 2022</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- CONTROLES -->
+                                <div class="swiper-button-prev carousel-control-prev"></div>
+                                <div class="swiper-button-next carousel-control-next"></div>
+                            </div>
+
+                            <!-- Anuncio móvil - Solo visible en mobile -->
+                            <div class="d-lg-none mt-4">
+                                <div class="ad ad-horizontal">
+                                    <div class="ad-content">
+                                        <i class="bi bi-megaphone"></i>
+                                        <div class="ad-text">
+                                            <h6>Espacio Publicitario</h6>
+                                            <p>Anuncia aquí tu negocio</p>
+                                        </div>
+                                        <span class="ad-size">320 x 100</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- COLUMNA DERECHA (ADS) -->
+                <div class="col-lg-3 ps-lg-4">
+
+                    <div class="sidebar-header mb-3">
+                        <span class="sidebar-title">NUESTROS PATROCINADORES</span>
+                    </div>
+
+                    <!-- Publicidad lateral 1 -->
+                    <div class="ad ad-vertical mb-4">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">300 x 600</span>
+                        </div>
+                    </div>
+
+                    <!-- Publicidad lateral 2 -->
+                    <div class="ad ad-vertical">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">300 x 600</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- ADS INFERIORES (DESKTOP) -->
+            <div class="row mt-5 g-3 d-none d-lg-flex">
+                <div class="col-lg-6">
+                    <div class="ad ad-horizontal">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">468 x 60</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ad ad-horizontal">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">468 x 60</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    <!--EVENTOS PASADOS-->
+    <section class="my-5">
+        <div class="container">
+
+            <!-- TÍTULO -->
+            <h3 class="past-events-title">Eventos Pasados</h3>
+
+            <!-- SWIPER CAROUSEL -->
+            <div class="past-events-carousel-redesigned">
+                <div class="swiper pastEventsSwiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- SLIDE 1 -->
+                        <div class="swiper-slide">
+                            <div class="past-event-card-redesigned">
+                                <img src="img/testimonios/eventos_pasados_1.png" class="img-fluid" alt="">
+                                <h6>Conferencia Internacional del TDAH</h6>
+                                <p>20 / MARZO / 2020</p>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 2 -->
+                        <div class="swiper-slide">
+                            <div class="past-event-card-redesigned">
+                                <img src="img/testimonios/eventos_pasados_2.png" class="img-fluid" alt="EXPO TDARTH">
+                                <h6>EXPO TDARTH</h6>
+                                <p>25 / MAYO / 2021</p>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 3 -->
+                        <div class="swiper-slide">
+                            <div class="past-event-card-redesigned">
+                                <img src="img/testimonios/eventos_pasados_3.png" class="img-fluid"
+                                    alt="EXPO FOTOS 2022">
+                                <h6>EXPO FOTOS 2022</h6>
+                                <p>10 / DICIEMBRE / 2022</p>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 4 -->
+                        <div class="swiper-slide">
+                            <div class="past-event-card-redesigned">
+                                <img src="img/eventos/tianguis_navideno_evento_pasado.png" class="img-fluid"
+                                    alt="Tianguis Navideño">
+                                <h6>Tianguis Navideño</h6>
+                                <p>DICIEMBRE / 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTROLES -->
+                <div class="swiper-button-prev carousel-control-prev"></div>
+                <div class="swiper-button-next carousel-control-next"></div>
+            </div>
+
+            <!-- Anuncio móvil - Solo visible en mobile -->
+            <div class="d-lg-none my-4">
+                <div class="ad ad-horizontal">
+                    <div class="ad-content">
+                        <i class="bi bi-megaphone"></i>
+                        <div class="ad-text">
+                            <h6>Espacio Publicitario</h6>
+                            <p>Anuncia aquí tu negocio</p>
+                        </div>
+                        <span class="ad-size">320 x 100</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publicidad inferior - Anuncio único de ancho completo -->
+    <section class="my-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="ad ad-horizontal">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">728 x 90</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Seccion de Newsletter final y anuncios-->
+    <section class="subscribe-section testimonios-padding">
+        <div class="container">
+
+            <div class="row align-items-center g-4">
+
+                <!-- Texto -->
+                <div class="col-lg-6">
+                    <h2 class="subscribe-title">
+                        Recibe las Últimas<br>
+                        Noticias y Eventos
+                    </h2>
+                </div>
+
+                <!-- Descripción + formulario -->
+                <div class="col-lg-6">
+                    <p class="subscribe-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                    </p>
+
+                    <form class="subscribe-form">
+                        <input type="text" class="form-control" placeholder="Tu nombre">
+                        <input type="email" class="form-control" placeholder="Ingresa tu correo electrónico">
+                        <button type="submit" class="btn btn-subscribe-main">
+                            Suscríbete
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <!-- Logo -->
+                <div class="col-lg-3 text-center text-lg-start mb-3 mb-lg-0">
+                    <img src="./img/logo_TDAH.PNG" alt="TDAH Adultos México" class="footer-logo">
+                </div>
+
+                <!-- Navegación -->
+                <div class="col-lg-6 text-center">
+                    <h5 class="footer-title">¿Quiénes Somos?</h5>
+                    <ul class="footer-menu">
+                        <li><a href="#">Tienda</a></li>
+                        <li><a href="#">Testimonios</a></li>
+                        <li><a href="#">Deportes</a></li>
+                        <li><a href="#">Negocios</a></li>
+                        <li><a href="#">Medicina</a></li>
+                        <li><a href="#">Cultura</a></li>
+                        <li><a href="#">Eventos</a></li>
+                        <p class="footer-copyright">
+                            © <span id="currentYear"></span> TDAH Adultos México. Todos los derechos reservados.
+                        </p>
+                    </ul>
+
+                </div>
+
+                <!-- Redes -->
+                <div class="col-lg-3 text-center text-lg-end">
+                    <p class="footer-social-title">Síguenos en nuestras<br>redes sociales</p>
+                    <div class="footer-social">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-youtube"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+        // Actualizar año automáticamente en el footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Swiper para eventos pasados (versión rediseñada - 3 columnas)
+        const pastEventsSwiper = new Swiper('.pastEventsSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 15,
+            grabCursor: true,
+            navigation: {
+                nextEl: '.past-events-carousel-redesigned .carousel-control-next',
+                prevEl: '.past-events-carousel-redesigned .carousel-control-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                }
+            }
+        });
+
+
+        const imageSwiper = new Swiper('.testimonial-content', {
+            slidesPerView: 1,
+            pagination: {
+                el: '.testimonial-content .swiper-pagination',
+                clickable: true,
+                dynamicBullets: false
+            }
+        });
+
+        const textSwiper = new Swiper('.testimonial-swiper-text', {
+            slidesPerView: 1,
+            navigation: {
+                nextEl: '.custom-next',
+                prevEl: '.custom-prev'
+            }
+        });
+
+        // Swiper para testimonios destacados (slider inferior)
+        const testimoniosDestacadosSwiper = new Swiper('.testimoniosDestacadosSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            grabCursor: true,
+            navigation: {
+                nextEl: '.testimonios-destacados-carousel .carousel-control-next',
+                prevEl: '.testimonios-destacados-carousel .carousel-control-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                }
+            }
+        });
+
+        // Sincronizar ambos swipers
+        imageSwiper.controller.control = textSwiper;
+        textSwiper.controller.control = imageSwiper;
+
+
+    </script>
+</body>
+
+</html>
