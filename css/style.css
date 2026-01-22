@@ -5588,3 +5588,349 @@ body>.container-fluid:first-child {
         width: 100% !important;
     }
 }
+
+/* ====================================
+   PÁGINA DE DETALLE DE EVENTO
+   ==================================== */
+
+.event-detail-section {
+    padding: 3rem 0;
+    background: var(--white);
+}
+
+/* Título principal */
+.event-detail-title {
+    font-family: 'Domine', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+/* Tags */
+.event-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.event-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: white;
+}
+
+.event-tag-orange {
+    background: var(--secondary);
+}
+
+.event-tag-orange i {
+    font-size: 8px;
+}
+
+.event-tag-blue {
+    background: var(--primary);
+}
+
+/* Meta información (fecha y hora) */
+.event-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.event-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.event-meta-item i {
+    font-size: 1.5rem;
+}
+
+/* Títulos de sección */
+.event-section-title {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+/* Mapa */
+.event-map-wrapper {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.event-map-wrapper iframe {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.event-map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 0.5rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.event-map-link:hover {
+    color: var(--secondary);
+}
+
+/* Botón agregar al calendario */
+.btn-add-calendar {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-add-calendar:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(3, 151, 177, 0.2);
+}
+
+/* Organizador */
+.event-organizer {
+    margin-top: 2rem;
+}
+
+.organizer-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.organizer-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background: white;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.organizer-info h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--black);
+}
+
+.organizer-info p {
+    font-size: 0.875rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Columna derecha - Visual */
+.event-detail-visual {
+    position: relative;
+}
+
+.event-main-image {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.event-main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Botón de reserva */
+.btn-reserve {
+    width: 100%;
+    padding: 1.25rem;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(254, 149, 24, 0.3);
+}
+
+.btn-reserve:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(3, 151, 177, 0.4);
+}
+
+.btn-reserve:active {
+    transform: translateY(0);
+}
+
+/* Anuncio sidebar */
+.event-sidebar-ad {
+    margin-top: 2rem;
+}
+
+/* ====================================
+   RESPONSIVE - REORGANIZACIÓN MOBILE
+   ==================================== */
+
+/* Mobile: orden de elementos */
+@media (max-width: 991px) {
+    
+    /* Imagen aparece primero */
+    .event-detail-visual {
+        margin-bottom: 2rem;
+    }
+
+    .event-main-image {
+        margin-bottom: 0;
+    }
+
+    /* Espaciado entre fecha/hora y botones */
+    .event-meta {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Botón reservar en mobile - full width */
+    .btn-reserve.d-lg-none {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.125rem;
+    }
+
+    /* Botón calendario en mobile - full width */
+    .btn-add-calendar.d-lg-none {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Ocultar anuncio sidebar en mobile */
+    .event-sidebar-ad.d-none.d-lg-block {
+        display: none !important;
+    }
+
+    /* Ajustar título en mobile */
+    .event-detail-title {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    /* Tags más compactos */
+    .event-tags {
+        margin-bottom: 1rem;
+    }
+
+    /* Ubicación con menos espacio superior */
+    .event-section-title {
+        margin-top: 1rem;
+    }
+
+    /* Mapa más compacto */
+    .event-map-wrapper iframe {
+        height: 200px;
+    }
+
+    /* Organizador más compacto */
+    .event-organizer {
+        margin-top: 1.5rem;
+    }
+}
+
+/* Tablet pequeña */
+@media (max-width: 768px) {
+    .event-detail-section {
+        padding: 2rem 0;
+    }
+
+    .event-meta {
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .event-meta-item {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile pequeño */
+@media (max-width: 576px) {
+    .event-detail-title {
+        font-size: 1.75rem;
+    }
+
+    .event-tag {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+
+    .btn-reserve.d-lg-none {
+        padding: 0.875rem;
+        font-size: 1rem;
+    }
+
+    .btn-add-calendar.d-lg-none {
+        padding: 10px 16px;
+        font-size: 0.875rem;
+    }
+
+    .btn-add-calendar img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .organizer-logo {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.ad-horizontal-tall {
+    height: 18rem;
+}
+/* Responsive para ad-horizontal-tall */
+@media (max-width: 991px) {
+    .ad-horizontal-tall {
+        height: 18rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .ad-horizontal-tall {
+        height: 20rem;
+    }
+}
