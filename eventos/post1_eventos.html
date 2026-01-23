@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 </head>
 
 <body>
@@ -198,7 +200,7 @@
                         </button>
 
                         <!-- Botón agregar al calendario (MOBILE) -->
-                        <a href="#" class="btn-add-calendar d-lg-none mb-4">
+                        <a href="#" class="btn-add-calendar d-lg-none mb-4" id="addToCalendarMobile">
                             <img src="https://ssl.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_31_2x.png"
                                 alt="Google Calendar" width="24" height="24">
                             <span>+ Agregar al calendario</span>
@@ -209,17 +211,13 @@
 
                         <div class="event-map-wrapper">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.8842922943564!2d-99.16562368509308!3d19.42847998688176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5bd1563%3A0x6c366f0e2de02ff7!2sCDMX!5e0!3m2!1ses!2smx!4v1234567890123!5m2!1ses!2smx"
-                                width="100%" height="250" style="border:0; border-radius: 12px;" allowfullscreen=""
-                                loading="lazy">
-                            </iframe>
-                            <a href="#" class="event-map-link">
-                                <i class="bi bi-arrow-up-right"></i> Ver mapa más grande
-                            </a>
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15050.64639279104!2d-99.16905!3d19.427022!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5bd1563%3A0x6c366f0e2de02ff7!2sEl%20%C3%81ngel%20de%20la%20Independencia!5e0!3m2!1ses!2smx!4v1769126468875!5m2!1ses!2smx"
+                                width="100%" height="320" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
 
                         <!-- Botón agregar al calendario (DESKTOP) - Solo visible en desktop -->
-                        <a href="#" class="btn-add-calendar d-none d-lg-inline-flex">
+                        <a href="#" class="btn-add-calendar d-none d-lg-inline-flex" id="addToCalendar">
                             <img src="https://ssl.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_31_2x.png"
                                 alt="Google Calendar" width="24" height="24">
                             <span>+ Agregar al calendario</span>
@@ -289,76 +287,108 @@
             </div>
         </div>
     </section>
-    <!--SECCION PROXIMOS EVENTOS DE LA COMUNIDAD -->
-    <section class="my-5">
+
+    <!--Seccion de carousel de imagenes del evento-->
+    <section class="event-gallery-section">
+        <div class="container">
+
+            <!-- Título -->
+            <h3 class="event-section-title mb-4">Galería del Evento</h3>
+
+            <!-- Carousel de imágenes -->
+            <div class="event-images-container">
+                <div class="swiper event-images-slider">
+                    <div class="swiper-wrapper">
+
+                        <!-- Imagen 1 -->
+                        <div class="swiper-slide">
+                            <a href="../img/eventos/evidencia_evento_taller_de_pintura.png" class="glightbox"
+                                data-gallery="event-gallery"
+                                data-glightbox="title: Taller de Pintura; description: Participantes expresando su creatividad">
+                                <div class="event-image-card">
+                                    <img src="../img/eventos/evidencia_evento_taller_de_pintura.png"
+                                        alt="Imagen del evento 1">
+                                    <div class="event-image-overlay">
+                                        <i class="bi bi-zoom-in"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Imagen 2 -->
+                        <div class="swiper-slide">
+                            <a href="../img/eventos/evidencia2_evento_taller_pintura.png" class="glightbox"
+                                data-gallery="event-gallery"
+                                data-glightbox="title: Momento Creativo; description: Explorando técnicas de pintura">
+                                <div class="event-image-card">
+                                    <img src="../img/eventos/evidencia2_evento_taller_pintura.png"
+                                        alt="Imagen del evento 2">
+                                    <div class="event-image-overlay">
+                                        <i class="bi bi-zoom-in"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Imagen 3 -->
+                        <div class="swiper-slide">
+                            <a href="../img/eventos/evidencia_evento_galeria_arte_taller_pintura.png" class="glightbox"
+                                data-gallery="event-gallery"
+                                data-glightbox="title: Expresión Libre; description: Sin juicios, solo arte">
+                                <div class="event-image-card">
+                                    <img src="../img/eventos/evidencia_evento_galeria_arte_taller_pintura.png"
+                                        alt="Imagen del evento 3">
+                                    <div class="event-image-overlay">
+                                        <i class="bi bi-zoom-in"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Controles de navegación -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
+                    <!-- Paginación (opcional) -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--SECCION DE Descripción de Evento -->
+    <section class="event-description-section my-5">
         <div class="container">
 
             <!-- Título sección -->
             <h2 class="mb-4 section-title-franklin">
-                Conecta con los testimonios
+                Descripción del Evento
             </h2>
 
             <div class="row g-4">
 
-                <!-- COLUMNA IZQUIERDA (Testimonios) -->
+                <!-- COLUMNA IZQUIERDA (Descripción) -->
                 <div class="col-lg-9">
 
-                    <!-- VIDEOS SUPERIORES (2 columnas) -->
-                    <div class="row g-4 mb-4">
-                        <!--Primera Video CARD--->
-                        <div class="col-md-6">
-                            <article class="testimonial-video-card">
+                    <!-- Contenedor de descripción -->
+                    <div class="event-description-content">
 
-                                <div class="testimonial-video-wrapper">
-                                    <img src="img/testimonios/primer_video.png" alt="Testimonio video">
-                                    <button class="play-video-btn">
-                                        <i class="bi bi-play-circle-fill"></i>
-                                    </button>
-                                </div>
-
-                                <div class="testimonial-rating">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-
-                                <p class="testimonial-review-text">
-                                    "Excelente experiencia, el apoyo de la comunidad ha sido fundamental en mi proceso
-                                    de aceptación y manejo del TDAH."
-                                </p>
-
-                            </article>
+                        <!-- Introducción -->
+                        <div class="description-intro mb-4">
+                            <h3 class="description-subtitle">¿De qué trata este taller?</h3>
+                            <p class="description-text">
+                                El <strong>Taller de Pintura: Expresión sin Juicios</strong> es un espacio seguro y
+                                acogedor diseñado especialmente para adultos con TDAH que desean explorar su creatividad
+                                a través del arte. Este taller ofrece una oportunidad única para expresarte libremente
+                                sin temor a críticas o juicios.
+                            </p>
                         </div>
-                        <!--Segunda Video Card-->
-                        <div class="col-md-6">
-                            <article class="testimonial-video-card">
 
-                                <div class="testimonial-video-wrapper">
-                                    <img src="img/testimonios/segundo_video.png" alt="Testimonio video">
-                                    <button class="play-video-btn">
-                                        <i class="bi bi-play-circle-fill"></i>
-                                    </button>
-                                </div>
-
-                                <div class="testimonial-rating">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-
-                                <p class="testimonial-review-text">
-                                    "Excelente experiencia, el apoyo de la comunidad ha sido fundamental en mi proceso
-                                    de aceptación y manejo del TDAH."
-                                </p>
-
-                            </article>
-                        </div>
-                        <!-- Anuncio móvil - Solo visible en mobile -->
-                        <div class="d-lg-none my-4">
+                        <!-- Anuncio móvil - Solo visible en mobile después de intro -->
+                        <div class="d-lg-none mb-4">
                             <div class="ad ad-horizontal">
                                 <div class="ad-content">
                                     <i class="bi bi-megaphone"></i>
@@ -370,146 +400,150 @@
                                 </div>
                             </div>
                         </div>
-                        <!--Tercer Video Card-->
-                        <div class="col-md-6">
-                            <article class="testimonial-video-card">
 
-                                <div class="testimonial-video-wrapper">
-                                    <img src="img/testimonios/tercer_video.png" alt="Testimonio video">
-                                    <button class="play-video-btn">
-                                        <i class="bi bi-play-circle-fill"></i>
-                                    </button>
-                                </div>
-
-                                <div class="testimonial-rating">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-
-                                <p class="testimonial-review-text">
-                                    "Excelente experiencia, el apoyo de la comunidad ha sido fundamental en mi proceso
-                                    de aceptación y manejo del TDAH."
-                                </p>
-
-                            </article>
-                        </div>
-                        <!---Cuarto Video Card-->
-                        <div class="col-md-6">
-                            <article class="testimonial-video-card">
-
-                                <div class="testimonial-video-wrapper">
-                                    <img src="img/testimonios/cuarto_video.png" alt="Testimonio video">
-                                    <button class="play-video-btn">
-                                        <i class="bi bi-play-circle-fill"></i>
-                                    </button>
-                                </div>
-
-                                <div class="testimonial-rating">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-
-                                <p class="testimonial-review-text">
-                                    "Excelente experiencia, el apoyo de la comunidad ha sido fundamental en mi proceso
-                                    de aceptación y manejo del TDAH."
-                                </p>
-
-                            </article>
+                        <!-- ¿Qué incluye? -->
+                        <div class="description-section mb-4">
+                            <h3 class="description-subtitle">¿Qué incluye el taller?</h3>
+                            <ul class="description-list">
+                                <li>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <span>Todos los materiales de pintura (pinturas acrílicas, pinceles, lienzos)</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <span>Guía de un instructor experimentado en arte terapia</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <span>Ambiente relajado y libre de presiones</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <span>Coffee break con snacks saludables</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <span>Certificado de participación</span>
+                                </li>
+                            </ul>
                         </div>
 
-                    </div>
+                        <!-- Anuncio móvil - Solo visible en mobile -->
+                        <div class="d-lg-none mb-4">
+                            <div class="ad ad-horizontal">
+                                <div class="ad-content">
+                                    <i class="bi bi-megaphone"></i>
+                                    <div class="ad-text">
+                                        <h6>Espacio Publicitario</h6>
+                                        <p>Anuncia aquí tu negocio</p>
+                                    </div>
+                                    <span class="ad-size">320 x 100</span>
+                                </div>
+                            </div>
+                        </div>
 
-                    <!-- EVENTOS INFERIORES (3 columnas) -->
-                    <div class="row g-4">
-                        <div class="col-12">
-                            <!-- Anuncio móvil - Solo visible en mobile -->
-                            <div class="d-lg-none mb-4">
-                                <div class="ad ad-horizontal">
-                                    <div class="ad-content">
-                                        <i class="bi bi-megaphone"></i>
-                                        <div class="ad-text">
-                                            <h6>Espacio Publicitario</h6>
-                                            <p>Anuncia aquí tu negocio</p>
+                        <!-- Beneficios  SE PUEDE AGREGAR PARA POTENCIAR EL EVENTO O OTRA SECCION
+                        <div class="description-section mb-4">
+                            <h3 class="description-subtitle">Beneficios del taller</h3>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="benefit-card">
+                                        <div class="benefit-icon">
+                                            <i class="bi bi-palette"></i>
                                         </div>
-                                        <span class="ad-size">320 x 100</span>
+                                        <h4>Estimula la creatividad</h4>
+                                        <p>Desarrolla nuevas formas de expresión y pensamiento creativo</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="benefit-card">
+                                        <div class="benefit-icon">
+                                            <i class="bi bi-heart-pulse"></i>
+                                        </div>
+                                        <h4>Reduce el estrés</h4>
+                                        <p>La pintura ayuda a relajar la mente y reducir la ansiedad</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="benefit-card">
+                                        <div class="benefit-icon">
+                                            <i class="bi bi-people"></i>
+                                        </div>
+                                        <h4>Conexión social</h4>
+                                        <p>Conoce a otras personas con TDAH en un ambiente positivo</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="benefit-card">
+                                        <div class="benefit-icon">
+                                            <i class="bi bi-stars"></i>
+                                        </div>
+                                        <h4>Autoestima</h4>
+                                        <p>Fortalece tu confianza mediante el logro creativo</p>
                                     </div>
                                 </div>
                             </div>
+                        </div> -->
 
-                            <!-- TÍTULO -->
-                            <h3 class="past-events-title mb-4">Eventos Proximos</h3>
-
-                            <!-- SWIPER CAROUSEL -->
-                            <div class="past-events-carousel testimonios-destacados-carousel">
-                                <div class="swiper testimoniosDestacadosSwiper">
-                                    <div class="swiper-wrapper">
-
-                                        <!-- SLIDE 1 -->
-                                        <div class="swiper-slide">
-                                            <div class="past-event-card">
-                                                <img src="img/eventos/expo_tdah_evento_pasados.png" class="img-fluid"
-                                                    alt="EXPO TDHA 2020">
-                                                <h6>EXPO TDHA 2020</h6>
-                                                <p>20 / MARZO / 2020</p>
-                                            </div>
-                                        </div>
-
-                                        <!-- SLIDE 2 -->
-                                        <div class="swiper-slide">
-                                            <div class="past-event-card">
-                                                <img src="img/eventos/expo_tdahart_evento_pasado.png" class="img-fluid"
-                                                    alt="EXPO TDARTH">
-                                                <h6>EXPO TDARTH</h6>
-                                                <p>25 / MAYO / 2021</p>
-                                            </div>
-                                        </div>
-
-                                        <!-- SLIDE 3 -->
-                                        <div class="swiper-slide">
-                                            <div class="past-event-card">
-                                                <img src="img/eventos/expo_fotos_eventos_pasados.png" class="img-fluid"
-                                                    alt="EXPO FOTOS 2022">
-                                                <h6>EXPO FOTOS 2022</h6>
-                                                <p>10 / DICIEMBRE / 2022</p>
-                                            </div>
-                                        </div>
-
-                                        <!-- SLIDE 4 -->
-                                        <div class="swiper-slide">
-                                            <div class="past-event-card">
-                                                <img src="img/eventos/tianguis_navideno_evento_pasado.png"
-                                                    class="img-fluid" alt="Tianguis Navideño">
-                                                <h6>Tianguis Navideño</h6>
-                                                <p>DICIEMBRE / 2022</p>
-                                            </div>
-                                        </div>
-
+                        <!-- Agenda del taller -->
+                        <div class="description-section mb-4">
+                            <h3 class="description-subtitle">Agenda del día</h3>
+                            <div class="agenda-timeline">
+                                <div class="agenda-item">
+                                    <div class="agenda-time">10:00 - 10:30</div>
+                                    <div class="agenda-content">
+                                        <h5>Bienvenida y presentación</h5>
+                                        <p>Conoce a los participantes y al instructor</p>
                                     </div>
                                 </div>
-
-                                <!-- CONTROLES -->
-                                <div class="swiper-button-prev carousel-control-prev"></div>
-                                <div class="swiper-button-next carousel-control-next"></div>
+                                <div class="agenda-item">
+                                    <div class="agenda-time">10:30 - 11:00</div>
+                                    <div class="agenda-content">
+                                        <h5>Introducción a técnicas básicas</h5>
+                                        <p>Aprende sobre colores, texturas y formas</p>
+                                    </div>
+                                </div>
+                                <div class="agenda-item">
+                                    <div class="agenda-time">11:00 - 12:30</div>
+                                    <div class="agenda-content">
+                                        <h5>Tiempo de creación libre</h5>
+                                        <p>Pinta tu obra sin límites ni juicios</p>
+                                    </div>
+                                </div>
+                                <div class="agenda-item">
+                                    <div class="agenda-time">12:30 - 13:00</div>
+                                    <div class="agenda-content">
+                                        <h5>Compartir y reflexionar</h5>
+                                        <p>Espacio opcional para compartir tu experiencia</p>
+                                    </div>
+                                </div>
                             </div>
-
-                            <!-- Anuncio móvil - Solo visible en mobile -->
-                            <div class="d-lg-none mt-4">
-                                <div class="ad ad-horizontal">
-                                    <div class="ad-content">
-                                        <i class="bi bi-megaphone"></i>
-                                        <div class="ad-text">
-                                            <h6>Espacio Publicitario</h6>
-                                            <p>Anuncia aquí tu negocio</p>
-                                        </div>
-                                        <span class="ad-size">320 x 100</span>
+                        </div>
+                        <!-- Anuncio móvil - Solo visible en mobile -->
+                        <div class="d-lg-none mb-4">
+                            <div class="ad ad-horizontal">
+                                <div class="ad-content">
+                                    <i class="bi bi-megaphone"></i>
+                                    <div class="ad-text">
+                                        <h6>Espacio Publicitario</h6>
+                                        <p>Anuncia aquí tu negocio</p>
                                     </div>
+                                    <span class="ad-size">320 x 100</span>
                                 </div>
+                            </div>
+                        </div>
+
+                        <!-- Requisitos -->
+                        <div class="description-section">
+                            <h3 class="description-subtitle">Requisitos para participar</h3>
+                            <div class="requirements-box">
+                                <ul class="requirements-list">
+                                    <li>No se requiere experiencia previa en pintura</li>
+                                    <li>Edad mínima: 18 años</li>
+                                    <li>Registro previo obligatorio (cupo limitado a 20 personas)</li>
+                                    <li>Llevar ropa cómoda que puedas manchar</li>
+                                    <li>Actitud abierta y ganas de disfrutar</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -547,9 +581,11 @@
                         </div>
                     </div>
 
+
                 </div>
 
             </div>
+
             <!-- ADS INFERIORES (DESKTOP) -->
             <div class="row mt-5 g-3 d-none d-lg-flex">
                 <div class="col-lg-6">
@@ -576,8 +612,94 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+
+        </div>
+    </section>
+
+    <!--EVENTOS PRÓXIMOS-->
+    <section class="my-5">
+        <div class="container">
+
+            <!-- TÍTULO -->
+            <h3 class="upcoming-events-title">Eventos Próximos</h3>
+
+            <!-- SWIPER CAROUSEL CON NUEVAS CLASES -->
+            <div class="upcoming-events-carousel">
+                <div class="swiper upcomingEventsSwiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- SLIDE 1 -->
+                        <div class="swiper-slide">
+                            <div class="upcoming-event-card">
+                                <img src="../img/eventos/dia1_chef_en_accion.png" class="img-fluid"
+                                    alt="Taller de Cocina">
+                                <div class="upcoming-event-overlay">
+                                    <h6>Taller de Cocina</h6>
+                                    <p>30 de enero 2026</p>
+                                    <a href="post2_eventos.html" class="btn-upcoming-event">
+                                        Ver Evento
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 2 -->
+                        <div class="swiper-slide">
+                            <div class="upcoming-event-card">
+                                <img src="../img/eventos/expo_tdahart_evento_pasado.png" class="img-fluid"
+                                    alt="EXPO TDARTH">
+                                <div class="upcoming-event-overlay">
+                                    <h6>EXPO TDARTH</h6>
+                                    <p>15 de febrero 2026</p>
+                                    <a href="post3_eventos.html" class="btn-upcoming-event">
+                                        Ver Evento
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 3 -->
+                        <div class="swiper-slide">
+                            <div class="upcoming-event-card">
+                                <img src="../img/eventos/taller_fotografia.png" class="img-fluid"
+                                    alt="Taller de Fotografía">
+                                <div class="upcoming-event-overlay">
+                                    <h6>Taller de Fotografía</h6>
+                                    <p>20 de febrero 2026</p>
+                                    <a href="post4_eventos.html" class="btn-upcoming-event">
+                                        Ver Evento
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 4 -->
+                        <div class="swiper-slide">
+                            <div class="upcoming-event-card">
+                                <img src="../img/eventos/tianguis_navideno_evento_pasado.png" class="img-fluid"
+                                    alt="Mercadito TDAH">
+                                <div class="upcoming-event-overlay">
+                                    <h6>Mercadito TDAH</h6>
+                                    <p>28 de febrero 2026</p>
+                                    <a href="post5_eventos.html" class="btn-upcoming-event">
+                                        Ver Evento
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles de navegación -->
+                <div class="swiper-button-next upcoming-next"></div>
+                <div class="swiper-button-prev upcoming-prev"></div>
+            </div>
+        </div>
     </section>
 
     <!--EVENTOS PASADOS-->
@@ -588,23 +710,25 @@
             <h3 class="past-events-title">Eventos Pasados</h3>
 
             <!-- SWIPER CAROUSEL -->
-            <div class="past-events-carousel-redesigned">
+            <div class="past-events-carousel">
                 <div class="swiper pastEventsSwiper">
                     <div class="swiper-wrapper">
 
                         <!-- SLIDE 1 -->
                         <div class="swiper-slide">
-                            <div class="past-event-card-redesigned">
-                                <img src="img/testimonios/eventos_pasados_1.png" class="img-fluid" alt="">
-                                <h6>Conferencia Internacional del TDAH</h6>
+                            <div class="past-event-card">
+                                <img src="../img/eventos/expo_tdah_evento_pasados.png" class="img-fluid"
+                                    alt="EXPO TDHA 2020">
+                                <h6>EXPO TDHA 2020</h6>
                                 <p>20 / MARZO / 2020</p>
                             </div>
                         </div>
 
                         <!-- SLIDE 2 -->
                         <div class="swiper-slide">
-                            <div class="past-event-card-redesigned">
-                                <img src="img/testimonios/eventos_pasados_2.png" class="img-fluid" alt="EXPO TDARTH">
+                            <div class="past-event-card">
+                                <img src="../img/eventos/expo_tdahart_evento_pasado.png" class="img-fluid"
+                                    alt="EXPO TDARTH">
                                 <h6>EXPO TDARTH</h6>
                                 <p>25 / MAYO / 2021</p>
                             </div>
@@ -612,8 +736,8 @@
 
                         <!-- SLIDE 3 -->
                         <div class="swiper-slide">
-                            <div class="past-event-card-redesigned">
-                                <img src="img/testimonios/eventos_pasados_3.png" class="img-fluid"
+                            <div class="past-event-card">
+                                <img src="../img/eventos/expo_fotos_eventos_pasados.png" class="img-fluid"
                                     alt="EXPO FOTOS 2022">
                                 <h6>EXPO FOTOS 2022</h6>
                                 <p>10 / DICIEMBRE / 2022</p>
@@ -622,8 +746,8 @@
 
                         <!-- SLIDE 4 -->
                         <div class="swiper-slide">
-                            <div class="past-event-card-redesigned">
-                                <img src="img/eventos/tianguis_navideno_evento_pasado.png" class="img-fluid"
+                            <div class="past-event-card">
+                                <img src="../img/eventos/tianguis_navideno_evento_pasado.png" class="img-fluid"
                                     alt="Tianguis Navideño">
                                 <h6>Tianguis Navideño</h6>
                                 <p>DICIEMBRE / 2022</p>
@@ -637,22 +761,8 @@
                 <div class="swiper-button-next carousel-control-next"></div>
             </div>
 
-            <!-- Anuncio móvil - Solo visible en mobile -->
-            <div class="d-lg-none my-4">
-                <div class="ad ad-horizontal">
-                    <div class="ad-content">
-                        <i class="bi bi-megaphone"></i>
-                        <div class="ad-text">
-                            <h6>Espacio Publicitario</h6>
-                            <p>Anuncia aquí tu negocio</p>
-                        </div>
-                        <span class="ad-size">320 x 100</span>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
-
     <!-- Publicidad inferior - Anuncio único de ancho completo -->
     <section class="my-2">
         <div class="container">
@@ -707,14 +817,32 @@
 
         </div>
     </section>
+    <!-- Anuncio móvil - Solo visible en mobile -->
+    <section class="d-lg-none my-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="ad ad-horizontal">
+                        <div class="ad-content">
+                            <i class="bi bi-megaphone"></i>
+                            <div class="ad-text">
+                                <h6>Espacio Publicitario</h6>
+                                <p>Anuncia aquí tu negocio</p>
+                            </div>
+                            <span class="ad-size">320 x 100</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer class="main-footer">
         <div class="container">
-
             <div class="row align-items-center">
 
                 <!-- Logo -->
                 <div class="col-lg-3 text-center text-lg-start mb-3 mb-lg-0">
-                    <img src="./img/logo_TDAH.PNG" alt="TDAH Adultos México" class="footer-logo">
+                    <img src="../img/logo_TDAH.PNG" alt="TDAH Adultos México" class="footer-logo">
                 </div>
 
                 <!-- Navegación -->
@@ -751,62 +879,118 @@
     </footer>
 
 
-    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script>
         // Actualizar año automáticamente en el footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // Swiper para eventos pasados (versión rediseñada - 3 columnas)
+        // Swiper para eventos pasados
         const pastEventsSwiper = new Swiper('.pastEventsSwiper', {
             slidesPerView: 1,
-            spaceBetween: 15,
+            spaceBetween: 0,
             grabCursor: true,
             navigation: {
-                nextEl: '.past-events-carousel-redesigned .carousel-control-next',
-                prevEl: '.past-events-carousel-redesigned .carousel-control-prev',
+                nextEl: '.past-events-carousel .carousel-control-next',
+                prevEl: '.past-events-carousel .carousel-control-prev',
             },
             breakpoints: {
                 768: {
-                    slidesPerView: 3,
-                    spaceBetween: 20
+                    slidesPerView: 4,
+                    spaceBetween: 0
                 }
             }
         });
 
-
-        const imageSwiper = new Swiper('.testimonial-content', {
-            slidesPerView: 1,
-            pagination: {
-                el: '.testimonial-content .swiper-pagination',
-                clickable: true,
-                dynamicBullets: false
-            }
-        });
-
-        const textSwiper = new Swiper('.testimonial-swiper-text', {
-            slidesPerView: 1,
-            navigation: {
-                nextEl: '.custom-next',
-                prevEl: '.custom-prev'
-            }
-        });
-
-        // Swiper para testimonios destacados (slider inferior)
-        const testimoniosDestacadosSwiper = new Swiper('.testimoniosDestacadosSwiper', {
+        // Swiper para eventos próximos (NUEVAS CLASES)
+        const upcomingEventsSwiper = new Swiper('.upcomingEventsSwiper', {
             slidesPerView: 1,
             spaceBetween: 20,
             grabCursor: true,
+            loop: true,
             navigation: {
-                nextEl: '.testimonios-destacados-carousel .carousel-control-next',
-                prevEl: '.testimonios-destacados-carousel .carousel-control-prev',
+                nextEl: '.upcoming-next',
+                prevEl: '.upcoming-prev',
             },
             breakpoints: {
-                768: {
-                    slidesPerView: 3,
+                576: {
+                    slidesPerView: 2,
                     spaceBetween: 20
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
                 }
             }
         });
+
+
+        // Swiper para galería de imágenes del evento
+        const eventImagesSwiper = new Swiper('.event-images-slider', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            grabCursor: true,
+            navigation: {
+                nextEl: '.event-images-slider .swiper-button-next',
+                prevEl: '.event-images-slider .swiper-button-prev',
+            },
+            pagination: {
+                el: '.event-images-slider .swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                }
+            }
+        });
+
+        // ✅ INICIALIZAR GLIGHTBOX PARA LA GALERÍA DEL EVENTO
+        const lightbox = GLightbox({
+            selector: '.glightbox',
+            touchNavigation: true,
+            loop: true,
+            autoplayVideos: false,
+            closeButton: true,
+            zoomable: true,
+            draggable: true,
+            openEffect: 'zoom',
+            closeEffect: 'fade',
+            slideEffect: 'slide',
+            moreLength: 0
+        });
+
+        // ✅ FUNCIONALIDAD AGREGAR A GOOGLE CALENDAR
+        function addToGoogleCalendar(e) {
+            e.preventDefault();
+
+            // Datos del evento (personaliza según tu evento)
+            const eventData = {
+                title: 'Taller de Pintura: Expresión sin Juicios',
+                description: 'Espacio seguro y acogedor diseñado para adultos con TDAH que desean explorar su creatividad a través del arte.',
+                location: 'Centro Cultural TDAH, Ciudad de México, CDMX',
+                startDate: '20261118T100000', // Formato: YYYYMMDDTHHMMSS (18 Nov 2026, 10:00 AM)
+                endDate: '20261118T130000',   // Formato: YYYYMMDDTHHMMSS (18 Nov 2026, 1:00 PM)
+            };
+
+            // Construir URL de Google Calendar
+            const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventData.title)}&dates=${eventData.startDate}/${eventData.endDate}&details=${encodeURIComponent(eventData.description)}&location=${encodeURIComponent(eventData.location)}&sf=true&output=xml`;
+
+            // Abrir en nueva pestaña
+            window.open(googleCalendarUrl, '_blank');
+        }
+
+        // Agregar event listeners a ambos botones (desktop y mobile)
+        document.getElementById('addToCalendar').addEventListener('click', addToGoogleCalendar);
+        document.getElementById('addToCalendarMobile').addEventListener('click', addToGoogleCalendar);
+
 
         // Sincronizar ambos swipers
         imageSwiper.controller.control = textSwiper;
