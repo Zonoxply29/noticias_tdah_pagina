@@ -3398,6 +3398,39 @@ body>.container-fluid:first-child {
 }
 
 /****** SECCION TESTIMONIOS ******/
+/* Estilos para el efecto fade del swiper de imagen */
+.testimonial-content {
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonial-content .swiper-wrapper {
+    display: flex;
+    transition-timing-function: ease-out;
+}
+
+.testimonial-content .swiper-slide {
+    opacity: 0 !important;
+    transition: opacity 0.5s ease;
+}
+
+.testimonial-content .swiper-slide-active {
+    opacity: 1 !important;
+}
+
+.testimonial-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.testimonial-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 /* Variante de para fondo de titulo de la pagina */
 .section-title-testimonios {
     background-color: var(--primary);
@@ -3557,6 +3590,205 @@ body>.container-fluid:first-child {
     }
 }
 
+/* ====================================
+   BOTÓN TESTIMONIO COMPLETO
+   ==================================== */
+
+.btn-testimonial-full {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 12px 30px;
+    background: var(--secondary);
+    color: white;
+    border: 2px solid var(--secondary);
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-testimonial-full:hover {
+    background: white;
+    color: var(--secondary);
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 134, 51, 0.3);
+}
+
+.btn-testimonial-full:active {
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .btn-testimonial-full {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-testimonial-full {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ====================================
+   MODAL TESTIMONIOS CON VIDEO
+   ==================================== */
+
+.testimonial-modal-content {
+    border-radius: 20px;
+    overflow: hidden;
+    border: none;
+}
+
+.testimonial-modal-header {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.testimonial-modal-body {
+    padding: 0;
+}
+
+/* Contenedor del video - altura dinámica */
+.testimonial-video-container {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.3s ease;
+}
+
+.testimonial-video-iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+}
+
+/* Contenedor de info - altura automática */
+.testimonial-info-container {
+    padding: 40px 30px;
+    background: linear-gradient(180deg,
+            #0397B1 0%,
+            rgba(255, 238, 204, 0) 100%);;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto; /* Scroll si el contenido es muy largo */
+}
+
+.testimonial-modal-name {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-modal-role {
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.testimonial-modal-quote-icon {
+    width: 50px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.testimonial-modal-quote-icon img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+.testimonial-modal-quote {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #34495e;
+    font-style: italic;
+    margin: 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #3498db;
+    flex-grow: 1; /* Permitir que el quote crezca */
+}
+
+
+/* Responsive */
+@media (max-width: 991px) {
+    .testimonial-video-container {
+        min-height: 300px;
+    }
+    
+    .testimonial-video-iframe {
+        min-height: 300px;
+    }
+    
+    .testimonial-info-container {
+        padding: 30px 20px;
+        max-height: 400px;
+    }
+    
+    .testimonial-modal-name {
+        font-size: 20px;
+    }
+    
+    .testimonial-modal-quote {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
+/* Modal más grande para contenido largo */
+.modal-xl {
+    max-width: 1200px;
+}
+
+/* Ajuste de altura del row para que coincidan */
+.testimonial-modal-body .row {
+    min-height: 400px;
+}
+
+.testimonial-modal-body .col-lg-7,
+.testimonial-modal-body .col-lg-5 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .testimonial-video-container {
+        min-height: 300px;
+    }
+    
+    .testimonial-info-container {
+        padding: 30px 20px;
+        min-height: 300px;
+    }
+}
+
 /********* Secccion de Testimonios**********/
 /* Cards de testimonios con video */
 .testimonial-video-card {
@@ -3580,7 +3812,7 @@ body>.container-fluid:first-child {
     overflow: hidden;
 }
 
-.testimonial-video-wrapper img {
+.testimonial-video-wrapper .video-thumbnail {
     position: absolute;
     top: 0;
     left: 0;
@@ -3589,23 +3821,40 @@ body>.container-fluid:first-child {
     object-fit: cover;
 }
 
+.testimonial-video-wrapper .video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+}
+
 .play-video-btn {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: none;
+    background: rgba(0, 0, 0, 0.6);
     border: none;
-    font-size: 60px;
-    color: rgba(255, 255, 255, 0.9);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.95);
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 2;
 }
 
 .play-video-btn:hover {
+    background: var(--primary);
+    transform: translate(-50%, -50%) scale(1.15);
     color: #fff;
-    transform: translate(-50%, -50%) scale(1.1);
 }
 
 .testimonial-rating {
