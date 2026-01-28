@@ -186,7 +186,14 @@
                             <div class="swiper-slide">
                                 <div class="testimonial-image-wrapper">
                                     <div class="testimonial-gradient"></div>
-                                    <img src="img/testimonios/Persona1_testimonios.png" alt="">
+                                    <img src="img/testimonios/mujer_testimonio_2.PNG" alt="">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-image-wrapper">
+                                    <div class="testimonial-gradient"></div>
+                                    <img src="img/testimonios/hombre_testimonio_3.PNG" alt="">
                                 </div>
                             </div>
 
@@ -202,7 +209,7 @@
                     <div class="swiper testimonial-swiper-text">
 
                         <div class="swiper-wrapper">
-
+                            <!--PRIMER SLIDER O TESTIMONIO-->
                             <div class="swiper-slide">
                                 <div class="testimonial-quote-wrapper">
                                     <img src="img/testimonios/comillas_testimonio.png" alt="comillas"
@@ -216,21 +223,71 @@
                                     <p class="testimonial-author">
                                         Jingbo Shan, Manager
                                     </p>
+
+                                    <!-- Botón modal 1 -->
+                                    <button type="button" class="btn btn-testimonial-full testimonial-trigger"
+                                        data-bs-toggle="modal" data-bs-target="#testimonialModalDynamic"
+                                        data-name="Jingbo Shan" data-role="Manager"
+                                        data-video="https://www.youtube.com/embed/1XA2Z_U2YbQ"
+                                        data-quote="They are the best people. And this is the suitable platform to learn from distance. I have enjoyed a lot to learning with them. They are very helpful and kind people.">
+                                        CONOCE EL TESTIMONIO COMPLETO
+                                    </button>
                                 </div>
                             </div>
-
+                            <!--SEGUNDO TESTIMONIO-->
                             <div class="swiper-slide">
                                 <div class="testimonial-quote-wrapper">
                                     <img src="img/testimonios/comillas_testimonio.png" alt="comillas"
                                         class="testimonial-quote-icon">
                                     <blockquote>
-                                        “Another testimonial text goes here with the same structure and font rules
-                                        applied consistently.”
+                                        "Descubrir esta comunidad cambió mi vida por completo. Durante años luché sola
+                                        con el TDAH, sin entender muchas de mis dificultades.
                                     </blockquote>
 
                                     <p class="testimonial-author">
-                                        Jingbo Shan, Manager
+                                        María González, Psicóloga
                                     </p>
+
+                                    <!-- Botón modal 2 -->
+                                    <button type="button" class="btn btn-testimonial-full testimonial-trigger"
+                                        data-bs-toggle="modal" data-bs-target="#testimonialModalDynamic"
+                                        data-name="María González" data-role="Psicóloga"
+                                        data-video="https://www.youtube.com/shorts/HNNpaoJN3iQ?feature=share"
+                                        data-quote="Descubrir esta comunidad cambió mi vida por completo. Durante años luché sola
+                                        con el TDAH, sin entender muchas de mis dificultades.
+                                        Aquí encontré no solo
+                                        información valiosa, sino también un espacio seguro donde compartir mis
+                                        experiencias. Los talleres y el apoyo constante me han ayudado a desarrollar
+                                        estrategias efectivas para mi día a día. Ahora me siento más empoderada y capaz
+                                        de enfrentar los desafíos. Estoy profundamente agradecida con cada persona que
+                                        forma parte de esta increíble comunidad."
+                                        data-image="img/testimonios/Persona1_testimonios.png">
+                                        CONOCE EL TESTIMONIO COMPLETO
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!--Tercer TESTIMONIO-->
+                            <div class="swiper-slide">
+                                <div class="testimonial-quote-wrapper">
+                                    <img src="img/testimonios/comillas_testimonio.png" alt="comillas"
+                                        class="testimonial-quote-icon">
+                                    <blockquote>
+                                        El tercer testimonio
+                                    </blockquote>
+
+                                    <p class="testimonial-author">
+                                        Juan Perez
+                                    </p>
+
+                                    <!-- Botón modal 3 -->
+                                    <button type="button" class="btn btn-testimonial-full testimonial-trigger"
+                                        data-bs-toggle="modal" data-bs-target="#testimonialModalDynamic"
+                                        data-name="Juan Perez" data-role="Empresario"
+                                        data-video="https://www.youtube.com/shorts/gfj6ZDfqwHY?feature=share"
+                                        data-quote="Tercer Testimonio">
+                                        CONOCE EL TESTIMONIO COMPLETO
+                                    </button>
                                 </div>
                             </div>
 
@@ -283,7 +340,11 @@
                             <article class="testimonial-video-card">
 
                                 <div class="testimonial-video-wrapper">
-                                    <img src="img/testimonios/primer_video.png" alt="Testimonio video">
+                                    <img src="img/testimonios/primer_video.png" alt="Testimonio video" class="video-thumbnail">
+                                    <video class="video-player" controls style="display: none;">
+                                        <source src="videos/testimonios/primer_testimonio.mp4" type="video/mp4">
+                                        Tu navegador no soporta el elemento de video.
+                                    </video>
                                     <button class="play-video-btn">
                                         <i class="bi bi-play-circle-fill"></i>
                                     </button>
@@ -309,7 +370,11 @@
                             <article class="testimonial-video-card">
 
                                 <div class="testimonial-video-wrapper">
-                                    <img src="img/testimonios/segundo_video.png" alt="Testimonio video">
+                                    <img src="img/testimonios/segundo_video.png" alt="Testimonio video" class="video-thumbnail">
+                                    <video class="video-player" controls style="display: none;">
+                                        <source src="videos/testimonios/segundo_testimonio.mp4" type="video/mp4">
+                                        Tu navegador no soporta el elemento de video.
+                                    </video>
                                     <button class="play-video-btn">
                                         <i class="bi bi-play-circle-fill"></i>
                                     </button>
@@ -348,7 +413,11 @@
                             <article class="testimonial-video-card">
 
                                 <div class="testimonial-video-wrapper">
-                                    <img src="img/testimonios/tercer_video.png" alt="Testimonio video">
+                                    <img src="img/testimonios/tercer_video.png" alt="Testimonio video" class="video-thumbnail">
+                                    <video class="video-player" controls style="display: none;">
+                                        <source src="videos/testimonios/tercer_testimonio.mp4" type="video/mp4">
+                                        Tu navegador no soporta el elemento de video.
+                                    </video>
                                     <button class="play-video-btn">
                                         <i class="bi bi-play-circle-fill"></i>
                                     </button>
@@ -374,7 +443,11 @@
                             <article class="testimonial-video-card">
 
                                 <div class="testimonial-video-wrapper">
-                                    <img src="img/testimonios/cuarto_video.png" alt="Testimonio video">
+                                    <img src="img/testimonios/cuarto_video.png" alt="Testimonio video" class="video-thumbnail">
+                                    <video class="video-player" controls style="display: none;">
+                                        <source src="videos/testimonios/cuarto_testimonio.mp4" type="video/mp4">
+                                        Tu navegador no soporta el elemento de video.
+                                    </video>
                                     <button class="play-video-btn">
                                         <i class="bi bi-play-circle-fill"></i>
                                     </button>
@@ -796,38 +869,38 @@
                             </div>
                         </div>
 
-                    <!-- PAGINACIÓN -->
-                    <div class="pagination-wrapper mt-4">
-                        <nav aria-label="Navegación de páginas">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item disabled">
-                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
-                                        <i class="bi bi-chevron-left"></i>
-                                    </a>
-                                </li>
-                                <li class="page-item active" aria-current="page">
-                                    <a class="page-link" href="#">1</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">2</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">3</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">4</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">5</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">
-                                        <i class="bi bi-chevron-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                        <!-- PAGINACIÓN -->
+                        <div class="pagination-wrapper mt-4">
+                            <nav aria-label="Navegación de páginas">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                            <i class="bi bi-chevron-left"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active" aria-current="page">
+                                        <a class="page-link" href="#">1</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">2</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">3</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">4</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">5</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">
+                                            <i class="bi bi-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
 
                 </main>
 
@@ -864,13 +937,13 @@
                     </div>
 
                     <!-- Botón tienda -->
-                    <a href="#" class="btn btn-store">
+                    <a href="tienda.html" class="btn btn-store">
                         <img src="img/logo_sale_tienda.png" alt="Tienda" class="btn-store-icon">
                         CONOCE LA TIENDA
                     </a>
 
                     <!-- Botón ayuda médica -->
-                    <a href="#" class="btn btn-medical">
+                    <a href="doctores.html" class="btn btn-medical">
                         <img src="img/logo_medico_curita.png" alt="Ayuda Médica" class="btn-medical-icon">
                         <span class="btn-medical-text">
                             AYUDA MÉDICA<br>
@@ -934,8 +1007,8 @@
                 </div>
 
             </div>
-
         </div>
+
     </section>
     <footer class="main-footer">
         <div class="container">
@@ -979,70 +1052,282 @@
 
         </div>
     </footer>
+    <!-- Modal Testimonio ÚNICO (Dinámico) -->
+    <div class="modal fade" id="testimonialModalDynamic" tabindex="-1" aria-labelledby="testimonialModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content testimonial-modal-content">
 
+                <!-- Header -->
+                <div class="modal-header testimonial-modal-header">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
 
+                <!-- Body -->
+                <div class="modal-body testimonial-modal-body p-0">
+                    <div class="row g-0">
+
+                        <!-- VIDEO (Izquierda) -->
+                        <div class="col-lg-7">
+                            <div class="testimonial-video-container">
+                                <iframe id="testimonialVideo" class="testimonial-video-iframe" src="" title="Testimonio"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+
+                        <!-- INFO (Derecha) -->
+                        <div class="col-lg-5">
+                            <div class="testimonial-info-container">
+                                <!-- Nombre y rol -->
+                                <h5 id="testimonialName" class="testimonial-modal-name"></h5>
+                                <p id="testimonialRole" class="testimonial-modal-role"></p>
+
+                                <!-- Testimonio -->
+                                <blockquote id="testimonialQuote" class="testimonial-modal-quote"></blockquote>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
     <script>
-        // Actualizar año automáticamente en el footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        document.addEventListener('DOMContentLoaded', function () {
 
-        // Swiper para eventos pasados (versión rediseñada - 3 columnas)
-        const pastEventsSwiper = new Swiper('.pastEventsSwiper', {
-            slidesPerView: 1,
-            spaceBetween: 15,
-            grabCursor: true,
-            navigation: {
-                nextEl: '.past-events-carousel-redesigned .carousel-control-next',
-                prevEl: '.past-events-carousel-redesigned .carousel-control-prev',
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 20
+            // Actualizar año automáticamente en el footer
+            const yearElement = document.getElementById('currentYear');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+
+            // ✅ SWIPER PARA IMAGEN (primer .testimonial-swiper-text = el de la imagen)
+            let imageSwiper = null;
+            const imageSwiperElement = document.querySelector('.col-12.col-lg-6.d-flex .testimonial-swiper-text');
+
+            if (imageSwiperElement) {
+                imageSwiper = new Swiper('.col-12.col-lg-6.d-flex .testimonial-swiper-text', {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    effect: 'fade',
+                    fadeEffect: {
+                        crossFade: true
+                    },
+                    speed: 500,
+                    pagination: {
+                        el: '.col-12.col-lg-6.d-flex .swiper-pagination',
+                        clickable: true,
+                        dynamicBullets: false
+                    },
+                    allowTouchMove: true
+                });
+            }
+
+            // ✅ SWIPER PARA TEXTO (segundo .testimonial-swiper-text = el del texto)
+            let textSwiper = null;
+            const textSwiperElements = document.querySelectorAll('.testimonial-swiper-text');
+            const textSwiperElement = textSwiperElements[1]; // Segundo elemento
+
+            if (textSwiperElement) {
+                // Crear un selector único temporal
+                textSwiperElement.setAttribute('data-swiper', 'text');
+
+                textSwiper = new Swiper('[data-swiper="text"]', {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    allowTouchMove: false,
+                    navigation: {
+                        nextEl: '.custom-next',
+                        prevEl: '.custom-prev'
+                    }
+                });
+            }
+
+            // ✅ SINCRONIZAR SWIPERS
+            if (imageSwiper && textSwiper) {
+                textSwiper.on('slideChange', function () {
+                    imageSwiper.slideTo(textSwiper.activeIndex);
+                });
+
+                imageSwiper.on('slideChange', function () {
+                    textSwiper.slideTo(imageSwiper.activeIndex);
+                });
+            }
+
+            // Swiper para eventos pasados
+            const pastEventsSwiper = new Swiper('.pastEventsSwiper', {
+                slidesPerView: 1,
+                spaceBetween: 15,
+                grabCursor: true,
+                navigation: {
+                    nextEl: '.past-events-carousel-redesigned .carousel-control-next',
+                    prevEl: '.past-events-carousel-redesigned .carousel-control-prev',
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    }
                 }
-            }
-        });
+            });
 
-
-        const imageSwiper = new Swiper('.testimonial-content', {
-            slidesPerView: 1,
-            pagination: {
-                el: '.testimonial-content .swiper-pagination',
-                clickable: true,
-                dynamicBullets: false
-            }
-        });
-
-        const textSwiper = new Swiper('.testimonial-swiper-text', {
-            slidesPerView: 1,
-            navigation: {
-                nextEl: '.custom-next',
-                prevEl: '.custom-prev'
-            }
-        });
-
-        // Swiper para testimonios destacados (slider inferior)
-        const testimoniosDestacadosSwiper = new Swiper('.testimoniosDestacadosSwiper', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            grabCursor: true,
-            navigation: {
-                nextEl: '.testimonios-destacados-carousel .carousel-control-next',
-                prevEl: '.testimonios-destacados-carousel .carousel-control-prev',
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 20
+            // Swiper para testimonios destacados
+            const testimoniosDestacadosSwiper = new Swiper('.testimoniosDestacadosSwiper', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                grabCursor: true,
+                navigation: {
+                    nextEl: '.testimonios-destacados-carousel .carousel-control-next',
+                    prevEl: '.testimonios-destacados-carousel .carousel-control-prev',
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    }
                 }
+            });
+
+            // ✅ MODAL DINÁMICO PARA TESTIMONIOS PRINCIPALES
+            const testimonialModal = document.getElementById('testimonialModalDynamic');
+            const testimonialTriggers = document.querySelectorAll('.testimonial-trigger');
+
+            testimonialTriggers.forEach((trigger, index) => {
+                trigger.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const name = this.getAttribute('data-name');
+                    const role = this.getAttribute('data-role');
+                    let video = this.getAttribute('data-video');
+                    const quote = this.getAttribute('data-quote');
+                    const image = this.getAttribute('data-image');
+
+                    // Convertir URL de YouTube
+                    if (video) {
+                        if (video.includes('youtube.com/shorts/')) {
+                            const videoId = video.split('/shorts/')[1].split('?')[0];
+                            video = `https://www.youtube.com/embed/${videoId}`;
+                        } else if (video.includes('youtu.be/')) {
+                            const videoId = video.split('youtu.be/')[1].split('?')[0];
+                            video = `https://www.youtube.com/embed/${videoId}`;
+                        } else if (video.includes('youtube.com/watch?v=')) {
+                            const videoId = video.split('v=')[1].split('&')[0];
+                            video = `https://www.youtube.com/embed/${videoId}`;
+                        }
+                    }
+
+                    // Actualizar modal
+                    const modalName = document.getElementById('testimonialName');
+                    const modalRole = document.getElementById('testimonialRole');
+                    const modalVideo = document.getElementById('testimonialVideo');
+                    const modalQuote = document.getElementById('testimonialQuote');
+                    const modalImage = document.getElementById('testimonialImage');
+
+                    if (modalName) modalName.textContent = name || 'Sin nombre';
+                    if (modalRole) modalRole.textContent = role || 'Sin rol';
+                    if (modalVideo) modalVideo.src = video || '';
+                    if (modalQuote) modalQuote.textContent = quote || 'Sin testimonio';
+                    if (modalImage) {
+                        modalImage.src = image || 'img/testimonios/Persona1_testimonios.png';
+                        modalImage.alt = name || 'Testimonio';
+                    }
+                });
+            });
+
+            // ✅ REPRODUCIR VIDEOS INLINE EN LAS CARDS
+            const playVideoButtons = document.querySelectorAll('.testimonial-video-card .play-video-btn');
+
+            playVideoButtons.forEach((button) => {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    const wrapper = this.closest('.testimonial-video-wrapper');
+                    const thumbnail = wrapper.querySelector('.video-thumbnail');
+                    const video = wrapper.querySelector('.video-player');
+                    const playBtn = this;
+
+                    if (video && thumbnail) {
+                        // Ocultar thumbnail y botón
+                        thumbnail.style.display = 'none';
+                        playBtn.style.display = 'none';
+
+                        // Mostrar y reproducir video
+                        video.style.display = 'block';
+                        video.play();
+
+                        console.log('▶️ Video iniciado');
+
+                        // Al terminar el video, volver a mostrar thumbnail
+                        video.addEventListener('ended', function () {
+                            video.style.display = 'none';
+                            thumbnail.style.display = 'block';
+                            playBtn.style.display = 'flex';
+                            video.currentTime = 0;
+                            console.log('⏹️ Video terminado');
+                        });
+
+                        // Si el usuario pausa, también mostrar el thumbnail
+                        video.addEventListener('pause', function () {
+                            if (video.currentTime < video.duration) {
+                                setTimeout(() => {
+                                    if (video.paused && video.currentTime > 0) {
+                                        video.style.display = 'none';
+                                        thumbnail.style.display = 'block';
+                                        playBtn.style.display = 'flex';
+                                    }
+                                }, 100);
+                            }
+                        });
+                    }
+                });
+            });
+
+            // ✅ PAUSAR VIDEO AL CERRAR MODAL
+            if (testimonialModal) {
+                // ✅ AJUSTAR ALTURA DINÁMICAMENTE CUANDO EL MODAL SE ABRE
+                testimonialModal.addEventListener('shown.bs.modal', function () {
+                    const infoContainer = document.querySelector('.testimonial-info-container');
+                    const videoContainer = document.querySelector('.testimonial-video-container');
+                    const videoIframe = document.getElementById('testimonialVideo');
+
+                    if (infoContainer && videoContainer && videoIframe) {
+                        setTimeout(() => {
+                            const infoHeight = infoContainer.scrollHeight;
+                            const finalHeight = Math.max(infoHeight, 400);
+
+                            videoContainer.style.height = `${finalHeight}px`;
+                            videoIframe.style.height = `${finalHeight}px`;
+                        }, 150);
+                    }
+                });
+
+                testimonialModal.addEventListener('hidden.bs.modal', function () {
+                    const iframe = document.getElementById('testimonialVideo');
+                    if (iframe) {
+                        iframe.src = '';
+                    }
+                });
+                // Empieza el video automaticamente cuando se abre el modal 
+                /*
+                testimonialModal.addEventListener('shown.bs.modal', function () {
+                    const iframe = document.getElementById('testimonialVideo');
+                    if (iframe && iframe.src && !iframe.src.includes('autoplay=1')) {
+                        iframe.src += (iframe.src.includes('?') ? '&' : '?') + 'autoplay=1';
+                        console.log('▶️ Video iniciado');
+                    }
+                });
+                */
             }
+
         });
-
-        // Sincronizar ambos swipers
-        imageSwiper.controller.control = textSwiper;
-        textSwiper.controller.control = imageSwiper;
-
-
     </script>
 </body>
 
